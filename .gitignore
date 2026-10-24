@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# Data (large files — download separately)
+data/images/
+data/*.zip
+experiments/*.json
+
+# API keys
+.env
+secrets.json
