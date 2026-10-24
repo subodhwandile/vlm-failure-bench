@@ -9,19 +9,67 @@ Steps:
   4. Compare self-identified region against counterfactual ground truth
   5. Report: does the model accurately locate what caused its failure?
 
-Run: python pilot_experiment.py --n_samples 50
-     python pilot_experiment.py --n_samples 50 --model claude-haiku-5-5   # cheapest (~$0.10)
-     python pilot_experiment.py --n_samples 50 --model claude-opus-5-5    # best quality (~$3)
+Run: python3 pilot_experiment.py --n_samples 50
+     python3 pilot_experiment.py --n_samples 50 --model anthropic.claude-3-5-haiku-20241022-v1:0
 """
 
 import anthropic
 import base64
 import json
 import os
+import subprocess
+import urllib.request
 import argparse
 from pathlib import Path
 
-DEFAULT_MODEL = "claude-haiku-5-5"  # cheap for pilots; switch to opus-5-5 for final benchmark
+TOAST_PROXY_BASE  = "https://llm-proxy.build.eng.toasttab.com/bedrock"
+DEFAULT_MODEL     = "global.anthropic.claude-haiku-4-5-20251001-v1:0"
+DEFAULT_MODEL_DIRECT = "claude-haiku-5-5"
+
+
+class ToastLLMClient:
+    """
+    Thin wrapper around the Toast LLM proxy.
+    Exposes client.messages.create() matching the anthropic SDK interface.
+    Uses Bearer JWT auth (refreshed per-call via toastApiKeyHelper).
+    """
+    def __init__(self, base_url: str = TOAST_PROXY_BASE):
+        self.base_url = base_url.rstrip("/")
+        self.messages = self  # so client.messages.create() works
+
+    def _get_jwt(self) -> str:
+        return subprocess.check_output(["/opt/homebrew/bin/toastApiKeyHelper"]).decode().strip()
+
+    def create(self, model: str, max_tokens: int, messages: list, **kwargs):
+        jwt = self._get_jwt()
+        url = f"{self.base_url}/model/{model}/invoke"
+        body = json.dumps({
+            "anthropic_version": "bedrock-2023-05-31",
+            "max_tokens": max_tokens,
+            "messages": messages,
+            **kwargs
+        }).encode()
+        req = urllib.request.Request(
+            url, data=body,
+            headers={"Authorization": f"Bearer {jwt}", "Content-Type": "application/json"},
+            method="POST"
+        )
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            data = json.loads(resp.read().decode())
+        # Return object matching anthropic SDK shape
+        class _Content:
+            def __init__(self, text): self.text = text
+        class _Resp:
+            def __init__(self, d): self.content = [_Content(c["text"]) for c in d.get("content", [])]
+        return _Resp(data)
+
+
+def make_client():
+    if os.environ.get("ANTHROPIC_API_KEY"):
+        print("Using direct Anthropic API")
+        return anthropic.Anthropic(), DEFAULT_MODEL_DIRECT
+    print(f"Using Toast LLM proxy ({TOAST_PROXY_BASE})")
+    return ToastLLMClient(), DEFAULT_MODEL
 from dataclasses import dataclass, asdict
 from typing import Optional
 
@@ -96,20 +144,31 @@ Be specific about the spatial location."""
     return response.content[0].text.strip()
 
 
+_WORD_TO_NUM = {
+    "zero": "0", "one": "1", "two": "2", "three": "3", "four": "4",
+    "five": "5", "six": "6", "seven": "7", "eight": "8", "nine": "9", "ten": "10",
+}
+
+def _normalize(s: str) -> str:
+    s = s.lower().strip().rstrip(".")
+    return _WORD_TO_NUM.get(s, s)
+
 def is_answer_correct(model_answer: str, correct_answer: str) -> bool:
-    """Loose match — handles plurals, case, minor variations."""
-    m = model_answer.lower().strip().rstrip(".")
-    c = correct_answer.lower().strip().rstrip(".")
+    """Loose match — handles plurals, case, word/digit number forms."""
+    m = _normalize(model_answer)
+    c = _normalize(correct_answer)
     return m == c or m in c or c in m
 
 
-def run_pilot(image_dir: str, qa_file: str, output_file: str, n_samples: int = 50, model: str = DEFAULT_MODEL):
+def run_pilot(image_dir: str, qa_file: str, output_file: str, n_samples: int = 50, model: str = None):
     """
     image_dir: directory containing images
     qa_file: JSON file with list of {image_id, image_file, question, answer}
     output_file: where to write results
     """
-    client = anthropic.Anthropic()
+    client, default_model = make_client()
+    if model is None:
+        model = default_model
     print(f"Using model: {model}")
 
     with open(qa_file) as f:
@@ -165,6 +224,3 @@ if __name__ == "__main__":
 
     os.makedirs(os.path.dirname(args.output), exist_ok=True)
     run_pilot(args.image_dir, args.qa_file, args.output, args.n_samples, args.model)
-
-    os.makedirs(os.path.dirname(args.output), exist_ok=True)
-    run_pilot(args.image_dir, args.qa_file, args.output, args.n_samples)
