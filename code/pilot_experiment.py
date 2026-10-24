@@ -9,7 +9,9 @@ Steps:
   4. Compare self-identified region against counterfactual ground truth
   5. Report: does the model accurately locate what caused its failure?
 
-Run: python pilot_experiment.py --model claude --n_samples 50
+Run: python pilot_experiment.py --n_samples 50
+     python pilot_experiment.py --n_samples 50 --model claude-haiku-5-5   # cheapest (~$0.10)
+     python pilot_experiment.py --n_samples 50 --model claude-opus-5-5    # best quality (~$3)
 """
 
 import anthropic
@@ -18,6 +20,8 @@ import json
 import os
 import argparse
 from pathlib import Path
+
+DEFAULT_MODEL = "claude-haiku-5-5"  # cheap for pilots; switch to opus-5-5 for final benchmark
 from dataclasses import dataclass, asdict
 from typing import Optional
 
@@ -40,13 +44,13 @@ def encode_image(image_path: str) -> str:
         return base64.standard_b64encode(f.read()).decode("utf-8")
 
 
-def ask_question(client: anthropic.Anthropic, image_path: str, question: str) -> str:
+def ask_question(client: anthropic.Anthropic, image_path: str, question: str, model: str = DEFAULT_MODEL) -> str:
     img_data = encode_image(image_path)
     ext = Path(image_path).suffix.lower().lstrip(".")
     media_type = {"jpg": "image/jpeg", "jpeg": "image/jpeg", "png": "image/png"}.get(ext, "image/jpeg")
 
     response = client.messages.create(
-        model="claude-opus-5-5",
+        model=model,
         max_tokens=256,
         messages=[{
             "role": "user",
@@ -59,7 +63,7 @@ def ask_question(client: anthropic.Anthropic, image_path: str, question: str) ->
     return response.content[0].text.strip()
 
 
-def ask_self_localization(client: anthropic.Anthropic, image_path: str, question: str, wrong_answer: str) -> str:
+def ask_self_localization(client: anthropic.Anthropic, image_path: str, question: str, wrong_answer: str, model: str = DEFAULT_MODEL) -> str:
     """
     Core experiment prompt: given that the model gave a wrong answer,
     ask it to identify which region of the image led to that answer.
@@ -79,7 +83,7 @@ Describe the region precisely:
 Be specific about the spatial location."""
 
     response = client.messages.create(
-        model="claude-opus-5-5",
+        model=model,
         max_tokens=512,
         messages=[{
             "role": "user",
@@ -99,13 +103,14 @@ def is_answer_correct(model_answer: str, correct_answer: str) -> bool:
     return m == c or m in c or c in m
 
 
-def run_pilot(image_dir: str, qa_file: str, output_file: str, n_samples: int = 50):
+def run_pilot(image_dir: str, qa_file: str, output_file: str, n_samples: int = 50, model: str = DEFAULT_MODEL):
     """
     image_dir: directory containing images
     qa_file: JSON file with list of {image_id, image_file, question, answer}
     output_file: where to write results
     """
     client = anthropic.Anthropic()
+    print(f"Using model: {model}")
 
     with open(qa_file) as f:
         samples = json.load(f)[:n_samples]
@@ -121,14 +126,14 @@ def run_pilot(image_dir: str, qa_file: str, output_file: str, n_samples: int = 5
             print(f"  SKIP — image not found: {image_path}")
             continue
 
-        model_answer = ask_question(client, image_path, sample["question"])
+        model_answer = ask_question(client, image_path, sample["question"], model)
         is_wrong = not is_answer_correct(model_answer, sample["answer"])
 
         self_loc = None
         if is_wrong:
             wrong_count += 1
             print(f"  WRONG: model='{model_answer}' correct='{sample['answer']}' — asking self-localization")
-            self_loc = ask_self_localization(client, image_path, sample["question"], model_answer)
+            self_loc = ask_self_localization(client, image_path, sample["question"], model_answer, model)
             print(f"  Self-localization: {self_loc[:100]}...")
 
         results.append(asdict(SampleResult(
@@ -155,7 +160,11 @@ if __name__ == "__main__":
     parser.add_argument("--qa_file", default="./data/qa_samples.json")
     parser.add_argument("--output", default="./experiments/pilot_results.json")
     parser.add_argument("--n_samples", type=int, default=50)
+    parser.add_argument("--model", default=DEFAULT_MODEL, help="claude-haiku-5-5 (cheap) or claude-opus-5-5 (best)")
     args = parser.parse_args()
+
+    os.makedirs(os.path.dirname(args.output), exist_ok=True)
+    run_pilot(args.image_dir, args.qa_file, args.output, args.n_samples, args.model)
 
     os.makedirs(os.path.dirname(args.output), exist_ok=True)
     run_pilot(args.image_dir, args.qa_file, args.output, args.n_samples)
