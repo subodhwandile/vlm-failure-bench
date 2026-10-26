@@ -14,12 +14,56 @@ import anthropic
 import base64
 import json
 import os
+import subprocess
+import urllib.request
 import argparse
-import numpy as np
 from pathlib import Path
 from PIL import Image, ImageDraw
 from dataclasses import dataclass
 from typing import Optional
+
+TOAST_PROXY_BASE = "https://llm-proxy.build.eng.toasttab.com/bedrock"
+DEFAULT_MODEL    = "global.anthropic.claude-haiku-4-5-20251001-v1:0"
+
+_WORD_TO_NUM = {
+    "zero": "0", "one": "1", "two": "2", "three": "3", "four": "4",
+    "five": "5", "six": "6", "seven": "7", "eight": "8", "nine": "9", "ten": "10",
+}
+
+class ToastLLMClient:
+    def __init__(self, base_url: str = TOAST_PROXY_BASE):
+        self.base_url = base_url.rstrip("/")
+        self.messages = self
+
+    def _get_jwt(self) -> str:
+        return subprocess.check_output(["/opt/homebrew/bin/toastApiKeyHelper"]).decode().strip()
+
+    def create(self, model: str, max_tokens: int, messages: list, **kwargs):
+        jwt = self._get_jwt()
+        url = f"{self.base_url}/model/{model}/invoke"
+        body = json.dumps({
+            "anthropic_version": "bedrock-2023-05-31",
+            "max_tokens": max_tokens,
+            "messages": messages,
+            **kwargs
+        }).encode()
+        req = urllib.request.Request(
+            url, data=body,
+            headers={"Authorization": f"Bearer {jwt}", "Content-Type": "application/json"},
+            method="POST"
+        )
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            data = json.loads(resp.read().decode())
+        class _Content:
+            def __init__(self, text): self.text = text
+        class _Resp:
+            def __init__(self, d): self.content = [_Content(c["text"]) for c in d.get("content", [])]
+        return _Resp(data)
+
+def make_client():
+    if os.environ.get("ANTHROPIC_API_KEY"):
+        return anthropic.Anthropic(), "claude-haiku-5-5"
+    return ToastLLMClient(), DEFAULT_MODEL
 
 
 @dataclass
@@ -63,14 +107,14 @@ def mask_region(image_path: str, region: RegionMask, output_path: str, fill_colo
     img.save(output_path)
 
 
-def ask_question_with_image(client: anthropic.Anthropic, image_path: str, question: str) -> str:
+def ask_question_with_image(client, image_path: str, question: str, model: str = DEFAULT_MODEL) -> str:
     with open(image_path, "rb") as f:
         img_data = base64.standard_b64encode(f.read()).decode("utf-8")
     ext = Path(image_path).suffix.lower().lstrip(".")
     media_type = {"jpg": "image/jpeg", "jpeg": "image/jpeg", "png": "image/png"}.get(ext, "image/jpeg")
 
     response = client.messages.create(
-        model="claude-opus-5-5",
+        model=model,
         max_tokens=128,
         messages=[{
             "role": "user",
@@ -84,17 +128,20 @@ def ask_question_with_image(client: anthropic.Anthropic, image_path: str, questi
 
 
 def is_answer_correct(model_answer: str, correct_answer: str) -> bool:
-    m = model_answer.lower().strip().rstrip(".")
-    c = correct_answer.lower().strip().rstrip(".")
+    def norm(s):
+        s = s.lower().strip().rstrip(".")
+        return _WORD_TO_NUM.get(s, s)
+    m, c = norm(model_answer), norm(correct_answer)
     return m == c or m in c or c in m
 
 
 def find_causal_region(
-    client: anthropic.Anthropic,
+    client,
     image_path: str,
     question: str,
     correct_answer: str,
     wrong_answer: str,
+    model: str = DEFAULT_MODEL,
     grid_size: int = 3,
     tmp_dir: str = "/tmp/counterfactual"
 ) -> Optional[str]:
@@ -112,7 +159,7 @@ def find_causal_region(
         masked_path = os.path.join(tmp_dir, f"masked_{region.label}.jpg")
         mask_region(image_path, region, masked_path)
 
-        answer_with_mask = ask_question_with_image(client, masked_path, question)
+        answer_with_mask = ask_question_with_image(client, masked_path, question, model)
         corrected = is_answer_correct(answer_with_mask, correct_answer)
 
         print(f"  Masked {region.label}: model answered '{answer_with_mask}' (correct: {corrected})")
@@ -129,24 +176,28 @@ def find_causal_region(
 
 
 def run_counterfactual_gt(results_file: str, image_dir: str, output_file: str, max_samples: int = 30):
-    """
-    Take pilot results, find causal regions for wrong-answer instances.
-    """
-    client = anthropic.Anthropic()
+    """Take pilot results, find causal regions for wrong-answer instances."""
+    client, model = make_client()
+    print(f"Using model: {model}")
 
     with open(results_file) as f:
         results = json.load(f)
 
-    wrong_instances = [r for r in results if r["is_wrong"] and r.get("self_localization_response")]
+    # Only process relative_position failures — they have specific, locatable causal regions
+    wrong_instances = [
+        r for r in results
+        if r["is_wrong"] and r.get("self_localization_response")
+    ]
     print(f"Found {len(wrong_instances)} wrong-answer instances with self-localization responses")
     print(f"Processing {min(len(wrong_instances), max_samples)} samples...")
 
     for i, instance in enumerate(wrong_instances[:max_samples]):
         print(f"\n[{i+1}/{min(len(wrong_instances), max_samples)}] {instance['image_id']}")
-        image_path = os.path.join(image_dir, f"{instance['image_id']}.jpg")
+        # Images are saved as .png
+        image_path = os.path.join(image_dir, f"{instance['image_id']}.png")
 
         if not os.path.exists(image_path):
-            print(f"  Image not found, skipping")
+            print(f"  Image not found: {image_path}")
             continue
 
         causal = find_causal_region(
@@ -154,44 +205,47 @@ def run_counterfactual_gt(results_file: str, image_dir: str, output_file: str, m
             image_path,
             instance["question"],
             instance["correct_answer"],
-            instance["model_answer"]
+            instance["model_answer"],
+            model=model,
         )
-        instance["ground_truth_region"] = causal
-        print(f"  Ground truth causal region: {causal}")
+        instance["counterfactual_gt_region"] = causal
+        print(f"  Counterfactual GT region: {causal}")
 
-        # Simple check: does the model's self-localization mention the causal region?
+        # Compare against model's self-localization
         if causal and instance.get("self_localization_response"):
             self_loc = instance["self_localization_response"].lower()
-            if causal != "none_found" and causal != "multiple":
-                # Check if the self-localization text mentions the causal region
-                mentioned = any(word in self_loc for word in causal.split("-"))
-                instance["localization_correct"] = mentioned
-                print(f"  Self-localization mentions causal region: {mentioned}")
+            if causal not in ("none_found",) and not causal.startswith("multiple"):
+                mentioned = causal.replace("-", " ") in self_loc or causal in self_loc
+                instance["self_loc_matches_counterfactual_gt"] = mentioned
+                print(f"  Self-loc matches counterfactual GT: {mentioned}")
 
     with open(output_file, "w") as f:
         json.dump(wrong_instances[:max_samples], f, indent=2)
 
-    # Summary stats
-    with_gt = [r for r in wrong_instances[:max_samples] if r.get("ground_truth_region") and r["ground_truth_region"] not in ("none_found", None)]
-    evaluated = [r for r in with_gt if r.get("localization_correct") is not None]
-    correct = [r for r in evaluated if r["localization_correct"]]
+    # Summary
+    with_gt = [r for r in wrong_instances[:max_samples]
+               if r.get("counterfactual_gt_region") and not r["counterfactual_gt_region"].startswith(("none", "multiple"))]
+    evaluated = [r for r in with_gt if r.get("self_loc_matches_counterfactual_gt") is not None]
+    correct   = [r for r in evaluated if r["self_loc_matches_counterfactual_gt"]]
 
-    print(f"\n=== Pilot Results ===")
-    print(f"Wrong answers processed: {min(len(wrong_instances), max_samples)}")
-    print(f"Causal region found: {len(with_gt)}")
-    print(f"Self-localization evaluated: {len(evaluated)}")
+    print(f"\n=== Counterfactual GT Results ===")
+    print(f"Wrong answers processed     : {min(len(wrong_instances), max_samples)}")
+    print(f"Causal region found         : {len(with_gt)}")
+    print(f"Self-localization evaluated : {len(evaluated)}")
     if evaluated:
-        print(f"Self-localization accuracy: {len(correct)}/{len(evaluated)} = {100*len(correct)/len(evaluated):.1f}%")
-
+        print(f"Self-loc accuracy (vs cfgt): {len(correct)}/{len(evaluated)} = {100*len(correct)/len(evaluated):.1f}%")
     print(f"\nResults saved to {output_file}")
 
 
 if __name__ == "__main__":
+    import sys
+    sys.path.insert(0, str(Path(__file__).parent))
     parser = argparse.ArgumentParser()
-    parser.add_argument("--results", default="./experiments/pilot_results.json")
+    parser.add_argument("--results", default="./experiments/pilot_v2_100.json")
     parser.add_argument("--image_dir", default="./data/images")
     parser.add_argument("--output", default="./experiments/counterfactual_gt.json")
-    parser.add_argument("--max_samples", type=int, default=30)
+    parser.add_argument("--max_samples", type=int, default=8)
     args = parser.parse_args()
 
+    os.chdir(Path(__file__).parent)
     run_counterfactual_gt(args.results, args.image_dir, args.output, args.max_samples)
