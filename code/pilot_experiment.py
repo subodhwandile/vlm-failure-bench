@@ -123,12 +123,13 @@ def ask_self_localization(client: anthropic.Anthropic, image_path: str, question
     prompt = f"""You previously answered the question "{question}" with "{wrong_answer}".
 
 Please identify the specific region of this image that most influenced your answer.
-Describe the region precisely:
-1. Location (e.g., top-left, center, bottom-right, specific object)
-2. What visual content is in that region
-3. Why that region led you to answer "{wrong_answer}"
 
-Be specific about the spatial location."""
+First, state ONLY the region label on a single line using this exact format:
+REGION: <one of: top-left, top-center, top-right, middle-left, center, middle-right, bottom-left, bottom-center, bottom-right>
+
+Then explain:
+1. What visual content is in that region
+2. Why that region led you to answer "{wrong_answer}" instead of the correct answer"""
 
     response = client.messages.create(
         model=model,

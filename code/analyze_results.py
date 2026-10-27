@@ -2,12 +2,19 @@
 Gap H pilot analysis: compute self-localization accuracy for failure cases.
 
 Usage:
-  python3 analyze_results.py --results experiments/pilot_v2_100.json
+  python3 analyze_results.py --results experiments/pilot_v3_100.json
 """
 
 import argparse
 import json
+import re
 from pathlib import Path
+
+VALID_REGIONS = {
+    "top-left", "top-center", "top-right",
+    "middle-left", "center", "middle-right",
+    "bottom-left", "bottom-center", "bottom-right",
+}
 
 REGION_KEYWORDS = {
     "top-left":      ["top-left", "top left", "upper-left", "upper left"],
@@ -28,6 +35,22 @@ CELL_RC = {
     "middle-left": (1, 0), "center": (1, 1), "middle-right": (1, 2),
     "bottom-left": (2, 0), "bottom-center": (2, 1), "bottom-right": (2, 2),
 }
+
+_REGION_ALIASES = {
+    "middle-center": "center",
+    "top-middle": "top-center",
+    "bottom-middle": "bottom-center",
+}
+
+def parse_region_tag(text: str) -> str | None:
+    """Extract 'REGION: <label>' from structured self-localization response."""
+    m = re.search(r'region:\s*([a-z-]+)', text.lower())
+    if m:
+        label = m.group(1).strip()
+        label = _REGION_ALIASES.get(label, label)
+        if label in VALID_REGIONS:
+            return label
+    return None
 
 def cell_iou(pos_a: str, pos_b: str) -> float:
     """Treat each cell as a unit square; IoU = 1 if same, 0 otherwise (no overlap between non-adjacent cells)."""
@@ -63,62 +86,64 @@ def analyze(results_path: str, qa_path: str = "data/qa_samples.json"):
     print(f"Wrong answers (errors)  : {len(wrong)} / {total} ({100*len(wrong)/total:.1f}%)")
     print()
 
-    # Split by question type
-    rel_pos   = [r for r in wrong if qa.get(r["image_id"], {}).get("question_type") == "relative_position"]
-    locatable = rel_pos  # only relative_position has a single non-trivial causal region
+    locatable = [r for r in wrong
+                 if qa.get(r["image_id"], {}).get("question_type") in ("relative_position", "adjacent_distractor")]
 
-    print(f"Relative-position failures: {len(rel_pos)}")
+    print(f"Spatially-locatable failures: {len(locatable)}")
     print()
 
-    exact_correct = 0
+    tag_correct   = 0   # primary metric: structured REGION: tag
+    kw_correct    = 0   # fallback: keyword match
     iou_scores    = []
 
     for r in locatable:
         qa_info    = qa.get(r["image_id"], {})
         gt_region  = qa_info.get("causal_region", "")
-        self_loc   = (r.get("self_localization_response") or "").lower()
-        mentioned  = detect_mentioned_region(self_loc)
+        q_type     = qa_info.get("question_type", "")
+        self_loc   = r.get("self_localization_response") or ""
         grid       = qa_info.get("grid_layout", {})
+        ref_pos    = qa_info.get("ref_pos") or qa_info.get("distractor_region", "?")
+        direction  = qa_info.get("direction", "?")
 
-        # Exact match
-        exact = gt_region in mentioned
-        exact_correct += int(exact)
+        # Primary: parse structured tag
+        tagged_region = parse_region_tag(self_loc)
+        tag_hit = tagged_region == gt_region
+        tag_correct += int(tag_hit)
+        tag_iou = cell_iou(gt_region, tagged_region) if tagged_region else 0.0
+        iou_scores.append(tag_iou)
 
-        # Best IoU from all mentioned regions (vs. GT)
-        best_iou = max((cell_iou(gt_region, m) for m in mentioned), default=0.0)
-        iou_scores.append(best_iou)
+        # Fallback keyword match (for older responses without REGION: tag)
+        mentioned = detect_mentioned_region(self_loc.lower())
+        kw_hit = gt_region in mentioned
+        kw_correct += int(kw_hit)
 
-        ref_pos   = qa_info.get("ref_pos", "?")
-        direction = qa_info.get("direction", "?")
-
-        print(f"  [{r['image_id']}]  q_type=relative_position")
-        print(f"    Question : {r['question']}")
-        print(f"    Model    : {r['model_answer']!r}  Correct: {r['correct_answer']!r}")
-        print(f"    GT causal region : {gt_region!r}  (ref: {ref_pos!r}, dir: {direction!r})")
-        print(f"    Mentioned regions: {mentioned}")
-        print(f"    Exact match: {exact}  Best IoU: {best_iou:.2f}")
+        print(f"  [{r['image_id']}]  q_type={q_type}")
+        print(f"    Question  : {r['question']}")
+        print(f"    Model     : {r['model_answer']!r}  Correct: {r['correct_answer']!r}")
+        print(f"    GT causal : {gt_region!r}  ref/distractor: {ref_pos!r}")
+        print(f"    REGION tag: {tagged_region!r}  tag_hit={tag_hit}  tag_IoU={tag_iou:.2f}")
+        print(f"    kw_hit    : {kw_hit}  (mentioned: {mentioned})")
         if grid:
-            print("    Grid layout:")
+            print("    Grid:")
             for pos, obj in sorted(grid.items(), key=lambda x: CELL_RC.get(x[0], (9,9))):
-                marker = " <-- GT CAUSAL" if pos == gt_region else (" <-- REF" if pos == ref_pos else "")
+                marker = " <-- GT" if pos == gt_region else (" <-- REF" if pos == ref_pos else "")
                 print(f"      {pos}: {obj['color']} {obj['shape']}{marker}")
         print(f"    Self-loc: {self_loc[:200]}")
         print()
 
     n = len(locatable)
     if n > 0:
-        exact_acc = 100 * exact_correct / n
-        mean_iou  = sum(iou_scores) / n
         print("=" * 60)
-        print(f"SELF-LOCALIZATION ACCURACY (relative_position failures)")
-        print(f"  Exact region match  : {exact_correct}/{n} = {exact_acc:.0f}%")
-        print(f"  Mean IoU (grid cell): {mean_iou:.3f}")
-        print(f"")
-        print(f"Key finding: when the model makes a spatial error,")
-        print(f"it correctly identifies the causal region only {exact_acc:.0f}% of the time")
-        print(f"(vs. 100% expected for accurate self-attribution).")
+        print(f"SELF-LOCALIZATION ACCURACY (spatially-locatable failures)")
+        print(f"  Structured tag (REGION:) : {tag_correct}/{n} = {100*tag_correct/n:.0f}%")
+        print(f"  Keyword match (fallback) : {kw_correct}/{n} = {100*kw_correct/n:.0f}%")
+        print(f"  Mean IoU (tag-based)     : {sum(iou_scores)/n:.3f}")
+        print()
+        if tag_correct == 0 and kw_correct > 0:
+            print("NOTE: structured REGION: tag not present — older prompt format.")
+            print("      Using keyword match as primary metric for this batch.")
     else:
-        print("No locatable failures found — run with more samples.")
+        print("No spatially-locatable failures found — run with more samples.")
 
 
 if __name__ == "__main__":
@@ -126,7 +151,7 @@ if __name__ == "__main__":
     os.chdir(Path(__file__).parent)
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--results", default="experiments/pilot_v2_100.json")
+    parser.add_argument("--results", default="experiments/pilot_v3_100.json")
     parser.add_argument("--qa", default="data/qa_samples.json")
     args = parser.parse_args()
     analyze(args.results, args.qa)

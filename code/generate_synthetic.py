@@ -145,7 +145,92 @@ def make_relative_position(sample_id: int) -> dict:
     }
 
 
-def make_dense_grid(sample_id: int) -> dict:
+def make_adjacent_distractor(sample_id: int) -> dict:
+    """
+    Single-distractor design for clean counterfactual GTs.
+
+    Layout:
+    - 9-cell grid, all cells filled with unique (color, shape) combos
+    - TARGET cell: has the shape being asked about, with the CORRECT color
+    - ADJACENT DISTRACTOR: a neighboring cell with the SAME SHAPE but a DIFFERENT color
+    - Question: "What color is the {shape} in the {target_pos}?"
+    - Common failure: model answers with the distractor's color
+
+    Counterfactual GT: masking the distractor cell should fix the error
+    (the model stops being confused by the competing same-shape nearby)
+
+    Known ground truth:
+    - causal_region: the target cell (correct answer location)
+    - distractor_region: the adjacent same-shape cell (what causes confusion)
+    """
+    img = Image.new("RGB", (SIZE, SIZE), (245, 245, 245))
+    draw = ImageDraw.Draw(img)
+
+    for i in [100, 200]:
+        draw.line([(i, 0), (i, SIZE)], fill=(180, 180, 180), width=2)
+        draw.line([(0, i), (SIZE, i)], fill=(180, 180, 180), width=2)
+
+    # Adjacency: cell → list of directly adjacent cells (share an edge)
+    adjacency = {
+        "top-left":     ["top-center", "middle-left"],
+        "top-center":   ["top-left", "top-right", "center"],
+        "top-right":    ["top-center", "middle-right"],
+        "middle-left":  ["top-left", "center", "bottom-left"],
+        "center":       ["top-center", "middle-left", "middle-right", "bottom-center"],
+        "middle-right": ["top-right", "center", "bottom-right"],
+        "bottom-left":  ["middle-left", "bottom-center"],
+        "bottom-center":["bottom-left", "bottom-right", "center"],
+        "bottom-right": ["middle-right", "bottom-center"],
+    }
+
+    # Build grid with unique (color, shape) pairs
+    combos = [(c, s) for c in COLORS for s in SHAPES]
+    random.shuffle(combos)
+    positions = list(GRID_POSITIONS.items())
+    random.shuffle(positions)
+
+    grid = {}
+    for (pos_name, coords), (color, shape) in zip(positions, combos[:9]):
+        grid[pos_name] = (color, shape, coords)
+
+    # Pick a target cell and inject an adjacent same-shape distractor
+    target_pos = random.choice(list(grid.keys()))
+    target_color, target_shape, target_coords = grid[target_pos]
+
+    neighbors = adjacency[target_pos]
+    distractor_pos = random.choice(neighbors)
+
+    # Override distractor with same shape, different color
+    distractor_color = random.choice([c for c in COLORS if c != target_color])
+    _, _, distractor_coords = grid[distractor_pos]
+    grid[distractor_pos] = (distractor_color, target_shape, distractor_coords)
+
+    # Draw all cells
+    for pos_name, (color, shape, coords) in grid.items():
+        draw_shape(draw, shape, coords, COLORS[color])
+
+    question      = f"What color is the {target_shape} in the {target_pos} of the image?"
+    answer        = target_color
+    causal_region = target_pos
+
+    image_file = f"synthetic_{sample_id:04d}.png"
+    img.save(str(IMAGES_DIR / image_file))
+
+    return {
+        "image_id":         f"synthetic_{sample_id:04d}",
+        "image_file":       image_file,
+        "question":         question,
+        "answer":           answer,
+        "question_type":    "adjacent_distractor",
+        "causal_region":    causal_region,
+        "distractor_region": distractor_pos,
+        "distractor_color": distractor_color,
+        "grid_layout":      {pos: {"color": c, "shape": s}
+                             for pos, (c, s, _) in grid.items()},
+    }
+
+
+
     """
     9-cell grid, all cells filled.
     Hard variant: one COLUMN has the SAME SHAPE in all 3 rows (different colors).
@@ -221,8 +306,8 @@ def make_dense_grid(sample_id: int) -> dict:
 
 def make_sample(sample_id: int, question_type: str) -> dict:
     """Generate one synthetic image + QA pair with known causal region."""
-    if question_type == "dense_grid":
-        return make_dense_grid(sample_id)
+    if question_type == "adjacent_distractor":
+        return make_adjacent_distractor(sample_id)
     if question_type == "relative_position":
         return make_relative_position(sample_id)
 
@@ -311,13 +396,15 @@ def generate(n_samples: int = 200, output_path: str = "data/qa_samples.json"):
     IMAGES_DIR.mkdir(parents=True, exist_ok=True)
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
-    # relative_position: two-step reasoning (find reference → report adjacent) — highest VLM error rate
-    # dense_grid: same-shape column confusion — moderate error rate
-    # legacy types: baseline / diversity
+    # adjacent_distractor: cleanest design for Gap H — single-cell counterfactual GT
+    #   each image has one same-shape distractor adjacent to the target cell
+    #   when model fails, masking the distractor should uniquely fix the error
+    # relative_position: two-step reasoning — higher error rate, more complex errors
+    # dense_grid: same-shape column — moderate error rate
     types = [
-        "relative_position", "relative_position", "relative_position",
-        "dense_grid", "dense_grid",
-        "color_left_right", "top_bottom", "spatial_relation", "count",
+        "adjacent_distractor", "adjacent_distractor", "adjacent_distractor",
+        "adjacent_distractor", "relative_position", "relative_position",
+        "color_left_right", "top_bottom", "relative_position",
     ]
     samples = []
 
