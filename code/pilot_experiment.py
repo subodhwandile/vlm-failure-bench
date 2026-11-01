@@ -54,13 +54,13 @@ class ToastLLMClient:
             headers={"Authorization": f"Bearer {jwt}", "Content-Type": "application/json"},
             method="POST"
         )
-        with urllib.request.urlopen(req, timeout=60) as resp:
+        with urllib.request.urlopen(req, timeout=120) as resp:
             data = json.loads(resp.read().decode())
-        # Return object matching anthropic SDK shape
+        # Return object matching anthropic SDK shape; filter thinking blocks (no "text" key)
         class _Content:
             def __init__(self, text): self.text = text
         class _Resp:
-            def __init__(self, d): self.content = [_Content(c["text"]) for c in d.get("content", [])]
+            def __init__(self, d): self.content = [_Content(c["text"]) for c in d.get("content", []) if c.get("type") == "text"]
         return _Resp(data)
 
 
@@ -93,22 +93,32 @@ def encode_image(image_path: str) -> str:
 
 
 def ask_question(client: anthropic.Anthropic, image_path: str, question: str, model: str = DEFAULT_MODEL) -> str:
+    import time
     img_data = encode_image(image_path)
     ext = Path(image_path).suffix.lower().lstrip(".")
     media_type = {"jpg": "image/jpeg", "jpeg": "image/jpeg", "png": "image/png"}.get(ext, "image/jpeg")
 
-    response = client.messages.create(
-        model=model,
-        max_tokens=256,
-        messages=[{
-            "role": "user",
-            "content": [
-                {"type": "image", "source": {"type": "base64", "media_type": media_type, "data": img_data}},
-                {"type": "text", "text": f"Answer this question in one short phrase or word: {question}"}
-            ]
-        }]
-    )
-    return response.content[0].text.strip()
+    for attempt in range(3):
+        try:
+            response = client.messages.create(
+                model=model,
+                max_tokens=256,
+                messages=[{
+                    "role": "user",
+                    "content": [
+                        {"type": "image", "source": {"type": "base64", "media_type": media_type, "data": img_data}},
+                        {"type": "text", "text": f"Answer this question in one short phrase or word: {question}"}
+                    ]
+                }]
+            )
+            if not response.content:
+                raise ValueError("empty content in response")
+            return response.content[0].text.strip()
+        except Exception as e:
+            if attempt < 2:
+                time.sleep(5 * (attempt + 1))
+            else:
+                raise
 
 
 def ask_self_localization(client: anthropic.Anthropic, image_path: str, question: str, wrong_answer: str, model: str = DEFAULT_MODEL) -> str:
@@ -131,18 +141,29 @@ Then explain:
 1. What visual content is in that region
 2. Why that region led you to answer "{wrong_answer}" instead of the correct answer"""
 
-    response = client.messages.create(
-        model=model,
-        max_tokens=512,
-        messages=[{
-            "role": "user",
-            "content": [
-                {"type": "image", "source": {"type": "base64", "media_type": media_type, "data": img_data}},
-                {"type": "text", "text": prompt}
-            ]
-        }]
-    )
-    return response.content[0].text.strip()
+    import time
+    response = None
+    for attempt in range(3):
+        try:
+            response = client.messages.create(
+                model=model,
+                max_tokens=512,
+                messages=[{
+                    "role": "user",
+                    "content": [
+                        {"type": "image", "source": {"type": "base64", "media_type": media_type, "data": img_data}},
+                        {"type": "text", "text": prompt}
+                    ]
+                }]
+            )
+            if not response.content:
+                raise ValueError("empty content in response")
+            return response.content[0].text.strip()
+        except Exception as e:
+            if attempt < 2:
+                time.sleep(5 * (attempt + 1))
+            else:
+                raise
 
 
 _WORD_TO_NUM = {
@@ -186,15 +207,24 @@ def run_pilot(image_dir: str, qa_file: str, output_file: str, n_samples: int = 5
             print(f"  SKIP — image not found: {image_path}")
             continue
 
-        model_answer = ask_question(client, image_path, sample["question"], model)
+        try:
+            model_answer = ask_question(client, image_path, sample["question"], model)
+        except Exception as e:
+            print(f"  SKIP — API error: {e}")
+            continue
         is_wrong = not is_answer_correct(model_answer, sample["answer"])
 
         self_loc = None
         if is_wrong:
             wrong_count += 1
             print(f"  WRONG: model='{model_answer}' correct='{sample['answer']}' — asking self-localization")
-            self_loc = ask_self_localization(client, image_path, sample["question"], model_answer, model)
-            print(f"  Self-localization: {self_loc[:100]}...")
+            try:
+                self_loc = ask_self_localization(client, image_path, sample["question"], model_answer, model)
+            except Exception as e:
+                print(f"  SKIP self-loc — API error: {e}")
+                self_loc = None
+            if self_loc:
+                print(f"  Self-localization: {self_loc[:100]}...")
 
         results.append(asdict(SampleResult(
             image_id=sample["image_id"],

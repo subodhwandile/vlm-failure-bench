@@ -12,7 +12,20 @@ venv/
 # Data (large files — download separately)
 data/images/
 data/*.zip
-experiments/*.json
+code/data/
+
+# Intermediate / partial experiment files and logs
+code/experiments/*.partial
+code/experiments/*.log
+
+# Exclude all experiment JSONs by default, then allow specific final results
+code/experiments/*.json
+!code/experiments/pilot_v5_500.json
+!code/experiments/real_vsr_v3_t0.json
+!code/experiments/real_vsr_v3_t0_mt.json
+!code/experiments/real_vsr_v3_t0_coco.json
+!code/experiments/real_vsr_v3_t0_cf_combined.json
+!code/experiments/real_vsr_v3_t0_sonnet_explain.json
 
 # API keys
 .env

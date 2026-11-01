@@ -146,12 +146,77 @@ def analyze(results_path: str, qa_path: str = "data/qa_samples.json"):
         print("No spatially-locatable failures found — run with more samples.")
 
 
+def analyze_real(results_path: str):
+    """Analyze real-image VSR experiment results."""
+    import re
+    with open(results_path) as f:
+        results = json.load(f)
+
+    total     = len(results)
+    wrong     = [r for r in results if r["is_wrong"]]
+    skipped   = total - sum(1 for r in results if r.get("model_answer_bool") is not None
+                            or r.get("model_answer_raw"))
+
+    print(f"Total samples       : {total}")
+    print(f"Wrong answers       : {len(wrong)} / {total} ({100*len(wrong)/max(total,1):.1f}%)")
+    print()
+
+    if not wrong:
+        print("No failures to analyze.")
+        return
+
+    tagged_ok = [r for r in wrong if r.get("tagged_region")]
+    print(f"REGION: tag parsed  : {len(tagged_ok)}/{len(wrong)} ({100*len(tagged_ok)/len(wrong):.0f}%)")
+
+    # Center-bias
+    center_bias = sum(1 for r in wrong
+                      if r.get("tagged_region") == "center")
+    print(f"Center-bias         : {center_bias}/{len(wrong)} ({100*center_bias/len(wrong):.0f}%)")
+
+    # Region distribution
+    from collections import Counter
+    dist = Counter(r.get("tagged_region") for r in wrong if r.get("tagged_region"))
+    print(f"\nSelf-reported region distribution (n={len(tagged_ok)}):")
+    for region, cnt in sorted(dist.items(), key=lambda x: -x[1]):
+        print(f"  {region:20s}: {cnt}")
+
+    # Relation-type breakdown
+    rel_dist = Counter(r.get("relation", "unknown") for r in wrong)
+    if any(r != "unknown" for r in rel_dist):
+        print(f"\nFailures by spatial relation:")
+        for rel, cnt in sorted(rel_dist.items(), key=lambda x: -x[1]):
+            print(f"  {rel:25s}: {cnt}")
+
+    # Counterfactual GT stats
+    with_cf = [r for r in wrong if r.get("counterfactual_gt") and
+               r["counterfactual_gt"] not in ("none_found", "multiple")]
+    if with_cf:
+        cf_match = sum(1 for r in with_cf
+                       if r.get("tagged_region") == r["counterfactual_gt"])
+        print(f"\nCounterfactual GT matches: {cf_match}/{len(with_cf)} "
+              f"({100*cf_match/max(len(with_cf),1):.0f}%)")
+
+    print()
+    for r in wrong:
+        print(f"  [{r['image_id']}]")
+        print(f"    Caption  : {r['caption']}")
+        print(f"    GT label : {r['gt_label']}  Model: {r['model_answer_raw']!r}")
+        print(f"    REGION   : {r.get('tagged_region')!r}  CF-GT: {r.get('counterfactual_gt')!r}")
+        print(f"    Self-loc : {(r.get('self_localization_response') or '')[:120]}")
+        print()
+
+
 if __name__ == "__main__":
     import os
+    import sys
     os.chdir(Path(__file__).parent)
-
     parser = argparse.ArgumentParser()
     parser.add_argument("--results", default="experiments/pilot_v3_100.json")
     parser.add_argument("--qa", default="data/qa_samples.json")
+    parser.add_argument("--real", action="store_true", help="Analyze real-image VSR results")
     args = parser.parse_args()
-    analyze(args.results, args.qa)
+
+    if args.real:
+        analyze_real(args.results)
+    else:
+        analyze(args.results, args.qa)

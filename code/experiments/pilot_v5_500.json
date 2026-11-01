@@ -1,0 +1,5002 @@
+[
+  {
+    "image_id": "synthetic_0000",
+    "question": "What color is the circle in the top-right of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0001",
+    "question": "What color is the circle in the middle-left of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0002",
+    "question": "What color is the circle in the bottom-center of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0003",
+    "question": "What color is the circle in the top-left of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0004",
+    "question": "What color is the square that is directly right of the purple circle?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0005",
+    "question": "What color is the square that is directly left of the blue circle?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0006",
+    "question": "What color is the triangle on the left side of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0007",
+    "question": "What color is the square at the top of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0008",
+    "question": "What color is the triangle that is directly right of the blue circle?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0009",
+    "question": "What color is the circle in the top-left of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0010",
+    "question": "What color is the triangle in the bottom-left of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0011",
+    "question": "What color is the circle in the top-right of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0012",
+    "question": "What color is the triangle in the bottom-left of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0013",
+    "question": "What color is the square that is directly above of the purple circle?",
+    "correct_answer": "blue",
+    "model_answer": "Red",
+    "is_wrong": true,
+    "self_localization_response": "REGION: top-center\n\nExplanation:\n1. The top-center region contains a red square with a black border on a white background.\n\n2. I answered \"Red\" because I identified the red square in the top-center region as being directly above the purple circle (which is located in the middle-left region). The spatial relationship between these two shapes made the red square the most visually prominent answer to the question about what color square is directly above the purple circle. However, the correct answer should be \"Yellow\" because the yellow square in the center region is actually more directly aligned above the purple circle than the red square is.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0014",
+    "question": "What color is the square that is directly above of the red circle?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0015",
+    "question": "What color is the triangle on the left side of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0016",
+    "question": "What color is the triangle at the top of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0017",
+    "question": "What color is the triangle that is directly left of the red square?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0018",
+    "question": "What color is the circle in the top-center of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0019",
+    "question": "What color is the circle in the bottom-right of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0020",
+    "question": "What color is the square in the top-right of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0021",
+    "question": "What color is the circle in the top-left of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0022",
+    "question": "What color is the triangle that is directly above of the blue triangle?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0023",
+    "question": "What color is the square that is directly right of the orange triangle?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0024",
+    "question": "What color is the square on the left side of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0025",
+    "question": "What color is the circle at the top of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0026",
+    "question": "What color is the square that is directly left of the purple square?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0027",
+    "question": "What color is the square in the bottom-left of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0028",
+    "question": "What color is the circle in the middle-right of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0029",
+    "question": "What color is the square in the top-right of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0030",
+    "question": "What color is the triangle in the top-center of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0031",
+    "question": "What color is the triangle that is directly below of the purple circle?",
+    "correct_answer": "green",
+    "model_answer": "Purple",
+    "is_wrong": true,
+    "self_localization_response": "REGION: center\n\nExplanation:\n1. The center region contains a purple triangle pointing upward.\n\n2. I identified this region as the answer because it is directly below the purple circle (located in the middle-left region). The spatial relationship of \"directly below\" guided me to look at what was positioned underneath the purple circle, which is the purple triangle in the center. The color purple in that triangle matched the color of the circle above it, which likely reinforced my selection of \"Purple\" as the answer, even though the question was asking for the color of the triangle specifically (which happens to also be purple in this case).",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0032",
+    "question": "What color is the circle that is directly left of the green square?",
+    "correct_answer": "blue",
+    "model_answer": "Red",
+    "is_wrong": true,
+    "self_localization_response": "REGION: middle-left\n\nExplanation:\n1. The middle-left region contains a red circle with a black outline.\n2. I identified this region as being \"directly left of the green square\" because the green square is located in the middle-right position, and the red circle in the middle-left is positioned to its left. However, this was incorrect reasoning. The circle that is actually *directly* left of the green square (in the middle-right) would be the blue circle in the center position, not the red circle. I mistakenly answered \"Red\" by identifying a circle that is left of the green square, but failed to recognize that \"directly left\" means immediately adjacent, which would be the blue circle in the center region.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0033",
+    "question": "What color is the square on the left side of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0034",
+    "question": "What color is the square at the top of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0035",
+    "question": "What color is the square that is directly above of the red triangle?",
+    "correct_answer": "red",
+    "model_answer": "Yellow",
+    "is_wrong": true,
+    "self_localization_response": "REGION: top-center\n\nExplanation:\n1. The top-center region contains a yellow square with a black border.\n\n2. I identified this region as being \"directly above\" the red triangle (which is located in the middle-right position). However, this was an error in spatial reasoning. The square that is actually directly above the red triangle is the red square in the top-right region, not the yellow square in the top-center. I incorrectly focused on the yellow square's prominent color and position rather than carefully verifying the true vertical alignment with the red triangle below it.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0036",
+    "question": "What color is the circle in the bottom-center of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0037",
+    "question": "What color is the circle in the top-center of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0038",
+    "question": "What color is the triangle in the bottom-left of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0039",
+    "question": "What color is the circle in the middle-left of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0040",
+    "question": "What color is the circle that is directly above of the blue square?",
+    "correct_answer": "blue",
+    "model_answer": "Red",
+    "is_wrong": true,
+    "self_localization_response": "REGION: top-center\n\nExplanation:\n\n1. The top-center region contains a red circle with a black outline on a white background.\n\n2. I identified this region as the answer because it is literally positioned directly above the blue square (which is located in the middle-left region). The spatial relationship is clear: the red circle in the top-center is directly above the blue square in the middle-left when tracing a vertical line downward. This region's red circle is the most visually prominent and directly aligned above the blue square, making \"Red\" the correct answer to the question. The color red in that specific region was the key factor in my response.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0041",
+    "question": "What color is the triangle that is directly right of the purple triangle?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0042",
+    "question": "What color is the circle on the left side of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0043",
+    "question": "What color is the triangle at the top of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0044",
+    "question": "What color is the circle that is directly right of the red square?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0045",
+    "question": "What color is the square in the bottom-right of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0046",
+    "question": "What color is the square in the middle-left of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0047",
+    "question": "What color is the triangle in the middle-left of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0048",
+    "question": "What color is the square in the middle-right of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0049",
+    "question": "What color is the circle that is directly left of the orange triangle?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0050",
+    "question": "What color is the square that is directly above of the green square?",
+    "correct_answer": "yellow",
+    "model_answer": "Orange",
+    "is_wrong": true,
+    "self_localization_response": "REGION: center\n\nExplanation:\n1. The center region contains an orange triangle.\n2. I incorrectly identified the center region as being \"directly above\" the green square in the bottom-left, when in fact the region directly above the bottom-left green square is the middle-left region, which contains a yellow square. I mistakenly focused on the orange triangle in the center instead of properly tracking the spatial relationship between the green square and what was positioned directly above it. The correct answer should have been \"Yellow.\"",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0051",
+    "question": "What color is the square on the left side of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0052",
+    "question": "What color is the square at the top of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0053",
+    "question": "What color is the square that is directly above of the red square?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0054",
+    "question": "What color is the circle in the middle-left of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0055",
+    "question": "What color is the square in the top-right of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0056",
+    "question": "What color is the circle in the middle-right of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0057",
+    "question": "What color is the square in the top-center of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0058",
+    "question": "What color is the triangle that is directly above of the green triangle?",
+    "correct_answer": "yellow",
+    "model_answer": "Orange",
+    "is_wrong": true,
+    "self_localization_response": "REGION: top-center\n\nExplanation:\n1. The top-center region contains an orange triangle with a black outline.\n\n2. I identified this region as being \"directly above\" the green triangle (which is located in the middle-left position). However, this was incorrect reasoning. The orange triangle in the top-center is actually above the purple square in the center, not above the green square. The triangle that is truly directly above the green square is the orange triangle in the top-center, but I should have verified the spatial relationship more carefully. The correct answer should have been \"Orange\" is indeed correct for this question, as the orange triangle (top-center) IS directly above the green triangle (bottom-right), not the green square. I made an error in my spatial analysis by conflating the green square with a green triangle, when in fact the green triangle is in the bottom-right position, and the orange triangle in top-center is not directly above it.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0059",
+    "question": "What color is the triangle that is directly below of the blue circle?",
+    "correct_answer": "green",
+    "model_answer": "Blue",
+    "is_wrong": true,
+    "self_localization_response": "REGION: bottom-left\n\nExplanation:\n1. The bottom-left region contains a blue triangle with a dark outline.\n\n2. I answered \"Blue\" because I identified the blue triangle in the bottom-left position as being directly below the blue circle in the top-right. However, this was incorrect reasoning. The triangle directly below the blue circle (top-right) is actually the orange triangle in the bottom-center region, not the blue triangle. I mistakenly focused on the color blue rather than correctly identifying which triangle occupies the position directly below the top-right blue circle. The correct answer should have been \"Orange.\"",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0060",
+    "question": "What color is the triangle on the left side of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0061",
+    "question": "What color is the square at the top of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0062",
+    "question": "What color is the square that is directly below of the blue square?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0063",
+    "question": "What color is the triangle in the top-right of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0064",
+    "question": "What color is the square in the top-left of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0065",
+    "question": "What color is the triangle in the top-left of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0066",
+    "question": "What color is the triangle in the bottom-left of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0067",
+    "question": "What color is the triangle that is directly left of the yellow square?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0068",
+    "question": "What color is the square that is directly left of the purple triangle?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0069",
+    "question": "What color is the triangle on the left side of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0070",
+    "question": "What color is the square at the top of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0071",
+    "question": "What color is the triangle that is directly below of the green triangle?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0072",
+    "question": "What color is the triangle in the middle-left of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0073",
+    "question": "What color is the square in the bottom-right of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0074",
+    "question": "What color is the circle in the bottom-center of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0075",
+    "question": "What color is the square in the bottom-right of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0076",
+    "question": "What color is the triangle that is directly right of the orange triangle?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0077",
+    "question": "What color is the circle that is directly left of the orange circle?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0078",
+    "question": "What color is the triangle on the left side of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0079",
+    "question": "What color is the triangle at the top of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0080",
+    "question": "What color is the square that is directly below of the red triangle?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0081",
+    "question": "What color is the circle in the center of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0082",
+    "question": "What color is the square in the top-left of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0083",
+    "question": "What color is the circle in the bottom-right of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0084",
+    "question": "What color is the triangle in the top-center of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0085",
+    "question": "What color is the square that is directly left of the yellow square?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0086",
+    "question": "What color is the triangle that is directly below of the blue square?",
+    "correct_answer": "green",
+    "model_answer": "Red",
+    "is_wrong": true,
+    "self_localization_response": "REGION: center\n\nExplanation:\n\n1. The center region contains a red triangle on a white background.\n\n2. This region led me to answer \"Red\" because it directly satisfies the spatial relationship described in the question - it is the triangle positioned directly below the blue square (which is in the middle-left region). The red triangle in the center is indeed directly beneath the blue square when viewing the 3x3 grid layout. This was the correct answer, so the center region was the appropriate focus for answering this question.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0087",
+    "question": "What color is the circle on the left side of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0088",
+    "question": "What color is the triangle at the top of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0089",
+    "question": "What color is the triangle that is directly right of the yellow circle?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0090",
+    "question": "What color is the square in the bottom-right of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0091",
+    "question": "What color is the square in the middle-left of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0092",
+    "question": "What color is the square in the bottom-left of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0093",
+    "question": "What color is the circle in the center of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0094",
+    "question": "What color is the circle that is directly right of the orange square?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0095",
+    "question": "What color is the circle that is directly left of the yellow triangle?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0096",
+    "question": "What color is the circle on the left side of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0097",
+    "question": "What color is the triangle at the top of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0098",
+    "question": "What color is the square that is directly above of the green circle?",
+    "correct_answer": "orange",
+    "model_answer": "Purple",
+    "is_wrong": true,
+    "self_localization_response": "REGION: center\n\nExplanation:\n\n1. The center region contains a purple circle with a dark purple/black outline.\n\n2. I likely answered \"Purple\" because I identified the purple circle in the center region and incorrectly traced upward to find what was \"directly above\" it. However, the correct answer should have been \"Orange\" because the orange square in the middle-right region is actually directly above the green circle in the bottom-right region. I confused the spatial relationships and focused on the purple circle's color rather than carefully identifying which square was positioned directly above the green circle.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0099",
+    "question": "What color is the square in the top-right of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0100",
+    "question": "What color is the triangle in the top-left of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0101",
+    "question": "What color is the triangle in the bottom-center of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0102",
+    "question": "What color is the triangle in the middle-left of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0103",
+    "question": "What color is the square that is directly below of the yellow circle?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0104",
+    "question": "What color is the square that is directly right of the orange square?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0105",
+    "question": "What color is the circle on the left side of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0106",
+    "question": "What color is the circle at the top of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0107",
+    "question": "What color is the circle that is directly right of the orange circle?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0108",
+    "question": "What color is the square in the top-right of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0109",
+    "question": "What color is the circle in the top-left of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0110",
+    "question": "What color is the square in the top-left of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0111",
+    "question": "What color is the triangle in the center of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0112",
+    "question": "What color is the circle that is directly below of the blue triangle?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0113",
+    "question": "What color is the square that is directly right of the red circle?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0114",
+    "question": "What color is the triangle on the left side of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0115",
+    "question": "What color is the triangle at the top of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0116",
+    "question": "What color is the triangle that is directly right of the blue square?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0117",
+    "question": "What color is the circle in the bottom-left of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0118",
+    "question": "What color is the circle in the middle-right of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0119",
+    "question": "What color is the triangle in the top-left of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0120",
+    "question": "What color is the square in the middle-right of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0121",
+    "question": "What color is the square that is directly below of the green triangle?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0122",
+    "question": "What color is the triangle that is directly below of the blue circle?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0123",
+    "question": "What color is the square on the left side of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0124",
+    "question": "What color is the circle at the top of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0125",
+    "question": "What color is the triangle that is directly below of the blue triangle?",
+    "correct_answer": "yellow",
+    "model_answer": "Red",
+    "is_wrong": true,
+    "self_localization_response": "REGION: bottom-center\n\nExplanation:\n1. The bottom-center region contains a red triangle with a black outline.\n\n2. I identified this region as being directly below the blue triangle (which is located in the middle-right region). The red triangle in the bottom-center is indeed positioned directly beneath the blue triangle in the middle-right, making it the correct answer to the question. The visual content\u2014a distinctly red-colored triangle\u2014directly supported answering \"Red\" to the question about what color triangle is below the blue triangle.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0126",
+    "question": "What color is the circle in the top-left of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0127",
+    "question": "What color is the triangle in the bottom-left of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0128",
+    "question": "What color is the square in the bottom-right of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0129",
+    "question": "What color is the triangle in the top-left of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0130",
+    "question": "What color is the square that is directly left of the red circle?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0131",
+    "question": "What color is the square that is directly right of the yellow triangle?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0132",
+    "question": "What color is the triangle on the left side of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0133",
+    "question": "What color is the square at the top of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0134",
+    "question": "What color is the circle that is directly below of the blue triangle?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0135",
+    "question": "What color is the circle in the top-left of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0136",
+    "question": "What color is the triangle in the top-right of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0137",
+    "question": "What color is the square in the middle-right of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0138",
+    "question": "What color is the circle in the bottom-center of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0139",
+    "question": "What color is the triangle that is directly below of the orange triangle?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0140",
+    "question": "What color is the triangle that is directly left of the blue circle?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0141",
+    "question": "What color is the square on the left side of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0142",
+    "question": "What color is the square at the top of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0143",
+    "question": "What color is the square that is directly right of the green circle?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0144",
+    "question": "What color is the triangle in the top-right of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0145",
+    "question": "What color is the circle in the center of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0146",
+    "question": "What color is the square in the center of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0147",
+    "question": "What color is the circle in the top-right of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0148",
+    "question": "What color is the square that is directly below of the yellow triangle?",
+    "correct_answer": "red",
+    "model_answer": "Orange",
+    "is_wrong": true,
+    "self_localization_response": "REGION: bottom-left\n\nExplanation:\n1. The bottom-left region contains an orange square with a black border.\n2. I identified this region as being directly below the yellow triangle in the middle-center position, and since the orange square is in the bottom-left (not bottom-center), I made a spatial reasoning error. The correct answer should have been \"Red\" because the red square in the bottom-right is actually more aligned vertically with the yellow triangle in the top-right area when considering the grid layout. However, I incorrectly focused on the orange square's prominent position and color salience in the bottom-left region rather than carefully tracking the vertical alignment of shapes across the grid.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0149",
+    "question": "What color is the square that is directly above of the orange circle?",
+    "correct_answer": "purple",
+    "model_answer": "Red",
+    "is_wrong": true,
+    "self_localization_response": "REGION: top-center\n\nExplanation:\n1. The top-center region contains a red square with a black border.\n2. I identified this region as being directly above the orange circle (which is located in the bottom-left), but this was incorrect spatial reasoning. The square directly above the orange circle is actually the purple/magenta square in the middle-left region, not the red square in the top-center. I made an error in determining what \"directly above\" meant by moving diagonally rather than staying in the same column, which led me to incorrectly identify the red square instead of the correct answer (purple/magenta).",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0150",
+    "question": "What color is the square on the left side of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0151",
+    "question": "What color is the square at the top of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0152",
+    "question": "What color is the square that is directly left of the orange circle?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0153",
+    "question": "What color is the triangle in the top-right of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0154",
+    "question": "What color is the square in the center of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0155",
+    "question": "What color is the circle in the middle-left of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0156",
+    "question": "What color is the triangle in the middle-right of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0157",
+    "question": "What color is the square that is directly left of the red circle?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0158",
+    "question": "What color is the square that is directly right of the green square?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0159",
+    "question": "What color is the square on the left side of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0160",
+    "question": "What color is the triangle at the top of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0161",
+    "question": "What color is the circle that is directly left of the red square?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0162",
+    "question": "What color is the triangle in the top-center of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0163",
+    "question": "What color is the circle in the bottom-right of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0164",
+    "question": "What color is the square in the top-right of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0165",
+    "question": "What color is the circle in the middle-right of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0166",
+    "question": "What color is the square that is directly below of the orange circle?",
+    "correct_answer": "purple",
+    "model_answer": "Green",
+    "is_wrong": true,
+    "self_localization_response": "REGION: bottom-center\n\nExplanation:\n\n1. What visual content is in that region: The bottom-center region contains a green square with a dark border.\n\n2. Why that region led you to answer \"Green\" instead of the correct answer: I made an error in spatial reasoning. I incorrectly identified the bottom-center green square as being \"directly below\" the orange circle in the top-left. However, the shape directly below the orange circle (top-left) is actually the blue circle in the middle-left region, not the green square. The correct answer should have been \"Blue\" since the blue circle is directly below the orange circle. I confused the position by focusing on the green square's color rather than carefully tracing the vertical alignment from the orange circle downward.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0167",
+    "question": "What color is the circle that is directly right of the orange square?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0168",
+    "question": "What color is the square on the left side of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0169",
+    "question": "What color is the square at the top of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0170",
+    "question": "What color is the square that is directly left of the purple square?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0171",
+    "question": "What color is the triangle in the middle-right of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0172",
+    "question": "What color is the square in the middle-right of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0173",
+    "question": "What color is the triangle in the middle-right of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0174",
+    "question": "What color is the square in the top-left of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0175",
+    "question": "What color is the square that is directly right of the red square?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0176",
+    "question": "What color is the square that is directly right of the blue circle?",
+    "correct_answer": "blue",
+    "model_answer": "Green",
+    "is_wrong": true,
+    "self_localization_response": "REGION: top-right\n\nExplanation:\n1. The top-right region contains a green square with a black border.\n\n2. I answered \"Green\" because I identified the square directly to the right of the blue circle (which is in the top-left) as being in the top-right region. However, this was incorrect reasoning. The square that is directly right of the blue circle is actually the blue square in the top-center region, not the green square in the top-right. The green square is diagonally positioned relative to the blue circle, not directly to its right. I should have identified the top-center blue square as the answer, making the correct answer \"Blue\" rather than \"Green.\"",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0177",
+    "question": "What color is the square on the left side of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0178",
+    "question": "What color is the triangle at the top of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0179",
+    "question": "What color is the triangle that is directly below of the purple circle?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0180",
+    "question": "What color is the circle in the bottom-left of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0181",
+    "question": "What color is the circle in the top-right of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0182",
+    "question": "What color is the circle in the bottom-left of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0183",
+    "question": "What color is the square in the top-left of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0184",
+    "question": "What color is the circle that is directly left of the green square?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0185",
+    "question": "What color is the square that is directly below of the purple square?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0186",
+    "question": "What color is the square on the left side of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0187",
+    "question": "What color is the square at the top of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0188",
+    "question": "What color is the triangle that is directly below of the blue circle?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0189",
+    "question": "What color is the square in the middle-right of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0190",
+    "question": "What color is the circle in the middle-left of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0191",
+    "question": "What color is the square in the middle-left of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0192",
+    "question": "What color is the square in the bottom-center of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0193",
+    "question": "What color is the triangle that is directly right of the green square?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0194",
+    "question": "What color is the triangle that is directly left of the red triangle?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0195",
+    "question": "What color is the circle on the left side of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0196",
+    "question": "What color is the triangle at the top of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0197",
+    "question": "What color is the circle that is directly right of the green circle?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0198",
+    "question": "What color is the circle in the bottom-right of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0199",
+    "question": "What color is the square in the top-left of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0200",
+    "question": "What color is the circle in the top-center of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0201",
+    "question": "What color is the circle in the bottom-center of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0202",
+    "question": "What color is the circle that is directly right of the blue triangle?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0203",
+    "question": "What color is the square that is directly left of the blue circle?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0204",
+    "question": "What color is the triangle on the left side of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0205",
+    "question": "What color is the triangle at the top of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0206",
+    "question": "What color is the circle that is directly right of the purple square?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0207",
+    "question": "What color is the circle in the top-center of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0208",
+    "question": "What color is the square in the bottom-center of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0209",
+    "question": "What color is the circle in the middle-right of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0210",
+    "question": "What color is the square in the bottom-center of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0211",
+    "question": "What color is the circle that is directly left of the yellow circle?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0212",
+    "question": "What color is the square that is directly below of the red square?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0213",
+    "question": "What color is the square on the left side of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0214",
+    "question": "What color is the square at the top of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0215",
+    "question": "What color is the circle that is directly above of the red triangle?",
+    "correct_answer": "red",
+    "model_answer": "Yellow",
+    "is_wrong": true,
+    "self_localization_response": "REGION: top-center\n\nExplanation:\n1. The top-center region contains a yellow triangle with a black outline.\n2. I incorrectly identified this yellow triangle as a circle, or I confused the spatial relationship. The correct answer should have been \"Red\" because the red circle in the top-right region is directly above the red triangle in the middle-right region. I made an error in identifying which shapes were circles versus triangles, and/or which shape was directly above the red triangle. The yellow circle in the bottom-center is not directly above the red triangle; rather, the red circle in the top-right is the shape directly above the red triangle.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0216",
+    "question": "What color is the circle in the middle-left of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0217",
+    "question": "What color is the circle in the top-right of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0218",
+    "question": "What color is the triangle in the bottom-left of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0219",
+    "question": "What color is the circle in the middle-left of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0220",
+    "question": "What color is the square that is directly right of the purple square?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0221",
+    "question": "What color is the circle that is directly right of the purple circle?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0222",
+    "question": "What color is the square on the left side of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0223",
+    "question": "What color is the square at the top of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0224",
+    "question": "What color is the triangle that is directly left of the red circle?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0225",
+    "question": "What color is the square in the bottom-right of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0226",
+    "question": "What color is the triangle in the middle-left of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0227",
+    "question": "What color is the triangle in the top-right of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0228",
+    "question": "What color is the triangle in the middle-left of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0229",
+    "question": "What color is the square that is directly above of the blue triangle?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0230",
+    "question": "What color is the triangle that is directly right of the blue circle?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0231",
+    "question": "What color is the triangle on the left side of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0232",
+    "question": "What color is the triangle at the top of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0233",
+    "question": "What color is the circle that is directly below of the blue circle?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0234",
+    "question": "What color is the triangle in the top-center of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0235",
+    "question": "What color is the circle in the middle-left of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0236",
+    "question": "What color is the square in the top-center of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0237",
+    "question": "What color is the square in the top-center of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0238",
+    "question": "What color is the triangle that is directly above of the blue circle?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0239",
+    "question": "What color is the triangle that is directly above of the orange circle?",
+    "correct_answer": "red",
+    "model_answer": "Purple",
+    "is_wrong": true,
+    "self_localization_response": "REGION: top-center\n\nExplanation:\n1. The top-center region contains a purple square with a black outline.\n\n2. I made an error in my previous response by identifying the purple square instead of correctly identifying the triangle directly above the orange circle. The triangle directly above the orange circle (which is in the bottom-center) is actually the red triangle located in the center region. I mistakenly looked at the top row and selected the purple shape, likely due to confusion about which shape was positioned \"directly above\" the orange circle, when I should have been tracking the vertical column alignment more carefully.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0240",
+    "question": "What color is the circle on the left side of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0241",
+    "question": "What color is the circle at the top of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0242",
+    "question": "What color is the triangle that is directly above of the blue square?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0243",
+    "question": "What color is the square in the middle-left of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0244",
+    "question": "What color is the circle in the top-left of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0245",
+    "question": "What color is the circle in the middle-left of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0246",
+    "question": "What color is the square in the bottom-center of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0247",
+    "question": "What color is the circle that is directly below of the green triangle?",
+    "correct_answer": "red",
+    "model_answer": "Purple",
+    "is_wrong": true,
+    "self_localization_response": "REGION: center\n\nExplanation:\n1. The center region contains a purple circle.\n2. I identified this region as the answer because I incorrectly traced the spatial relationship \"directly below\" from the green triangle (top-right) by moving downward to the center position, where the purple circle is located. However, the correct answer should have been the red circle in the middle-right region, as that is the shape that is truly directly below the green triangle in the top-right corner.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0248",
+    "question": "What color is the square that is directly above of the purple triangle?",
+    "correct_answer": "orange",
+    "model_answer": "Yellow",
+    "is_wrong": true,
+    "self_localization_response": "REGION: top-center\n\nExplanation:\n1. The top-center region contains a yellow square with a black border.\n\n2. I answered \"Yellow\" because I identified the yellow square in the top-center region as being directly above the purple triangle (which is located in the bottom-center region). However, the correct answer should be \"Orange\" because the orange square in the center region is actually directly above the purple triangle, not the yellow square in the top-center. I made an error in spatial reasoning by not carefully verifying the direct vertical alignment between shapes.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0249",
+    "question": "What color is the circle on the left side of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0250",
+    "question": "What color is the square at the top of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0251",
+    "question": "What color is the circle that is directly below of the yellow circle?",
+    "correct_answer": "blue",
+    "model_answer": "Red",
+    "is_wrong": true,
+    "self_localization_response": "REGION: middle-left\n\nExplanation:\n1. The middle-left region contains a red circle with a black outline.\n2. This region led to the incorrect answer \"Red\" because it is a circle that appears in the left column of the grid. However, the question asked specifically for the circle \"directly below the yellow circle.\" The yellow circle is in the top-center position, so the circle directly below it is the blue circle in the center position (middle-center region), not the red circle in the middle-left region. The error occurred by identifying a red circle in the grid without properly considering the spatial relationship of \"directly below\" the yellow circle's position.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0252",
+    "question": "What color is the triangle in the top-center of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0253",
+    "question": "What color is the square in the bottom-right of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0254",
+    "question": "What color is the circle in the center of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0255",
+    "question": "What color is the square in the top-left of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0256",
+    "question": "What color is the triangle that is directly below of the yellow triangle?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0257",
+    "question": "What color is the circle that is directly left of the red square?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0258",
+    "question": "What color is the triangle on the left side of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0259",
+    "question": "What color is the square at the top of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0260",
+    "question": "What color is the triangle that is directly above of the orange triangle?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0261",
+    "question": "What color is the circle in the top-left of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0262",
+    "question": "What color is the circle in the bottom-left of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0263",
+    "question": "What color is the square in the middle-right of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0264",
+    "question": "What color is the square in the middle-left of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0265",
+    "question": "What color is the circle that is directly right of the yellow circle?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0266",
+    "question": "What color is the circle that is directly left of the red triangle?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0267",
+    "question": "What color is the circle on the left side of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0268",
+    "question": "What color is the triangle at the top of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0269",
+    "question": "What color is the triangle that is directly above of the red circle?",
+    "correct_answer": "green",
+    "model_answer": "Green.",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0270",
+    "question": "What color is the triangle in the middle-right of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0271",
+    "question": "What color is the circle in the bottom-left of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0272",
+    "question": "What color is the circle in the bottom-left of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0273",
+    "question": "What color is the square in the top-left of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0274",
+    "question": "What color is the triangle that is directly left of the orange square?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0275",
+    "question": "What color is the circle that is directly right of the green square?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0276",
+    "question": "What color is the square on the left side of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0277",
+    "question": "What color is the square at the top of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0278",
+    "question": "What color is the square that is directly right of the red circle?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0279",
+    "question": "What color is the circle in the top-left of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0280",
+    "question": "What color is the triangle in the top-right of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0281",
+    "question": "What color is the circle in the top-left of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0282",
+    "question": "What color is the circle in the center of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0283",
+    "question": "What color is the triangle that is directly above of the blue circle?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0284",
+    "question": "What color is the circle that is directly below of the orange square?",
+    "correct_answer": "yellow",
+    "model_answer": "Red",
+    "is_wrong": true,
+    "self_localization_response": "REGION: center\n\nExplanation:\n1. The center region contains a red circle with a black outline.\n2. This region led me to answer \"Red\" because the red circle is indeed located directly below the orange square (which is in the top-right). However, I made an error in identifying the spatial relationship. The circle directly below the orange square in the top-right would be the yellow circle in the middle-right position, not the red circle in the center. I incorrectly focused on the red circle's position rather than carefully tracing the vertical alignment from the orange square downward.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0285",
+    "question": "What color is the triangle on the left side of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0286",
+    "question": "What color is the triangle at the top of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0287",
+    "question": "What color is the triangle that is directly above of the red square?",
+    "correct_answer": "red",
+    "model_answer": "Green",
+    "is_wrong": true,
+    "self_localization_response": "REGION: center\n\nExplanation:\n1. The center region contains a green triangle with a black outline.\n2. I identified this region as being \"directly above\" the red square in the bottom-left, when in fact the green triangle in the center is diagonally positioned relative to the red square. The correct answer should have been \"Red\" - referring to the red triangle in the middle-left region, which is literally directly above the red square in the bottom-left. I mistakenly focused on the center green triangle instead of carefully verifying the spatial relationship of \"directly above,\" which requires vertical alignment, not diagonal positioning.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0288",
+    "question": "What color is the triangle in the middle-right of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0289",
+    "question": "What color is the triangle in the top-center of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0290",
+    "question": "What color is the circle in the top-right of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0291",
+    "question": "What color is the square in the center of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0292",
+    "question": "What color is the square that is directly above of the orange triangle?",
+    "correct_answer": "green",
+    "model_answer": "Yellow",
+    "is_wrong": true,
+    "self_localization_response": "REGION: top-center\n\nExplanation:\n\n1. What visual content is in that region: The top-center region contains a yellow circle with a black outline.\n\n2. Why that region led to answering \"Yellow\" instead of the correct answer: I made an error in spatial reasoning. I incorrectly identified the top-center yellow circle as being \"directly above\" the orange triangle (which is located in the bottom-right region). However, the square that is actually directly above the orange triangle is the green square in the middle-right region. I confused the position and focused on the yellow shape in the top row rather than correctly tracing the column directly above the orange triangle.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0293",
+    "question": "What color is the triangle that is directly left of the green square?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0294",
+    "question": "What color is the circle on the left side of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0295",
+    "question": "What color is the triangle at the top of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0296",
+    "question": "What color is the circle that is directly right of the red square?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0297",
+    "question": "What color is the square in the bottom-center of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0298",
+    "question": "What color is the square in the middle-left of the image?",
+    "correct_answer": "green",
+    "model_answer": "Purple",
+    "is_wrong": true,
+    "self_localization_response": "REGION: bottom-left\n\nExplanation:\n1. The bottom-left region contains a purple square with a black border.\n2. I made an error in my previous answer by identifying the wrong region. When asked about \"the square in the middle-left,\" I should have identified the green square in the middle-left position (which is in the second row, first column). Instead, I apparently confused it with the purple square located in the bottom-left position (third row, first column), leading me to incorrectly answer \"Purple\" when the correct answer should have been \"Green.\"",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0299",
+    "question": "What color is the square in the bottom-center of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0300",
+    "question": "What color is the triangle in the middle-right of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0301",
+    "question": "What color is the triangle that is directly above of the red triangle?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0302",
+    "question": "What color is the circle that is directly below of the blue square?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0303",
+    "question": "What color is the triangle on the left side of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0304",
+    "question": "What color is the square at the top of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0305",
+    "question": "What color is the square that is directly below of the orange circle?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0306",
+    "question": "What color is the circle in the top-center of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0307",
+    "question": "What color is the triangle in the center of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0308",
+    "question": "What color is the circle in the middle-right of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0309",
+    "question": "What color is the square in the top-center of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0310",
+    "question": "What color is the square that is directly below of the orange circle?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0311",
+    "question": "What color is the circle that is directly left of the blue triangle?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0312",
+    "question": "What color is the triangle on the left side of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0313",
+    "question": "What color is the square at the top of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0314",
+    "question": "What color is the triangle that is directly right of the yellow circle?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0315",
+    "question": "What color is the circle in the middle-right of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0316",
+    "question": "What color is the circle in the bottom-left of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0317",
+    "question": "What color is the circle in the bottom-center of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0318",
+    "question": "What color is the triangle in the bottom-left of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0319",
+    "question": "What color is the square that is directly above of the orange square?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0320",
+    "question": "What color is the triangle that is directly right of the orange triangle?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0321",
+    "question": "What color is the square on the left side of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0322",
+    "question": "What color is the circle at the top of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0323",
+    "question": "What color is the square that is directly above of the yellow triangle?",
+    "correct_answer": "yellow",
+    "model_answer": "Orange",
+    "is_wrong": true,
+    "self_localization_response": "REGION: top-right\n\nExplanation:\n1. The top-right region contains an orange square with a black outline.\n\n2. I made an error in spatial reasoning. I incorrectly identified the square directly above the yellow triangle (which is in the bottom-left region) as the top-right square. In reality, the square directly above the yellow triangle is the yellow square in the middle-left region. The top-right orange square is diagonally positioned relative to the yellow triangle, not directly above it. My answer of \"Orange\" was incorrect because I failed to properly trace the vertical alignment from the yellow triangle upward.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0324",
+    "question": "What color is the triangle in the bottom-center of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0325",
+    "question": "What color is the square in the middle-left of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0326",
+    "question": "What color is the square in the middle-right of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0327",
+    "question": "What color is the square in the bottom-right of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0328",
+    "question": "What color is the circle that is directly above of the orange square?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0329",
+    "question": "What color is the square that is directly right of the green triangle?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0330",
+    "question": "What color is the triangle on the left side of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0331",
+    "question": "What color is the triangle at the top of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0332",
+    "question": "What color is the square that is directly above of the green triangle?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0333",
+    "question": "What color is the square in the bottom-right of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0334",
+    "question": "What color is the triangle in the top-left of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0335",
+    "question": "What color is the triangle in the middle-left of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0336",
+    "question": "What color is the circle in the bottom-right of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0337",
+    "question": "What color is the square that is directly below of the red triangle?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0338",
+    "question": "What color is the circle that is directly left of the green square?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0339",
+    "question": "What color is the triangle on the left side of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0340",
+    "question": "What color is the triangle at the top of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0341",
+    "question": "What color is the triangle that is directly below of the yellow circle?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0342",
+    "question": "What color is the triangle in the middle-right of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0343",
+    "question": "What color is the square in the top-center of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0344",
+    "question": "What color is the triangle in the middle-right of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0345",
+    "question": "What color is the square in the bottom-center of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0346",
+    "question": "What color is the triangle that is directly right of the red triangle?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0347",
+    "question": "What color is the square that is directly right of the blue circle?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0348",
+    "question": "What color is the circle on the left side of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0349",
+    "question": "What color is the triangle at the top of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0350",
+    "question": "What color is the triangle that is directly below of the orange square?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0351",
+    "question": "What color is the square in the top-center of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0352",
+    "question": "What color is the square in the middle-left of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0353",
+    "question": "What color is the square in the bottom-center of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0354",
+    "question": "What color is the triangle in the middle-right of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0355",
+    "question": "What color is the circle that is directly right of the purple square?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0356",
+    "question": "What color is the circle that is directly above of the orange circle?",
+    "correct_answer": "green",
+    "model_answer": "Yellow",
+    "is_wrong": true,
+    "self_localization_response": "REGION: top-center\n\nExplanation:\n1. The top-center region contains a yellow circle with a black outline on a white background.\n\n2. I identified this yellow circle as being \"directly above\" the orange circle in the middle-right position. However, the orange circle is actually in the middle-right region, and the circle directly above it would be the yellow circle in the top-center region. While this yellow circle is diagonally positioned rather than directly vertical, I incorrectly treated the diagonal alignment as sufficiently \"direct.\" The correct answer should have been \"Green\" since the green circle in the top-right is more accurately positioned above the orange circle, or the question may have been ambiguous in its spatial reference.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0357",
+    "question": "What color is the circle on the left side of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0358",
+    "question": "What color is the circle at the top of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0359",
+    "question": "What color is the square that is directly above of the orange square?",
+    "correct_answer": "yellow",
+    "model_answer": "Blue",
+    "is_wrong": true,
+    "self_localization_response": "REGION: center\n\nExplanation:\n1. The center region contains a blue circle.\n\n2. I made an error in my previous answer by confusing the shape types. The question asked about \"the square that is directly above of the orange square.\" The orange square is in the bottom-left region, and directly above it (in the middle-left region) is a yellow square, not a blue square. I incorrectly identified the blue circle in the center region as the answer, likely because I failed to properly distinguish between the shapes (circles vs. squares) and their positions in the grid. The correct answer should have been \"Yellow\" (the square in the middle-left), not \"Blue.\"",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0360",
+    "question": "What color is the circle in the bottom-center of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0361",
+    "question": "What color is the square in the bottom-center of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0362",
+    "question": "What color is the square in the middle-left of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0363",
+    "question": "What color is the triangle in the bottom-left of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0364",
+    "question": "What color is the square that is directly right of the blue triangle?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0365",
+    "question": "What color is the circle that is directly below of the red triangle?",
+    "correct_answer": "orange",
+    "model_answer": "Green",
+    "is_wrong": true,
+    "self_localization_response": "REGION: middle-left\n\nExplanation:\n1. This region contains a green circle with a black outline.\n2. I identified this region as being \"directly below\" the red triangle (which is in the top-center), when in fact the circle directly below the red triangle is the orange circle in the center position. I mistakenly selected the middle-left region instead of the center region, causing me to report the color of the green circle rather than correctly identifying the orange circle that is truly positioned directly below the red triangle.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0366",
+    "question": "What color is the triangle on the left side of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0367",
+    "question": "What color is the triangle at the top of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0368",
+    "question": "What color is the square that is directly above of the purple triangle?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0369",
+    "question": "What color is the square in the top-center of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0370",
+    "question": "What color is the triangle in the top-center of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0371",
+    "question": "What color is the circle in the top-right of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0372",
+    "question": "What color is the circle in the center of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Yellow",
+    "is_wrong": true,
+    "self_localization_response": "REGION: center\n\nExplanation:\n1. The center region contains a yellow circle with a black outline on a white background.\n\n2. This region led to the answer \"Yellow\" because the circle located in the center of the image is indeed colored yellow. However, I should clarify that the question asked about \"the circle in the center of the image,\" and there is a yellow circle in the center region, so \"Yellow\" was actually the correct answer to that question. The center region directly influenced this answer because it contains the only circle positioned in the central area of the 3x3 grid.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0373",
+    "question": "What color is the square that is directly right of the red triangle?",
+    "correct_answer": "purple",
+    "model_answer": "Yellow",
+    "is_wrong": true,
+    "self_localization_response": "REGION: middle-right\n\n1. What visual content is in that region:\nThis region contains a yellow triangle with a black outline.\n\n2. Why that region led you to answer \"Yellow\" instead of the correct answer:\nI made an error in spatial reasoning. I identified the yellow triangle in the middle-right position and incorrectly assumed it was a square. The question asked about \"the square that is directly right of the red triangle,\" and I should have looked to the center position (which contains a purple square) rather than the middle-right position. The correct answer should have been \"Purple,\" not \"Yellow.\" I confused the shape (triangle vs. square) and failed to properly identify which shape was directly to the right of the red triangle in the middle-left position.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0374",
+    "question": "What color is the triangle that is directly above of the green circle?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0375",
+    "question": "What color is the square on the left side of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0376",
+    "question": "What color is the triangle at the top of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0377",
+    "question": "What color is the square that is directly right of the orange triangle?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0378",
+    "question": "What color is the circle in the bottom-center of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0379",
+    "question": "What color is the circle in the center of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0380",
+    "question": "What color is the square in the middle-left of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0381",
+    "question": "What color is the square in the bottom-right of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0382",
+    "question": "What color is the circle that is directly above of the orange circle?",
+    "correct_answer": "blue",
+    "model_answer": "Yellow",
+    "is_wrong": true,
+    "self_localization_response": "REGION: center\n\n**Explanation:**\n\n1. **Visual content in that region:** This region contains a yellow circle with a black outline.\n\n2. **Why this led to the incorrect answer:** I identified the yellow circle in the center region as being \"directly above\" the orange circle in the bottom-left. However, this was an error in spatial reasoning. The yellow circle is in the center of the grid, while the orange circle is in the bottom-left corner. The circle that is actually directly above the orange circle (bottom-left) is the blue circle in the middle-left position. I should have identified the **blue circle** as the correct answer instead of the yellow circle.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0383",
+    "question": "What color is the square that is directly below of the red circle?",
+    "correct_answer": "purple",
+    "model_answer": "Yellow",
+    "is_wrong": true,
+    "self_localization_response": "REGION: bottom-left\n\nExplanation:\n1. The bottom-left region contains a yellow square with a black border.\n\n2. I identified this region as being directly below the red circle because I incorrectly traced a vertical line downward from the red circle (located in the middle-right position) and mistakenly landed on the bottom-left yellow square instead of recognizing that the square directly below the red circle is actually the purple square in the bottom-center position. I failed to properly align the vertical positioning, leading me to select the wrong shape's color.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0384",
+    "question": "What color is the circle on the left side of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0385",
+    "question": "What color is the triangle at the top of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0386",
+    "question": "What color is the square that is directly below of the blue triangle?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0387",
+    "question": "What color is the circle in the top-right of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0388",
+    "question": "What color is the square in the center of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0389",
+    "question": "What color is the circle in the top-center of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0390",
+    "question": "What color is the triangle in the top-center of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0391",
+    "question": "What color is the circle that is directly below of the purple square?",
+    "correct_answer": "green",
+    "model_answer": "Orange",
+    "is_wrong": true,
+    "self_localization_response": "REGION: center\n\nExplanation:\n1. What visual content is in that region: The center region contains an orange circle with a black outline.\n\n2. Why that region led you to answer \"Orange\" instead of the correct answer: The orange circle in the center region is directly below the purple square (located in the middle-left). I identified this orange circle as the answer because it is spatially positioned directly beneath the purple square when looking at the grid layout. However, upon reflection, the correct answer should be \"Orange\" - which was actually my original answer, so this was correct. The center region's orange circle is indeed the circle directly below the purple square.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0392",
+    "question": "What color is the circle that is directly left of the purple square?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0393",
+    "question": "What color is the circle on the left side of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0394",
+    "question": "What color is the circle at the top of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0395",
+    "question": "What color is the circle that is directly above of the purple triangle?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0396",
+    "question": "What color is the square in the middle-left of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0397",
+    "question": "What color is the triangle in the bottom-center of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0398",
+    "question": "What color is the square in the top-right of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0399",
+    "question": "What color is the square in the bottom-center of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0400",
+    "question": "What color is the triangle that is directly left of the green triangle?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0401",
+    "question": "What color is the circle that is directly left of the green triangle?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0402",
+    "question": "What color is the circle on the left side of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0403",
+    "question": "What color is the circle at the top of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0404",
+    "question": "What color is the triangle that is directly below of the blue square?",
+    "correct_answer": "blue",
+    "model_answer": "Green",
+    "is_wrong": true,
+    "self_localization_response": "REGION: bottom-right\n\nExplanation:\n1. The bottom-right region contains a green triangle with a dark green outline.\n2. I answered \"Green\" because I identified the triangle in the bottom-right region. However, the correct answer should have been based on the triangle that is *directly below* the blue square (which is in the center region). The triangle directly below the blue square is in the bottom-center region and is blue, not green. I mistakenly focused on the green triangle in the bottom-right corner instead of identifying which triangle was in the position directly below the blue square.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0405",
+    "question": "What color is the circle in the middle-right of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0406",
+    "question": "What color is the triangle in the center of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0407",
+    "question": "What color is the circle in the top-left of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0408",
+    "question": "What color is the circle in the top-left of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0409",
+    "question": "What color is the triangle that is directly above of the yellow circle?",
+    "correct_answer": "green",
+    "model_answer": "Red",
+    "is_wrong": true,
+    "self_localization_response": "REGION: center\n\nExplanation:\n\n1. What visual content is in that region: The center region contains a red circle with a dark red/black outline.\n\n2. Why that region led you to answer \"Red\" instead of the correct answer: I made an error in spatial reasoning. I incorrectly identified the red circle in the center region as being \"directly above\" the yellow circle in the bottom-right. However, the triangle that is actually directly above the yellow circle is the green triangle in the middle-right region. The red circle is diagonally positioned relative to the yellow circle, not directly above it. The correct answer should have been \"Green\".",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0410",
+    "question": "What color is the triangle that is directly above of the orange square?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0411",
+    "question": "What color is the circle on the left side of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0412",
+    "question": "What color is the square at the top of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0413",
+    "question": "What color is the circle that is directly below of the red circle?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0414",
+    "question": "What color is the triangle in the middle-right of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0415",
+    "question": "What color is the circle in the bottom-right of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0416",
+    "question": "What color is the triangle in the center of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Red",
+    "is_wrong": true,
+    "self_localization_response": "REGION: bottom-center\n\nEXPLANATION:\n1. The bottom-center region contains a red triangle with a dark border.\n\n2. This region led to the incorrect answer of \"Red\" because it is literally in the center of the image (horizontally and vertically positioned in the middle area of the 3x3 grid). However, the question asked for \"the triangle in the center of the image,\" which should refer to the orange triangle in the middle-center position (the actual geometric center). The bottom-center red triangle, while also central to the overall layout, is not the centermost element. The error was likely caused by confusing the bottom-center red triangle with the true center position, when the correct answer should have been \"Orange\" (referring to the middle-center triangle).",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0417",
+    "question": "What color is the triangle in the bottom-left of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0418",
+    "question": "What color is the circle that is directly left of the blue triangle?",
+    "correct_answer": "blue",
+    "model_answer": "Orange",
+    "is_wrong": true,
+    "self_localization_response": "REGION: middle-left\n\nExplanation:\n1. This region contains an orange circle with a black outline.\n2. I identified this region as containing the circle directly left of the blue triangle because the blue triangle is located in the bottom-center region, and the orange circle in the middle-left appears to be positioned to the left of it. However, this was incorrect reasoning - I should have focused on what is *directly* left of the blue triangle, which would be the blue circle in the bottom-left region. The orange circle is not directly left of the blue triangle; rather, the blue circle is directly left of the blue triangle. I mistakenly selected the orange circle instead of recognizing that the blue circle was the correct answer to the question.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0419",
+    "question": "What color is the square that is directly above of the orange triangle?",
+    "correct_answer": "red",
+    "model_answer": "Orange",
+    "is_wrong": true,
+    "self_localization_response": "REGION: top-center\n\nExplanation:\n1. The top-center region contains an orange square with a black border.\n\n2. I identified this region as being \"directly above\" the orange triangle in the bottom-left region. However, this was an error in spatial reasoning. The orange square in the top-center is actually directly above the yellow circle in the center, not above the orange triangle. The correct answer should have been \"Yellow\" (the square in the middle-right that is directly above the orange triangle in the bottom-left). I mistakenly associated the orange color of the square with the orange color of the triangle below it, leading to an incorrect answer based on color matching rather than accurate positional analysis.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0420",
+    "question": "What color is the triangle on the left side of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0421",
+    "question": "What color is the circle at the top of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0422",
+    "question": "What color is the circle that is directly right of the orange square?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0423",
+    "question": "What color is the triangle in the top-right of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0424",
+    "question": "What color is the circle in the middle-right of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0425",
+    "question": "What color is the circle in the center of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0426",
+    "question": "What color is the square in the middle-left of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0427",
+    "question": "What color is the circle that is directly right of the blue triangle?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0428",
+    "question": "What color is the triangle that is directly right of the red square?",
+    "correct_answer": "red",
+    "model_answer": "Blue",
+    "is_wrong": true,
+    "self_localization_response": "REGION: top-center\n\nExplanation:\n1. The top-center region contains a red triangle.\n2. I made an error in my previous answer. The question asked about \"the triangle that is directly right of the red square.\" The red square is in the top-left region, and directly to its right (in the top-center region) is a RED triangle, not a blue one. I incorrectly answered \"Blue\" when the correct answer should have been \"Red.\" I likely confused the triangle's color with the blue square located in the top-right region, which is not directly right of the red square.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0429",
+    "question": "What color is the square on the left side of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0430",
+    "question": "What color is the square at the top of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0431",
+    "question": "What color is the circle that is directly below of the blue square?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0432",
+    "question": "What color is the circle in the top-left of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0433",
+    "question": "What color is the triangle in the bottom-center of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0434",
+    "question": "What color is the circle in the center of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0435",
+    "question": "What color is the square in the middle-right of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0436",
+    "question": "What color is the triangle that is directly above of the yellow square?",
+    "correct_answer": "green",
+    "model_answer": "Purple",
+    "is_wrong": true,
+    "self_localization_response": "REGION: top-center\n\nExplanation:\n1. The top-center region contains a purple square.\n2. I made an error in my previous answer by confusing the shape in the top-center region (a square) with the triangle directly above the yellow square. The triangle directly above the yellow square is actually located in the middle-left region and is green in color. I incorrectly identified the purple square's color as the answer, when I should have looked to the middle-left region where the green triangle sits directly above the yellow square in the bottom-left region.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0437",
+    "question": "What color is the triangle that is directly right of the red circle?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0438",
+    "question": "What color is the circle on the left side of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0439",
+    "question": "What color is the square at the top of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0440",
+    "question": "What color is the circle that is directly right of the purple square?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0441",
+    "question": "What color is the square in the center of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green.",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0442",
+    "question": "What color is the circle in the center of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0443",
+    "question": "What color is the triangle in the bottom-left of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0444",
+    "question": "What color is the triangle in the center of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0445",
+    "question": "What color is the triangle that is directly above of the purple circle?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0446",
+    "question": "What color is the square that is directly right of the purple triangle?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0447",
+    "question": "What color is the triangle on the left side of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0448",
+    "question": "What color is the triangle at the top of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0449",
+    "question": "What color is the square that is directly right of the blue triangle?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0450",
+    "question": "What color is the square in the top-right of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0451",
+    "question": "What color is the circle in the top-left of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0452",
+    "question": "What color is the circle in the bottom-right of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0453",
+    "question": "What color is the square in the middle-left of the image?",
+    "correct_answer": "red",
+    "model_answer": "Green",
+    "is_wrong": true,
+    "self_localization_response": "REGION: middle-left\n\nExplanation:\n1. The visual content in the middle-left region is a red square with a black border.\n2. I answered \"Green\" incorrectly because I likely confused the middle-left position with the center position. The center region contains a green square, which is why I gave that answer. I mistakenly identified the wrong region's contents, providing the color of the center square instead of accurately observing that the middle-left square is actually red.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0454",
+    "question": "What color is the triangle that is directly right of the purple circle?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0455",
+    "question": "What color is the circle that is directly right of the red square?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0456",
+    "question": "What color is the square on the left side of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0457",
+    "question": "What color is the circle at the top of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0458",
+    "question": "What color is the square that is directly left of the purple circle?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0459",
+    "question": "What color is the square in the middle-right of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0460",
+    "question": "What color is the square in the top-center of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0461",
+    "question": "What color is the circle in the center of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0462",
+    "question": "What color is the triangle in the top-right of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0463",
+    "question": "What color is the triangle that is directly left of the red square?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0464",
+    "question": "What color is the square that is directly right of the orange triangle?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0465",
+    "question": "What color is the triangle on the left side of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0466",
+    "question": "What color is the circle at the top of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0467",
+    "question": "What color is the triangle that is directly right of the red triangle?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0468",
+    "question": "What color is the circle in the top-left of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0469",
+    "question": "What color is the triangle in the bottom-right of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0470",
+    "question": "What color is the square in the center of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0471",
+    "question": "What color is the circle in the center of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0472",
+    "question": "What color is the triangle that is directly above of the green triangle?",
+    "correct_answer": "red",
+    "model_answer": "Purple",
+    "is_wrong": true,
+    "self_localization_response": "REGION: top-left\n\nExplanation:\n1. The top-left region contains a purple triangle with a black outline.\n2. This region led to the answer \"Purple\" because it is indeed directly above the green triangle (located in the bottom-left). However, the question asks for the triangle directly above the green triangle, which would be the red triangle in the middle-left position, not the purple one. The purple triangle is diagonally positioned above the green triangle, not directly above it. The error occurred by identifying the purple triangle's position without carefully considering the spatial relationship \"directly above,\" which specifically means in the same column, one row up.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0473",
+    "question": "What color is the square that is directly below of the purple triangle?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0474",
+    "question": "What color is the triangle on the left side of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0475",
+    "question": "What color is the square at the top of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0476",
+    "question": "What color is the triangle that is directly below of the orange circle?",
+    "correct_answer": "yellow",
+    "model_answer": "Orange",
+    "is_wrong": true,
+    "self_localization_response": "REGION: bottom-center\n\nExplanation:\n\n1. What visual content is in that region:\nThe bottom-center region contains an orange triangle with a black outline.\n\n2. Why that region led you to answer \"Orange\" instead of the correct answer:\nI incorrectly identified the triangle directly below the orange circle (top-right) as being in the bottom-center region. The orange circle is in the top-right, and the triangle directly below it would be in the middle-right region, which contains a blue triangle. I confused the position and mistakenly referenced the orange triangle in the bottom-center instead, leading to the incorrect answer of \"Orange\" when the correct answer should have been \"Blue\".",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0477",
+    "question": "What color is the circle in the middle-right of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0478",
+    "question": "What color is the square in the top-right of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0479",
+    "question": "What color is the circle in the bottom-left of the image?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0480",
+    "question": "What color is the square in the top-center of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0481",
+    "question": "What color is the circle that is directly below of the yellow triangle?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0482",
+    "question": "What color is the triangle that is directly right of the green triangle?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0483",
+    "question": "What color is the triangle on the left side of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0484",
+    "question": "What color is the triangle at the top of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0485",
+    "question": "What color is the triangle that is directly right of the orange square?",
+    "correct_answer": "purple",
+    "model_answer": "Green",
+    "is_wrong": true,
+    "self_localization_response": "REGION: bottom-center\n\nExplanation:\n1. The bottom-center region contains a purple triangle with a dark outline.\n2. I incorrectly identified this triangle as green, when it is clearly purple. I likely made an error in color perception or mistakenly conflated it with the green circle in the center region. The triangle directly to the right of the orange square (bottom-left) is actually the purple triangle in the bottom-center, not a green shape. My previous answer of \"Green\" was incorrect.",
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0486",
+    "question": "What color is the square in the bottom-left of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0487",
+    "question": "What color is the square in the top-left of the image?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0488",
+    "question": "What color is the circle in the bottom-right of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0489",
+    "question": "What color is the circle in the bottom-right of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0490",
+    "question": "What color is the circle that is directly above of the orange circle?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0491",
+    "question": "What color is the circle that is directly above of the yellow circle?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0492",
+    "question": "What color is the circle on the left side of the image?",
+    "correct_answer": "orange",
+    "model_answer": "Orange",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0493",
+    "question": "What color is the circle at the top of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0494",
+    "question": "What color is the circle that is directly right of the green circle?",
+    "correct_answer": "red",
+    "model_answer": "Red",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0495",
+    "question": "What color is the square in the top-left of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0496",
+    "question": "What color is the square in the top-center of the image?",
+    "correct_answer": "blue",
+    "model_answer": "Blue",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0497",
+    "question": "What color is the triangle in the middle-right of the image?",
+    "correct_answer": "green",
+    "model_answer": "Green",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0498",
+    "question": "What color is the triangle in the top-left of the image?",
+    "correct_answer": "yellow",
+    "model_answer": "Yellow",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  },
+  {
+    "image_id": "synthetic_0499",
+    "question": "What color is the circle that is directly below of the red circle?",
+    "correct_answer": "purple",
+    "model_answer": "Purple",
+    "is_wrong": false,
+    "self_localization_response": null,
+    "ground_truth_region": null,
+    "localization_correct": null
+  }
+]
