@@ -1,0 +1,106 @@
+% FailWhere — Dataset documentation supplement (DMLR submission)
+% Follows the NeurIPS Datasets & Benchmarks documentation guidance.
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{url}
+\usepackage{enumitem}
+
+\title{FailWhere: Dataset Documentation and Intended Uses\\
+\large Supplementary material}
+\author{Subodh Wandile}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{1. Overview}
+\textsc{FailWhere} is a benchmark for testing whether a vision-language
+model (VLM) can verbally identify which spatial region of an image caused
+its own incorrect answer. The release contains: (a)~a synthetic
+grid-image benchmark, (b)~a real-image extension built on the Visual
+Spatial Reasoning (VSR) dataset, (c)~counterfactual-masking ground truth
+(CF-GT) for 142 model failures, and (d)~the complete model response logs
+underlying every number in the paper.
+
+\section*{2. Motivation}
+The benchmark was created to isolate \emph{verbal failure
+self-localization}: given an answer the model got wrong, can it name the
+responsible region using only its verbal output? Prior attribution work
+either requires model internals or only evaluates correct answers. The
+benchmark is intended for evaluating introspection, faithfulness, and
+spatial reasoning of VLMs. It is not intended for model training, and it
+is not a measure of general VQA ability.
+
+\section*{3. Composition}
+
+\subsection*{3.1 Synthetic split (\texttt{code/data/qa\_samples\_500.json})}
+500 samples. Each image is a 300$\times$300\,px synthetic grid divided
+into nine labeled cells (top-left through bottom-right); each cell holds
+one shape$\times$color object. Two question types:
+\emph{adjacent\_distractor} and \emph{relative\_position}. Ground truth is
+the \emph{answer-cell} (cell containing the correct answer), known by
+construction.
+
+\subsection*{3.2 VSR split (real images)}
+The first 500 items of \texttt{cambridgeltl/vsr\_random}, split
+\texttt{test} (Liu et al.\ 2023): COCO train2017 photographs paired with
+binary True/False spatial captions. Model outputs and region tags are
+released; the underlying images are redistributed only by reference to
+the VSR/COCO sources (Section~6).
+
+\subsection*{3.3 Counterfactual-masking ground truth (CF-GT)}
+For each of 142 model failures on the VSR split, each of the nine grid
+cells was masked with solid gray (128,\,128,\,128) and the model re-run.
+A cell whose masking flips the answer to correct is CF-GT; outcomes are
+labeled \texttt{clean} (exactly one cell, $n{=}22$),
+\texttt{multiple} ($n{=}47$), or \texttt{none\_found} ($n{=}73$).
+
+\subsection*{3.4 Model response logs}
+Six result JSONs under \texttt{code/experiments/} record, per item, the
+question, model answer, all three self-localization prompt responses
+(neutral, stateless, multi-turn), the parsed \textsc{region:} tag, CF-GT,
+and per-cell masking answers. A 141-item Sonnet control file
+(\texttt{real\_vsr\_v3\_t0\_sonnet\_explain.json}) records a second
+model's attributions of Haiku's failures.
+
+\section*{4. Collection and annotation}
+No human annotators were used. Synthetic items were generated
+programmatically (\texttt{code/generate\_synthetic.py}); ground truth is
+therefore exact by construction. VSR items are unchanged from the source
+dataset. CF-GT labels were produced mechanically by the masking
+procedure, not by human judgment. Model generations were produced via the
+Anthropic API: \texttt{claude-haiku-4-5-20251022} /
+\texttt{global.anthropic.claude-haiku-4-5-20251001-v1:0} (temperature 0.0)
+and \texttt{claude-sonnet-5-5} /
+\texttt{global.anthropic.claude-sonnet-5-5} (default temperature; the
+Bedrock endpoint rejects the parameter for this model). The COCO
+evidence-cell analysis joins VSR captions to COCO
+\texttt{instances\_train2017} bounding boxes via a documented noun-matching
+heuristic (93.4\% join rate; a known limitation).
+
+\section*{5. Recommended uses and misuses}
+\textbf{Recommended:} evaluating verbal self-attribution, faithfulness,
+and region-grounding of VLMs; counterfactual evaluation methodology
+research. \textbf{Not recommended:} training; measuring general VQA
+accuracy; drawing conclusions about models' internal (non-verbal)
+representations, which this benchmark does not access.
+
+\section*{6. Distribution, rights, and licensing}
+Repository: \url{https://github.com/subodhwandile/vlm-failure-bench},
+released under the MIT license. The VSR dataset is a public research
+dataset built on COCO (which carries its own per-image licenses); this
+release references those images by the source URLs rather than
+redistributing them, and users must comply with the COCO terms of use.
+Model-generated outputs were produced through a paid API and are released
+by the author. The author bears all responsibility in case of any
+violation of rights, and confirms the licenses of all released artifacts.
+
+\section*{7. Maintenance plan}
+The benchmark is hosted on GitHub and maintained by the author via the
+repository issue tracker. Versioned result files are committed with the
+code; any future data corrections will be issued as tagged releases and
+documented in the repository changelog. No fixed update cadence is
+planned; the dataset is a frozen experimental artifact corresponding to
+the paper's reported results.
+
+\end{document}

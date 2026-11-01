@@ -229,8 +229,8 @@ near-zero self-localization under answer-cell GT.
 \subsection{Real Images: Center Bias}
 \label{sec:center}
 
-On 142 failures (VSR, temp$=0$), the model tags ``center'' in 47\% of
-Condition~B responses — 4.2$\times$ the uniform prior (11.1\%).
+On 142 failures (VSR, temp$=0$), the model tags ``center'' in 45.8\% of
+Condition~B responses — 4.1$\times$ the uniform prior (11.1\%).
 The per-instance COCO bbox analysis (Section~\ref{sec:coco}) shows this reflects
 veridical image statistics: COCO subjects are in the center cell 49.3\% of the time.
 The center-bias is not an error artifact — it tracks object distributions.
@@ -334,10 +334,10 @@ The clean ceiling is the paper's hardest constraint: any tag-accuracy claim on
 this dataset is bounded by 15.5\%, not 100\%.
 
 \paragraph{Label asymmetry.}
-True-caption failures (model said False, $n{=}102$): 60.8\% none\_found,
-11.8\% clean — holistic spatial-comprehension failures.
-False-caption failures (model said True, $n{=}40$): 27.5\% none\_found,
-25.0\% clean — more localized, region-specific evidence.
+True-caption failures (model said False, $n{=}104$): 60.6\% none\_found,
+11.5\% clean — holistic spatial-comprehension failures.
+False-caption failures (model said True, $n{=}38$): 26.3\% none\_found,
+26.3\% clean — more localized, region-specific evidence.
 
 \subsection{Other-Model Baseline: Sonnet Reads Haiku's Failures}
 \label{sec:sonnet}

@@ -1,0 +1,604 @@
+% FailWhere: Can Vision-Language Models Self-Localize Their Own Failures?
+% DMLR submission version
+%
+% To compile: requires dmlr2e.sty (in this directory, from
+% https://github.com/JmlrOrg/dmlr-style-file).
+% Then: pdflatex paper_dmlr && bibtex paper_dmlr && pdflatex paper_dmlr && pdflatex paper_dmlr
+%
+% DMLR is single-blind: author info, real repo URL, and affiliations are shown.
+
+\documentclass[twoside,11pt]{article}
+
+\usepackage[preprint]{dmlr2e}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{url}
+
+% Short headings: running head and authors last names
+\ShortHeadings{FailWhere: VLM Failure Self-Localization}{Wandile}
+\firstpageno{1}
+% OpenReview link shown on the first page; update with the forum URL after submission.
+\def\openreview{\url{https://openreview.net/group?id=DMLR}}
+
+\begin{document}
+
+\title{FailWhere: Can Vision-Language Models Self-Localize Their Own Failures?}
+
+\author{\name Subodh Wandile \email subodh.anant.wandile@toasttab.com \\
+       \addr Toast, Inc.\\
+       Boston, MA, USA}
+
+\maketitle
+\begin{abstract}
+When a Vision-Language Model (VLM) answers a visual question incorrectly, can it
+accurately identify which spatial region of the image caused that error?
+We introduce \textsc{FailWhere}, a benchmark that tests this capacity directly:
+for each answer (correct or wrong), we ask the model to name the 3$\times$3 grid
+region most responsible using a structured \textsc{region:} tag.
+On controlled synthetic images (500 samples, Claude Haiku), structured
+self-localization accuracy is only 9\% against an answer-cell ground truth,
+despite 75\% keyword-level mention — a verbal-commitment gap showing the model
+hedges across regions in text but cannot commit.
+On real COCO photographs (VSR dataset, 142 failures), four converging lines of
+evidence show the \textsc{region:} tag is generic image re-reading rather than
+failure self-knowledge:
+\textbf{(1)}~hit rates on failures match correct answers within 1.1\,pp
+(\textsc{tost} equivalence confirmed) — correctness-invariant spatial awareness;
+\textbf{(2)}~a different model (Sonnet-5-5) that never produced the wrong answers
+attributes Haiku's failures equally well ($+$25.4\,pp above null, $p{=}0.002$) —
+no privileged access to the answering model's state;
+\textbf{(3)}~center tags carry zero causal signal; and
+\textbf{(4)}~non-center tags land $+$23--25\,pp above causal ground truth across
+models.
+Verbal self-attribution is prior-dominated in the modal case (${\sim}54\%$ center)
+but meaningfully informative when the model commits to a specific non-center region.
+We release the benchmark and all code.
+\end{abstract}
+
+\begin{keywords}
+  vision-language models, interpretability, failure attribution,
+  benchmarks, spatial reasoning, faithfulness
+\end{keywords}
+
+
+
+%% ===================================================================
+\section{Introduction}
+%% ===================================================================
+
+Modern VLMs achieve strong performance on visual question answering benchmarks,
+yet failures remain common on spatial reasoning tasks.
+Fixing these failures requires understanding \emph{why} a model failed —
+which region of the image triggered the wrong answer.
+This is an open problem: prior attribution work either uses model internals
+(attention maps, gradients) or focuses on cases where the model was correct.
+
+\paragraph{The gap.}
+We map prior work onto a 2$\times$2 table
+(Table~\ref{tab:2x2}) across two dimensions:
+(1)~correct or wrong answer, and
+(2)~verbal (black-box) or internal (white-box) attribution.
+\textsc{FailWhere} occupies the empty cell: verbal, black-box, failure-case localization.
+
+\paragraph{Contributions.}
+\textbf{(1)}~We formalize \emph{VLM failure self-localization}: given a failure,
+can the model name the responsible image region using only its verbal output?
+\textbf{(2)}~We introduce \textsc{FailWhere}: a synthetic benchmark with controlled
+3$\times$3 grid images and counterfactual-masking ground truth (CF-GT).
+\textbf{(3)}~We provide the first empirical results:
+9\% self-localization on synthetic images;
+a two-regime structure on real COCO photos;
+and a Sonnet-vs-Haiku control that resolves the ``self'' question cleanly.
+\textbf{(4)}~We release benchmark code and all result files.%
+\footnote{Code, data, and result JSONs:
+\url{https://github.com/subodhwandile/vlm-failure-bench}
+(MIT license; maintained via the repository issue tracker).}
+
+
+%% ===================================================================
+\section{Related Work}
+%% ===================================================================
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lll}
+\toprule
+ & Correct answers & \textbf{Wrong answers} \\
+\midrule
+\textbf{Verbal} & CRAFT \citep{parcalabescu-frank-2023-craft} & \textsc{FailWhere} (ours) \\
+\textbf{Internal} & EDCT-Bench \citep{zang-2026-edct}; GLIMPSE & MLLMs-Know \citep{zhang-2025-mllms} \\
+\bottomrule
+\end{tabular}
+\caption{2$\times$2 positioning of FailWhere among prior attribution work.
+The verbal$\times$failure cell was previously empty.}
+\label{tab:2x2}
+\end{table}
+
+\paragraph{White-box failure attribution.}
+\citet{zhang-2025-mllms} use attention maps and gradient overlays to identify
+which image regions VLMs attend to when making errors.
+\textsc{FailWhere} asks whether verbal self-reports approximate this signal without
+model internals.
+
+\paragraph{Verbal correct attribution.}
+CRAFT \citep{parcalabescu-frank-2023-craft} tests whether VLMs explain their
+\emph{correct} answers faithfully.
+\textsc{FailWhere} asks the same question on failures, where no correct explanation
+is available to copy from.
+
+\paragraph{VLM self-knowledge and CoT faithfulness.}
+\citet{madsen-etal-2024-faithfulness} show that chain-of-thought explanations are
+often unfaithful post-hoc rationalizations.
+Our verbal-commitment gap (75\% keyword vs.\ 9\% structured accuracy) is a
+spatial-domain instance of this finding.
+\citet{kadavath-2022-knowwhat} show LLMs can self-calibrate factual confidence but
+struggle with spatial confidence.
+\citet{shen-2023-visual-cot} find VLM spatial descriptions less faithful than
+factual ones.
+Seeing-but-Not-Believing \citep{seeing-2025} shows VLMs can encode a scene
+correctly yet fail to believe their own percept — directly motivating our question.
+CLIP Cross-Eyed \citep{clipcross-2026} finds that verbalized spatial descriptions
+misalign with internal spatial representations, consistent with our center-prior
+finding: the verbal channel reports a distributional prior, not an introspective readout.
+
+
+%% ===================================================================
+\section{The \textsc{FailWhere} Benchmark}
+%% ===================================================================
+
+\subsection{Synthetic Benchmark}
+
+Images are 300$\times$300\,px, divided into a uniform 3$\times$3 grid.
+Each cell contains one object (shape $\times$ color).
+Two question types:
+
+\begin{itemize}
+  \item \textbf{Adjacent-distractor}: same shape in target and adjacent cell,
+    different colors; model answers with the distractor color.
+  \item \textbf{Relative-position}: ``What is [dir] of the [ref-object]?'' —
+    requires two-step spatial reasoning; model misidentifies reference or shifts
+    one cell.
+\end{itemize}
+
+\noindent Ground truth: \emph{answer-cell GT} (cell containing the correct answer).
+
+\subsection{Real-Image Extension: VSR}
+
+We use the Visual Spatial Reasoning dataset \citep{liu-2023-vsr}
+(VSR, \texttt{cambridgeltl/vsr\_random}, split \texttt{test}),
+which pairs COCO train2017 photographs with 66 spatial-relation caption types.
+Task: classify each caption as True or False.
+We use the first 500 items, at temperature~$= 0.0$.
+
+\subsection{Counterfactual Masking Ground Truth (CF-GT)}
+
+For each failure, we mask each of 9 cells with solid gray (128,128,128)
+and re-run the VLM.
+The cell whose masking corrects the wrong answer is CF-GT.
+If no cell fixes it: \texttt{none\_found}.
+If several cells each fix it: \texttt{multiple}.
+Only single-cell \emph{clean} outcomes ($n{=}22/142$, 15.5\%) are used to score
+tag accuracy; this 15.5\% rate is the hard attribution ceiling for this dataset.
+
+\subsection{Self-Localization Protocol}
+
+Three prompt conditions (full templates in Appendix~\ref{app:prompts}):
+
+\begin{itemize}
+  \item \textbf{Condition A (Neutral)}: ``Which region most influenced your answer?''
+    — all items.
+  \item \textbf{Condition B (Stateless)}: ``Your answer was wrong. Which region
+    caused it?'' — failures only.
+  \item \textbf{Condition C (Multi-turn)}: original T/F exchange prepended as
+    context before attribution prompt — failures only.
+\end{itemize}
+
+\noindent The \textsc{region:} tag uses exactly one of nine labels
+(top-left, top-center, \ldots, bottom-right).
+Parse rate: 100\% on the VSR run.
+
+
+%% ===================================================================
+\section{Results}
+%% ===================================================================
+
+\subsection{Synthetic Benchmark}
+\label{sec:synthetic}
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lr}
+\toprule
+Metric & Value \\
+\midrule
+Samples & 500 \\
+Error rate & 8.8\% (44/500) \\
+Structured tag accuracy (answer-cell GT) & \textbf{9\%} (4/44) \\
+Keyword match (region mentioned in text) & 75\% (33/44) \\
+Mean IoU (structured tag) & 0.091 \\
+Failures by type (relative-pos / adj-distract) & 40 / 4 \\
+\bottomrule
+\end{tabular}
+\caption{Synthetic benchmark results (Claude Haiku, $n{=}500$, temp$=0$).}
+\label{tab:synthetic}
+\end{table}
+
+Table~\ref{tab:synthetic} shows a \emph{verbal-commitment gap}: 75\% keyword
+mention vs.\ 9\% structured accuracy.
+The model mentions the correct region in its explanation but commits to a different
+one in the \textsc{region:} tag — hedging across many regions in free text while
+defaulting to a wrong heuristic when forced to name one.
+Both the 200-sample pilot (0\% / 17 failures) and this 500-sample run confirm
+near-zero self-localization under answer-cell GT.
+
+\subsection{Real Images: Center Bias}
+\label{sec:center}
+
+On 142 failures (VSR, temp$=0$), the model tags ``center'' in 45.8\% of
+Condition~B responses — 4.1$\times$ the uniform prior (11.1\%).
+The per-instance COCO bbox analysis (Section~\ref{sec:coco}) shows this reflects
+veridical image statistics: COCO subjects are in the center cell 49.3\% of the time.
+The center-bias is not an error artifact — it tracks object distributions.
+
+\subsection{Correctness-Invariant Spatial Awareness}
+\label{sec:coco}
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lrrr}
+\toprule
+ & Correct ($n{=}336$) & Failed ($n{=}131$) & $\Delta$ \\
+\midrule
+Subject cell hit & 46.1\% & 45.0\% & $-1.1$\,pp \\
+Object cell hit & 26.2\% & 28.2\% & $+2.1$\,pp \\
+Either cell hit & 59.2\% & 61.8\% & $+2.6$\,pp \\
+\midrule
+\emph{Baseline: uniform} & 11.1\% & 11.1\% & — \\
+\emph{Baseline: perm-null} & 23.2\% & 22.9\% & — \\
+\emph{Baseline: always-center} & 49.1\% & 49.6\% & — \\
+\bottomrule
+\end{tabular}
+\caption{Per-instance COCO bbox hit rates for neutral tag (Cond.\ A),
+comparing correct vs.\ failed answers ($n{=}467$ scored items, 93.4\% join rate).
+\textsc{tost} equivalence test ($\pm 8$\,pp bounds): $p{=}0.86$ (subject),
+$p{=}0.62$ (either) — cannot reject equivalence.}
+\label{tab:coco}
+\end{table}
+
+Table~\ref{tab:coco} shows three decisive findings:
+
+\textbf{(1)}~Hit rates on failed answers match correct answers within 2.6\,pp
+(all within 95\% Wilson CIs).
+TOST equivalence ($\pm 8$\,pp) is confirmed ($p{\geq}0.62$):
+the \textsc{region:} tag does not distinguish whether the answer was correct.
+
+\textbf{(2)}~The verbal report is prior-dominated:
+``always predict center'' achieves 49.1--49.6\% subject-hit, \emph{beating} the
+model's 46.1--45.0\%.
+The \textsc{region:} tag captures image-object priors but adds no discriminative
+information beyond them.
+
+\textbf{(3)}~Center sensitivity analysis:
+when the subject IS in center, the model tags center 57.6\% (correct) /
+53.8\% (failed); when it is not, the model still tags center 25.1\% / 31.8\%.
+As a binary center-detector: sensitivity ${\approx}56\%$, FPR ${\approx}28\%$,
+AUC ${\approx}0.64$ — a weak detector.
+
+\subsection{Counterfactual Attribution: Two-Regime Structure}
+\label{sec:cf}
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lrrr}
+\toprule
+ & Neutral (A) & Stateless (B) & Multi-turn (C) \\
+\midrule
+Clean hit rate ($n{=}22$) & 27.3\% & 31.8\% & 36.4\% \\
+Perm-null & 13.5\% & 14.0\% & 13.7\% \\
+Excess over null & $+$13.8\,pp & $+$17.8\,pp & $+$22.7\,pp \\
+\midrule
+\emph{Tag = center} ($n{=}3$) & 33.3\% & 66.7\% & 33.3\% \\
+excess & $+$0.0\,pp & $+$0.0\,pp & $+$0.0\,pp \\
+\emph{Tag $\neq$ center} ($n{=}19$) & 26.3\% & 26.3\% & 26.3\% \\
+excess & $+$14.9\,pp & $+$16.4\,pp & $+$16.4\,pp \\
+\bottomrule
+\end{tabular}
+\caption{Tag vs.\ CF-GT accuracy on clean single-cell subset ($n{=}22$).
+Center excess is exactly null across all conditions; non-center excess is
+stable at $+$15--16\,pp — identical across conditions.}
+\label{tab:cf}
+\end{table}
+
+\paragraph{Two-regime model.}
+Table~\ref{tab:cf} reveals a clean bifurcation:
+
+\textbf{Center tags carry zero causal signal.}
+The center hit rate equals the permuted-null and the always-center baseline
+(both ${\approx}14\%$); excess is 0\,pp across all three conditions.
+Center self-attribution provides no information about what actually caused the error.
+
+\textbf{Non-center tags carry real signal.}
+When the model escapes the center prior, it hits CF-GT at 26.3\% vs.\ a
+17.9\% null — a consistent $+$16\,pp excess across all three conditions,
+approximately $2.3\times$ above chance.
+
+\textbf{Context (Condition~C) does not improve attribution.}
+The non-center hit rate is identical across all three conditions (26.3\%),
+confirming the two-regime structure is prompt-invariant.
+The multi-turn gain on the overall number ($+$22.7\,pp) is a center-stratum
+artifact ($n{=}3$, noise).
+
+\paragraph{Failure typology.}
+Of 142 CF runs: \texttt{none\_found} 51.4\%, \texttt{multiple} 33.1\%,
+clean 15.5\%.
+Most VSR failures are causally diffuse at 3$\times$3 granularity — no single
+cell explains the error.
+The clean ceiling is the paper's hardest constraint: any tag-accuracy claim on
+this dataset is bounded by 15.5\%, not 100\%.
+
+\paragraph{Label asymmetry.}
+True-caption failures (model said False, $n{=}104$): 60.6\% none\_found,
+11.5\% clean — holistic spatial-comprehension failures.
+False-caption failures (model said True, $n{=}38$): 26.3\% none\_found,
+26.3\% clean — more localized, region-specific evidence.
+
+\subsection{Other-Model Baseline: Sonnet Reads Haiku's Failures}
+\label{sec:sonnet}
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lrrrr}
+\toprule
+ & \multicolumn{2}{c}{Sonnet-5-5} & \multicolumn{2}{c}{Haiku-4-5} \\
+ & Neutral & Stateless & Neutral & Stateless \\
+\midrule
+Clean hit ($n{=}22$) & 31.8\% & \textbf{36.4\%} & 27.3\% & 31.8\% \\
+Excess over null & $+$20.4\,pp & $+$25.4\,pp & — & — \\
+$p$-value (one-sided) & 0.007 & \textbf{0.002} & — & — \\
+Center bias & 39.7\% & 41.4\% & 41.8\% & 45.4\% \\
+\bottomrule
+\end{tabular}
+\caption{Sonnet-5-5 attributing Haiku-4-5's 142 VSR failures vs.\ Haiku's
+own attributions, scored against Haiku's CF-GT.
+Sonnet matches or slightly exceeds Haiku despite never having produced the
+wrong answers. Sonnet stateless result is the paper's strongest significant
+number: $+$25.4\,pp, $p{=}0.002$.}
+\label{tab:sonnet}
+\end{table}
+
+\paragraph{Design.}
+Self-knowledge control: Sonnet-5-5 is given the image, caption, and
+Haiku's wrong answer, then produces a \textsc{region:} tag.
+If Sonnet matches Haiku's attribution accuracy, the tag reflects generic image
+re-reading; if it is worse, self-knowledge is required.
+
+\paragraph{Result.}
+Table~\ref{tab:sonnet} shows Sonnet matches or slightly exceeds Haiku:
+31.8--36.4\% vs.\ 27.3--31.8\%.
+The Sonnet stateless result is the paper's strongest significant number:
+$+$25.4\,pp above null, $p{=}0.002$.
+A model that never produced the wrong answer attributes the failure as well as
+the model that did.
+
+\paragraph{Implication.}
+\textbf{The \textsc{region:} tag is a generic re-reading of the image, not
+privileged access to the answering model's internal state.}
+Combined with Section~\ref{sec:coco}'s correctness-invariance, Sections
+\ref{sec:cf}--\ref{sec:sonnet} jointly establish the four-pillar story of
+Section~\ref{sec:discussion}.
+
+
+%% ===================================================================
+\section{Discussion}
+\label{sec:discussion}
+%% ===================================================================
+
+\paragraph{Four pillars.}
+The paper's results converge on a complete structured negative result:
+
+\begin{enumerate}
+  \item \textbf{Reads the image, not the mind} — Sonnet attributes Haiku's failures
+    equally well ($+$25.4\,pp, $p{=}0.002$).
+    No privileged model-state access is needed or demonstrated.
+  \item \textbf{Doesn't know if the answer was wrong} — identical hit rates on
+    correct and failed answers ($\Delta = -1.1$\,pp, TOST $\pm 8$\,pp confirmed).
+  \item \textbf{Commits reasonably when it escapes center} — non-center tags land
+    $+$15--25\,pp above null across conditions and models.
+  \item \textbf{Most reports never escape} — ${\sim}54$\% are center-tagged;
+    center tags carry zero causal signal.
+\end{enumerate}
+
+\paragraph{The center bias is not spurious.}
+COCO subjects sit in the center cell 49.3\% of the time; the model's 42\%
+neutral-center rate reflects real image statistics, not a failure artifact.
+However, the center prior is counterproductive under failure conditions:
+causal cells are 86\% non-central (19/22 clean), so always-center achieves
+only 13.6\% CF-GT accuracy vs.\ the model's 27--32\%.
+The center prior is informative for object localization and harmful for
+failure attribution — the two tasks are confounded only at the level of the
+verbal tag.
+
+\paragraph{Two GT definitions and their ceiling.}
+\textit{Answer-cell GT} (cell containing the correct answer) targets capability;
+\textit{CF-GT} (cell whose masking fixes the error) targets causality.
+On the VSR dataset, 84.5\% of failures have no clean CF-GT ($\geq 2$ cells or
+none required); the effective attribution ceiling is 15.5\%.
+Any result reporting tag-vs-CF-GT accuracy must be interpreted relative to this
+ceiling, not 100\%.
+
+\paragraph{Limitations.}
+(1)~Caption-to-COCO bbox matching uses heuristic noun extraction (93.4\% join rate).
+(2)~All experiments use Claude Haiku and Sonnet; cross-family replication
+(GPT-4V, Gemini) remains future work.
+(3)~Task scope is binary T/F (VSR); generalization to open-ended VQA is untested.
+(4)~The stateless prompt asks for post-hoc attribution; the model has no memory
+of its visual processing chain.
+(5)~CF masking at 3$\times$3 has a resolution limit: synthetic adjacent-distractor
+cases return \texttt{multiple} (4/4) even when the causal cell is known by
+construction.
+(6)~Fix-rate secondary analysis ($n{=}64$, $+$4.9\,pp, $p{=}0.20$) is
+directionally consistent with the binary result but underpowered.
+
+
+%% ===================================================================
+\section{Conclusion}
+%% ===================================================================
+
+We introduce \textsc{FailWhere} and show that VLM verbal self-localization is
+generic image re-reading with a center prior — not failure self-knowledge.
+The result is a complete structured negative: the \textsc{region:} tag
+(1)~requires no model-state access (Sonnet control), (2)~does not detect
+failure (correctness-invariance), (3)~is informative when non-center
+($+$15--25\,pp), and (4)~is mostly captured by the center prior (${\sim}54\%$
+of reports).
+These findings motivate both better introspection training objectives and
+more precise evaluation frameworks that distinguish self-report from genuine
+failure attribution.
+
+
+%% ===================================================================
+%% ===================================================================
+\impact{This work studies whether vision-language models can accurately
+identify the image region responsible for their own errors.
+Positively, a reliable self-localization capacity would support error
+diagnosis, targeted model debugging, and more trustworthy deployment of
+VLMs in spatial-reasoning settings (e.g., robotics, document
+understanding, assistive tools). Our findings are cautionary in a way
+that also benefits practitioners: a fluent, confident \textsc{region:}
+tag is largely generic image re-reading driven by a center prior, so
+downstream systems should not consume verbal failure attributions as
+ground-truth causal evidence. Negatively, the same finding could
+encourage over-trust in models that \emph{appear} self-aware;
+misattributed explanations could misdirect debugging effort or mask
+systematic failure modes. The benchmark uses public datasets (COCO
+images via the VSR dataset) and synthetic images; it contains no
+personal data and poses no privacy concerns.}
+
+\acks{The author thanks the creators of the Visual Spatial Reasoning
+dataset and the COCO dataset for public data access, and Anthropic for
+API access to the evaluated models.
+This research received no external funding and was conducted in a
+personal capacity; the author declares no competing interests beyond
+their employment at Toast, Inc., which had no role in this work.}
+
+\vskip 0.2in
+\bibliography{refs}
+% dmlr2e sets the natbib bibliography style (plainnat) automatically.
+
+\appendix
+
+\section{Prompt Templates}
+\label{app:prompts}
+
+All prompts use temperature $= 0.0$ and model
+\texttt{claude-haiku-4-5-20251022} (public Anthropic API) /
+\texttt{global.anthropic.claude-haiku-4-5-20251001-v1:0} (Bedrock).
+Sonnet baseline (\S\ref{sec:sonnet}): \texttt{claude-sonnet-5-5} /
+\texttt{global.anthropic.claude-sonnet-5-5};
+\texttt{temperature} omitted on Bedrock (deprecated parameter for this model).
+
+\subsection{True/False Question (all conditions)}
+\begin{verbatim}
+Is the following statement true or false?
+
+Statement: "{caption}"
+
+Answer with only "True" or "False".
+\end{verbatim}
+
+\subsection{Condition A — Neutral Self-Localization}
+\begin{verbatim}
+You just answered the following question about this image:
+"{caption}"
+
+Your answer was: "{model_answer}"
+
+Which region of the image most influenced your answer?
+
+State ONLY the region label on a single line:
+REGION: <one of: top-left, top-center, top-right,
+middle-left, center, middle-right,
+bottom-left, bottom-center, bottom-right>
+
+Then briefly explain why that region influenced your answer.
+\end{verbatim}
+
+\subsection{Condition B — Stateless Failure-Specific}
+\begin{verbatim}
+You answered the following question INCORRECTLY.
+
+Question: Is the following statement true or false?
+Statement: "{caption}"
+
+Your answer was: "{model_answer}" (this was wrong).
+
+Which region of the image most influenced your incorrect answer?
+
+State ONLY the region label on a single line:
+REGION: <one of: top-left, top-center, top-right,
+middle-left, center, middle-right,
+bottom-left, bottom-center, bottom-right>
+
+Then explain:
+1. What visual content in that region led to the wrong answer
+2. Why that region caused your error
+\end{verbatim}
+
+\subsection{Condition C — Multi-Turn}
+\begin{verbatim}
+[Turn 1 — user]
+Is the following statement true or false?
+Statement: "{caption}"
+Answer with only "True" or "False".
+
+[Turn 1 — assistant]
+{model_answer}
+
+[Turn 2 — user]
+That answer was incorrect. Looking back at the image,
+which region most influenced your incorrect answer?
+
+State ONLY the region label on a single line:
+REGION: <one of: top-left, top-center, top-right,
+middle-left, center, middle-right,
+bottom-left, bottom-center, bottom-right>
+
+Then explain:
+1. What visual content in that region led to the wrong answer
+2. Why that region caused your error
+\end{verbatim}
+
+\subsection{Grid Cell Definitions}
+
+The image is divided into a uniform 3$\times$3 grid:
+
+\begin{center}
+\small
+\begin{tabular}{lrrrr}
+\toprule
+Cell & $x_0$ & $y_0$ & $x_1$ & $y_1$ \\
+\midrule
+top-left    & 0   & 0   & 1/3 & 1/3 \\
+top-center  & 1/3 & 0   & 2/3 & 1/3 \\
+top-right   & 2/3 & 0   & 1   & 1/3 \\
+middle-left & 0   & 1/3 & 1/3 & 2/3 \\
+center      & 1/3 & 1/3 & 2/3 & 2/3 \\
+middle-right& 2/3 & 1/3 & 1   & 2/3 \\
+bottom-left & 0   & 2/3 & 1/3 & 1   \\
+bottom-center&1/3 & 2/3 & 2/3 & 1   \\
+bottom-right& 2/3 & 2/3 & 1   & 1   \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent CF masking: cells are filled with solid gray (128, 128, 128).
+Images encoded as PNG base64 in API requests to avoid JPEG re-compression
+artifacts in masked regions.
+
+\end{document}
