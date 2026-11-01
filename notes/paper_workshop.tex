@@ -1,0 +1,119 @@
+% FailWhere — ICLR Workshop condensed version (4 pages, non-archival)
+%
+% Target: ICLR 2027 workshop on Evaluating and Aligning LLMs (~Feb 1, 2027)
+% VERIFY target workshop is non-archival before submitting (to keep ARR submission clean)
+%
+% To compile: requires ICLR 2027 workshop template (typically iclr2027_workshop.sty).
+% Or use standard article format for initial draft.
+
+\documentclass[11pt]{article}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage[margin=1in]{geometry}
+
+\title{\textsc{FailWhere}: Verbal Failure Self-Localization in VLMs\\
+is Generic Image Re-Reading with a Center Prior}
+
+\author{Anonymous}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Can a Vision-Language Model identify which spatial region of an image caused
+an incorrect answer?
+We test this on the VSR dataset (142 failures, Claude Haiku, temp$=0$).
+Four converging findings: the verbal \textsc{region:} tag
+(1)~is produced equally well by a different model that never answered
+(Sonnet-5-5, $+$25.4\,pp above null, $p{=}0.002$);
+(2)~has equal accuracy on correct and failed answers ($\Delta{=}-1.1$\,pp,
+TOST confirmed);
+(3)~carries zero causal signal when center is tagged; and
+(4)~lands $+$23--25\,pp above null when a specific non-center region is named.
+The tag is generic image re-reading with a center prior, not failure self-knowledge.
+Code and data: \url{https://anonymous.4open.science/r/vlm-failure-bench}.
+\end{abstract}
+
+\section{Introduction and Background}
+
+Prior VLM attribution work is either white-box (attention, gradients) or focuses
+on correct answers.
+No prior work tests whether verbal self-reports can localize the spatial cause of
+a \emph{failure}.
+We introduce \textsc{FailWhere}: for each failure, ask the model to name the
+responsible 3$\times$3 grid region using a structured \textsc{region:} tag.
+Counterfactual masking (mask each of 9 cells with gray, re-run the model)
+provides causal ground truth (CF-GT).
+
+\section{Setup}
+
+\textbf{Dataset.} VSR \cite{liu-2023-vsr}, 500 samples (142 failures), COCO images.
+\textbf{Conditions.} Neutral (Cond.\,A, all items), Stateless (Cond.\,B, failures only),
+Multi-turn (Cond.\,C, T/F exchange as context).
+\textbf{CF-GT.} Per-failure masking: 51.4\% \texttt{none\_found}, 33.1\% \texttt{multiple},
+15.5\% clean single-cell (hard attribution ceiling).
+\textbf{Baselines.} Permuted-tag null (shuffle tags within-item); always-center;
+COCO bbox hit (does the tag land on a known object bbox?).
+
+\section{Results}
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{lrrrr}
+\toprule
+ & \multicolumn{2}{c}{Sonnet-5-5} & \multicolumn{2}{c}{Haiku-4-5} \\
+ & Neutral & Stateless & Neutral & Stateless \\
+\midrule
+Clean hit ($n{=}22$)   & 31.8\% & \textbf{36.4\%} & 27.3\% & 31.8\% \\
+Excess over null       & $+$20.4\,pp & $+$25.4\,pp & — & — \\
+$p$ (one-sided)        & 0.007 & \textbf{0.002} & — & — \\
+\midrule
+\multicolumn{5}{l}{\emph{Two-regime split (Haiku stateless)}} \\
+Tag = center ($n{=}3$)       & \multicolumn{4}{r}{excess $= 0.0$\,pp (all conditions)} \\
+Tag $\neq$ center ($n{=}19$) & \multicolumn{4}{r}{excess $= +$16.4\,pp (all conditions)} \\
+\midrule
+\multicolumn{5}{l}{\emph{Correctness invariance (COCO bbox, $n{=}467$)}} \\
+Subject hit (correct)  & \multicolumn{4}{r}{46.1\%} \\
+Subject hit (failed)   & \multicolumn{4}{r}{45.0\% ($\Delta{=}-1.1$\,pp, TOST $p{=}0.86$)} \\
+\bottomrule
+\end{tabular}
+\caption{Summary results. The \textsc{region:} tag does not distinguish failure
+from success, and a different model matches the answering model's attribution
+accuracy.}
+\end{table}
+
+\paragraph{Sonnet baseline (pillar~1).}
+Sonnet-5-5 attributes Haiku's failures as well as Haiku does ($+$25.4\,pp, $p{=}0.002$).
+No model-state access is required; the tag is generic image re-reading.
+
+\paragraph{Correctness invariance (pillar~2).}
+COCO bbox hit rates are within 2.6\,pp for correct vs.\ failed answers.
+TOST equivalence ($\pm$8\,pp) confirms: the tag does not detect failure.
+
+\paragraph{Two-regime structure (pillars 3--4).}
+Center tags: 47\% of self-reports, 4.2$\times$ uniform prior, zero excess above null.
+Non-center tags: $+$16--25\,pp above null, consistent across all three prompt
+conditions and both models.
+The tag is informative when the model escapes the center prior (${\sim}46\%$ of
+cases), uninformative otherwise.
+
+\section{Discussion and Conclusion}
+
+Verbal failure self-localization in current VLMs is: prior-dominated (center),
+not failure-specific (correctness-invariant), and not self-knowledge
+(other-model control).
+The positive finding is narrow but real: non-center self-reports are ${\sim}2\times$
+above chance.
+This motivates evaluation frameworks that score only non-center tags, and training
+objectives that reward calibrated non-center commitment over center-defaulting.
+
+\bibliographystyle{plain}
+\bibliography{refs}
+
+\end{document}

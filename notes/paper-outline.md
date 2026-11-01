@@ -509,11 +509,13 @@ strategy is.
 
 ## 7. Conclusion
 
-We introduce FailWhere and show that a SOTA VLM achieves 0% accuracy when asked to verbally
-identify which spatial region caused its own visual error. The model instead defaults to a
-center-bias heuristic or identifies the distractor — suggesting that spatial self-attribution
-capability is absent in current VLMs. This motivates both better interpretability training
-objectives and more precise evaluation frameworks.
+We introduce FailWhere and show that VLM verbal failure self-localization is generic image
+re-reading with a center prior — not failure self-knowledge. The REGION: tag (1) requires no
+model-state access (Sonnet control, +25.4pp, p=0.002), (2) does not detect failure
+(correctness-invariance, TOST confirmed), (3) is informative when non-center (+15–25pp
+across conditions and models), and (4) is mostly captured by the center prior (~54% of reports).
+This motivates both better introspection training objectives and evaluation frameworks that
+separately score center vs. non-center self-reports.
 
 ---
 
@@ -653,26 +655,31 @@ CF masking: cells are replaced with a solid gray (128, 128, 128) rectangle. Imag
 
 ## Remaining Action Items (science done — logistics + polish only)
 
-### 1. Reproducibility (this week)
-- [ ] Commit result JSONs to repo: `real_vsr_v3_t0.json`, `real_vsr_v3_t0_mt.json`, `real_vsr_v3_t0_coco.json`, `real_vsr_v3_t0_cf_combined.json`, `real_vsr_v3_t0_sonnet_explain.json`, `pilot_v5_500.json`
-- [ ] Commit 142-failure image set (masked inputs used for CF validation)
-- [ ] Swap Toast proxy code → plain `ANTHROPIC_API_KEY` + `anthropic` SDK; keep Toast path as env-var fallback
-- [x] Pin model IDs + temperatures verbatim in paper (§3 / appendix) — Appendix A written with all 4 prompt templates verbatim, model IDs for both API paths, and grid cell definitions
-- [x] Document all three prompt variants verbatim in appendix (neutral, stateless, multi-turn) — done in Appendix A (A.2–A.4)
-- [x] Verify fresh clone runs end-to-end (synthetic + VSR + CF analysis) — verified: fresh clone + `pip install anthropic pillow datasets` reproduces 9%/75% synthetic (analyze_results.py) and +4.9pp fix-rate (analyze_cf_fixrate.py). COCO bbox analysis requires separate COCO download (~450MB, to be documented in README).
+### 1. Reproducibility ✅ COMPLETE
+- [x] Commit result JSONs to repo (git commit 29d08cf)
+- [x] Swap Toast proxy → plain ANTHROPIC_API_KEY path
+- [x] Pin model IDs + temperatures verbatim (Appendix A)
+- [x] Document prompt variants verbatim (Appendix A.2–A.4)
+- [x] Verify fresh clone runs end-to-end
+- [x] README updated with VSR/COCO quickstart + COCO download block (git commit 74afde3)
 
 ### 2. ARR Submission Prep (Nov–Dec)
-- [ ] ACL format, Findings track — aim for clean 8-page submission
-- [ ] Create OpenReview account + ARR registration **in November** (not deadline week)
-- [ ] Anonymized repo link — use anonymous.4open.science if needed
-- [ ] Abstract rewrite for submission (currently a working draft — tighten to ≤250 words)
+- [x] Draft 8-page ACL Findings paper — `notes/paper.tex` written
+- [x] Draft 4-page workshop version — `notes/paper_workshop.tex` written
+- [x] Anonymized repo note added to README (anonymous.4open.science)
+- [ ] **User action: Create OpenReview account + ARR registration in November**
+- [ ] Upload to anonymous.4open.science before submission; update footnote in paper.tex
+- [ ] Get ACL 2025 template files and verify paper compiles (download from acl-org/acl-style-files)
+- [ ] Tighten abstract to ≤250 words (current draft is at the limit — recount after template)
+- [ ] Update arXiv IDs in refs.bib for any papers that were preprints at outline time
 
 ### 3. Final Pass (late Dec)
-- [ ] End-to-end read: check every number against final JSONs
-- [ ] Confirm four-pillar framing is consistent across abstract / intro / results / discussion
-- [ ] Strip any residual "center bias" or "can't self-localize" phrasing that doesn't match the resolved framing
+- [ ] End-to-end read: verify every number in paper.tex traces to a JSON file
+- [ ] Confirm four-pillar framing consistent across abstract / intro / §4.8 / discussion
+- [ ] Verify workshop version is non-archival before submitting (~Feb 1)
 
-### 4. ICLR Workshop (parallel, ~Feb 1)
-- [ ] 4–6 page non-archival version of same study
-- [ ] **Verify target workshop is non-archival** before submitting (to keep ARR submission clean)
+### 4. ICLR Workshop (~Feb 1) — draft complete, need logistics
+- [x] 4-page non-archival version written (`notes/paper_workshop.tex`)
+- [ ] Identify specific ICLR 2027 workshop and verify non-archival status
+- [ ] Apply target workshop LaTeX template
 

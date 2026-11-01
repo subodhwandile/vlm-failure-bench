@@ -99,6 +99,13 @@ notes/
   paper-outline.md           # full paper outline with all results and appendix
 ```
 
+## Anonymous Submission
+
+For double-blind review, use:
+[anonymous.4open.science](https://anonymous.4open.science) — upload a zip of
+this repo to get a stable anonymous URL. Update the `\footnote` in `notes/paper.tex`
+before submitting to ARR.
+
 ## Citation
 
 ```
