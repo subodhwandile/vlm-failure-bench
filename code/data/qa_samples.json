@@ -1,0 +1,7886 @@
+[
+  {
+    "image_id": "synthetic_0000",
+    "image_file": "synthetic_0000.png",
+    "question": "What color is the square in the bottom-center of the image?",
+    "answer": "green",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-center",
+    "distractor_region": "bottom-left",
+    "distractor_color": "orange",
+    "grid_layout": {
+      "bottom-left": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "center": {
+        "color": "purple",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0001",
+    "image_file": "synthetic_0001.png",
+    "question": "What color is the square in the middle-right of the image?",
+    "answer": "purple",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-right",
+    "distractor_region": "bottom-right",
+    "distractor_color": "green",
+    "grid_layout": {
+      "top-center": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "green",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0002",
+    "image_file": "synthetic_0002.png",
+    "question": "What color is the square in the middle-left of the image?",
+    "answer": "green",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-left",
+    "distractor_region": "bottom-left",
+    "distractor_color": "red",
+    "grid_layout": {
+      "center": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "green",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0003",
+    "image_file": "synthetic_0003.png",
+    "question": "What color is the circle in the middle-left of the image?",
+    "answer": "red",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-left",
+    "distractor_region": "bottom-left",
+    "distractor_color": "green",
+    "grid_layout": {
+      "bottom-left": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "blue",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0004",
+    "image_file": "synthetic_0004.png",
+    "question": "What color is the triangle that is directly left of the orange circle?",
+    "answer": "blue",
+    "question_type": "relative_position",
+    "causal_region": "bottom-center",
+    "ref_pos": "bottom-right",
+    "direction": "left",
+    "grid_layout": {
+      "center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "yellow",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0005",
+    "image_file": "synthetic_0005.png",
+    "question": "What color is the triangle that is directly left of the yellow square?",
+    "answer": "blue",
+    "question_type": "relative_position",
+    "causal_region": "top-center",
+    "ref_pos": "top-right",
+    "direction": "left",
+    "grid_layout": {
+      "top-right": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "center": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "middle-right": {
+        "color": "red",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0006",
+    "image_file": "synthetic_0006.png",
+    "question": "What color is the triangle on the left side of the image?",
+    "answer": "orange",
+    "question_type": "color_left_right",
+    "causal_region": "middle-left",
+    "distractor_region": "middle-right"
+  },
+  {
+    "image_id": "synthetic_0007",
+    "image_file": "synthetic_0007.png",
+    "question": "What color is the triangle at the top of the image?",
+    "answer": "red",
+    "question_type": "top_bottom",
+    "causal_region": "top-center",
+    "distractor_region": "bottom-center"
+  },
+  {
+    "image_id": "synthetic_0008",
+    "image_file": "synthetic_0008.png",
+    "question": "What color is the circle that is directly above of the purple triangle?",
+    "answer": "green",
+    "question_type": "relative_position",
+    "causal_region": "center",
+    "ref_pos": "bottom-center",
+    "direction": "above",
+    "grid_layout": {
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "middle-right": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "square"
+      },
+      "center": {
+        "color": "green",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0009",
+    "image_file": "synthetic_0009.png",
+    "question": "What color is the square in the middle-right of the image?",
+    "answer": "yellow",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-right",
+    "distractor_region": "bottom-right",
+    "distractor_color": "blue",
+    "grid_layout": {
+      "middle-right": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "blue",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0010",
+    "image_file": "synthetic_0010.png",
+    "question": "What color is the triangle in the middle-left of the image?",
+    "answer": "orange",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-left",
+    "distractor_region": "bottom-left",
+    "distractor_color": "green",
+    "grid_layout": {
+      "bottom-center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "center": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "middle-right": {
+        "color": "red",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0011",
+    "image_file": "synthetic_0011.png",
+    "question": "What color is the triangle in the bottom-center of the image?",
+    "answer": "purple",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-center",
+    "distractor_region": "bottom-left",
+    "distractor_color": "yellow",
+    "grid_layout": {
+      "middle-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0012",
+    "image_file": "synthetic_0012.png",
+    "question": "What color is the circle in the bottom-left of the image?",
+    "answer": "orange",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-left",
+    "distractor_region": "middle-left",
+    "distractor_color": "blue",
+    "grid_layout": {
+      "bottom-left": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0013",
+    "image_file": "synthetic_0013.png",
+    "question": "What color is the square that is directly left of the yellow square?",
+    "answer": "purple",
+    "question_type": "relative_position",
+    "causal_region": "bottom-center",
+    "ref_pos": "bottom-right",
+    "direction": "left",
+    "grid_layout": {
+      "middle-left": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "green",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0014",
+    "image_file": "synthetic_0014.png",
+    "question": "What color is the circle that is directly below of the purple square?",
+    "answer": "blue",
+    "question_type": "relative_position",
+    "causal_region": "middle-left",
+    "ref_pos": "top-left",
+    "direction": "below",
+    "grid_layout": {
+      "center": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0015",
+    "image_file": "synthetic_0015.png",
+    "question": "What color is the triangle on the left side of the image?",
+    "answer": "purple",
+    "question_type": "color_left_right",
+    "causal_region": "middle-left",
+    "distractor_region": "middle-right"
+  },
+  {
+    "image_id": "synthetic_0016",
+    "image_file": "synthetic_0016.png",
+    "question": "What color is the triangle at the top of the image?",
+    "answer": "blue",
+    "question_type": "top_bottom",
+    "causal_region": "top-center",
+    "distractor_region": "bottom-center"
+  },
+  {
+    "image_id": "synthetic_0017",
+    "image_file": "synthetic_0017.png",
+    "question": "What color is the triangle that is directly above of the purple triangle?",
+    "answer": "green",
+    "question_type": "relative_position",
+    "causal_region": "top-right",
+    "ref_pos": "middle-right",
+    "direction": "above",
+    "grid_layout": {
+      "center": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "green",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0018",
+    "image_file": "synthetic_0018.png",
+    "question": "What color is the triangle in the bottom-left of the image?",
+    "answer": "red",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-left",
+    "distractor_region": "middle-left",
+    "distractor_color": "blue",
+    "grid_layout": {
+      "top-center": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0019",
+    "image_file": "synthetic_0019.png",
+    "question": "What color is the triangle in the center of the image?",
+    "answer": "blue",
+    "question_type": "adjacent_distractor",
+    "causal_region": "center",
+    "distractor_region": "top-center",
+    "distractor_color": "yellow",
+    "grid_layout": {
+      "middle-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "yellow",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0020",
+    "image_file": "synthetic_0020.png",
+    "question": "What color is the circle in the top-right of the image?",
+    "answer": "green",
+    "question_type": "adjacent_distractor",
+    "causal_region": "top-right",
+    "distractor_region": "middle-right",
+    "distractor_color": "red",
+    "grid_layout": {
+      "top-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "yellow",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0021",
+    "image_file": "synthetic_0021.png",
+    "question": "What color is the square in the top-center of the image?",
+    "answer": "green",
+    "question_type": "adjacent_distractor",
+    "causal_region": "top-center",
+    "distractor_region": "center",
+    "distractor_color": "orange",
+    "grid_layout": {
+      "top-left": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0022",
+    "image_file": "synthetic_0022.png",
+    "question": "What color is the triangle that is directly right of the yellow square?",
+    "answer": "red",
+    "question_type": "relative_position",
+    "causal_region": "center",
+    "ref_pos": "middle-left",
+    "direction": "right",
+    "grid_layout": {
+      "top-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "red",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0023",
+    "image_file": "synthetic_0023.png",
+    "question": "What color is the triangle that is directly right of the green circle?",
+    "answer": "blue",
+    "question_type": "relative_position",
+    "causal_region": "bottom-center",
+    "ref_pos": "bottom-left",
+    "direction": "right",
+    "grid_layout": {
+      "middle-right": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "blue",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0024",
+    "image_file": "synthetic_0024.png",
+    "question": "What color is the triangle on the left side of the image?",
+    "answer": "blue",
+    "question_type": "color_left_right",
+    "causal_region": "middle-left",
+    "distractor_region": "middle-right"
+  },
+  {
+    "image_id": "synthetic_0025",
+    "image_file": "synthetic_0025.png",
+    "question": "What color is the square at the top of the image?",
+    "answer": "red",
+    "question_type": "top_bottom",
+    "causal_region": "top-center",
+    "distractor_region": "bottom-center"
+  },
+  {
+    "image_id": "synthetic_0026",
+    "image_file": "synthetic_0026.png",
+    "question": "What color is the circle that is directly above of the blue triangle?",
+    "answer": "green",
+    "question_type": "relative_position",
+    "causal_region": "top-left",
+    "ref_pos": "middle-left",
+    "direction": "above",
+    "grid_layout": {
+      "bottom-right": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "green",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0027",
+    "image_file": "synthetic_0027.png",
+    "question": "What color is the square in the middle-left of the image?",
+    "answer": "red",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-left",
+    "distractor_region": "bottom-left",
+    "distractor_color": "blue",
+    "grid_layout": {
+      "top-center": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "middle-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0028",
+    "image_file": "synthetic_0028.png",
+    "question": "What color is the triangle in the middle-right of the image?",
+    "answer": "red",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-right",
+    "distractor_region": "top-right",
+    "distractor_color": "purple",
+    "grid_layout": {
+      "center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "blue",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0029",
+    "image_file": "synthetic_0029.png",
+    "question": "What color is the circle in the top-center of the image?",
+    "answer": "blue",
+    "question_type": "adjacent_distractor",
+    "causal_region": "top-center",
+    "distractor_region": "top-right",
+    "distractor_color": "red",
+    "grid_layout": {
+      "center": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0030",
+    "image_file": "synthetic_0030.png",
+    "question": "What color is the circle in the center of the image?",
+    "answer": "blue",
+    "question_type": "adjacent_distractor",
+    "causal_region": "center",
+    "distractor_region": "middle-right",
+    "distractor_color": "green",
+    "grid_layout": {
+      "middle-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "blue",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0031",
+    "image_file": "synthetic_0031.png",
+    "question": "What color is the square that is directly right of the orange square?",
+    "answer": "red",
+    "question_type": "relative_position",
+    "causal_region": "center",
+    "ref_pos": "middle-left",
+    "direction": "right",
+    "grid_layout": {
+      "top-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "blue",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0032",
+    "image_file": "synthetic_0032.png",
+    "question": "What color is the circle that is directly left of the green circle?",
+    "answer": "purple",
+    "question_type": "relative_position",
+    "causal_region": "bottom-left",
+    "ref_pos": "bottom-center",
+    "direction": "left",
+    "grid_layout": {
+      "top-left": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "middle-right": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0033",
+    "image_file": "synthetic_0033.png",
+    "question": "What color is the triangle on the left side of the image?",
+    "answer": "green",
+    "question_type": "color_left_right",
+    "causal_region": "middle-left",
+    "distractor_region": "middle-right"
+  },
+  {
+    "image_id": "synthetic_0034",
+    "image_file": "synthetic_0034.png",
+    "question": "What color is the square at the top of the image?",
+    "answer": "red",
+    "question_type": "top_bottom",
+    "causal_region": "top-center",
+    "distractor_region": "bottom-center"
+  },
+  {
+    "image_id": "synthetic_0035",
+    "image_file": "synthetic_0035.png",
+    "question": "What color is the square that is directly above of the red square?",
+    "answer": "yellow",
+    "question_type": "relative_position",
+    "causal_region": "middle-left",
+    "ref_pos": "bottom-left",
+    "direction": "above",
+    "grid_layout": {
+      "bottom-left": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0036",
+    "image_file": "synthetic_0036.png",
+    "question": "What color is the circle in the bottom-right of the image?",
+    "answer": "red",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-right",
+    "distractor_region": "middle-right",
+    "distractor_color": "blue",
+    "grid_layout": {
+      "bottom-center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "yellow",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0037",
+    "image_file": "synthetic_0037.png",
+    "question": "What color is the triangle in the bottom-left of the image?",
+    "answer": "green",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-left",
+    "distractor_region": "middle-left",
+    "distractor_color": "purple",
+    "grid_layout": {
+      "bottom-left": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "center": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0038",
+    "image_file": "synthetic_0038.png",
+    "question": "What color is the triangle in the top-right of the image?",
+    "answer": "orange",
+    "question_type": "adjacent_distractor",
+    "causal_region": "top-right",
+    "distractor_region": "middle-right",
+    "distractor_color": "green",
+    "grid_layout": {
+      "bottom-center": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0039",
+    "image_file": "synthetic_0039.png",
+    "question": "What color is the circle in the middle-left of the image?",
+    "answer": "red",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-left",
+    "distractor_region": "top-left",
+    "distractor_color": "yellow",
+    "grid_layout": {
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "middle-right": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "center": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0040",
+    "image_file": "synthetic_0040.png",
+    "question": "What color is the square that is directly right of the yellow square?",
+    "answer": "blue",
+    "question_type": "relative_position",
+    "causal_region": "center",
+    "ref_pos": "middle-left",
+    "direction": "right",
+    "grid_layout": {
+      "center": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "red",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0041",
+    "image_file": "synthetic_0041.png",
+    "question": "What color is the triangle that is directly right of the green triangle?",
+    "answer": "purple",
+    "question_type": "relative_position",
+    "causal_region": "center",
+    "ref_pos": "middle-left",
+    "direction": "right",
+    "grid_layout": {
+      "bottom-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "center": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0042",
+    "image_file": "synthetic_0042.png",
+    "question": "What color is the circle on the left side of the image?",
+    "answer": "green",
+    "question_type": "color_left_right",
+    "causal_region": "middle-left",
+    "distractor_region": "middle-right"
+  },
+  {
+    "image_id": "synthetic_0043",
+    "image_file": "synthetic_0043.png",
+    "question": "What color is the triangle at the top of the image?",
+    "answer": "green",
+    "question_type": "top_bottom",
+    "causal_region": "top-center",
+    "distractor_region": "bottom-center"
+  },
+  {
+    "image_id": "synthetic_0044",
+    "image_file": "synthetic_0044.png",
+    "question": "What color is the square that is directly left of the purple circle?",
+    "answer": "yellow",
+    "question_type": "relative_position",
+    "causal_region": "bottom-center",
+    "ref_pos": "bottom-right",
+    "direction": "left",
+    "grid_layout": {
+      "top-center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "yellow",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0045",
+    "image_file": "synthetic_0045.png",
+    "question": "What color is the circle in the bottom-center of the image?",
+    "answer": "blue",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-center",
+    "distractor_region": "bottom-left",
+    "distractor_color": "orange",
+    "grid_layout": {
+      "bottom-center": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "yellow",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0046",
+    "image_file": "synthetic_0046.png",
+    "question": "What color is the square in the center of the image?",
+    "answer": "orange",
+    "question_type": "adjacent_distractor",
+    "causal_region": "center",
+    "distractor_region": "top-center",
+    "distractor_color": "red",
+    "grid_layout": {
+      "middle-right": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0047",
+    "image_file": "synthetic_0047.png",
+    "question": "What color is the circle in the bottom-center of the image?",
+    "answer": "red",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-center",
+    "distractor_region": "center",
+    "distractor_color": "blue",
+    "grid_layout": {
+      "top-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "red",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0048",
+    "image_file": "synthetic_0048.png",
+    "question": "What color is the square in the top-center of the image?",
+    "answer": "yellow",
+    "question_type": "adjacent_distractor",
+    "causal_region": "top-center",
+    "distractor_region": "center",
+    "distractor_color": "red",
+    "grid_layout": {
+      "bottom-left": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0049",
+    "image_file": "synthetic_0049.png",
+    "question": "What color is the square that is directly right of the purple circle?",
+    "answer": "purple",
+    "question_type": "relative_position",
+    "causal_region": "bottom-right",
+    "ref_pos": "bottom-center",
+    "direction": "right",
+    "grid_layout": {
+      "bottom-left": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0050",
+    "image_file": "synthetic_0050.png",
+    "question": "What color is the triangle that is directly right of the red circle?",
+    "answer": "purple",
+    "question_type": "relative_position",
+    "causal_region": "top-right",
+    "ref_pos": "top-center",
+    "direction": "right",
+    "grid_layout": {
+      "top-left": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "center": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "blue",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0051",
+    "image_file": "synthetic_0051.png",
+    "question": "What color is the square on the left side of the image?",
+    "answer": "red",
+    "question_type": "color_left_right",
+    "causal_region": "middle-left",
+    "distractor_region": "middle-right"
+  },
+  {
+    "image_id": "synthetic_0052",
+    "image_file": "synthetic_0052.png",
+    "question": "What color is the circle at the top of the image?",
+    "answer": "purple",
+    "question_type": "top_bottom",
+    "causal_region": "top-center",
+    "distractor_region": "bottom-center"
+  },
+  {
+    "image_id": "synthetic_0053",
+    "image_file": "synthetic_0053.png",
+    "question": "What color is the square that is directly above of the blue circle?",
+    "answer": "red",
+    "question_type": "relative_position",
+    "causal_region": "middle-left",
+    "ref_pos": "bottom-left",
+    "direction": "above",
+    "grid_layout": {
+      "center": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0054",
+    "image_file": "synthetic_0054.png",
+    "question": "What color is the square in the center of the image?",
+    "answer": "purple",
+    "question_type": "adjacent_distractor",
+    "causal_region": "center",
+    "distractor_region": "top-center",
+    "distractor_color": "orange",
+    "grid_layout": {
+      "middle-left": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "orange",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0055",
+    "image_file": "synthetic_0055.png",
+    "question": "What color is the circle in the bottom-left of the image?",
+    "answer": "blue",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-left",
+    "distractor_region": "bottom-center",
+    "distractor_color": "purple",
+    "grid_layout": {
+      "top-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "middle-right": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "blue",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0056",
+    "image_file": "synthetic_0056.png",
+    "question": "What color is the triangle in the bottom-left of the image?",
+    "answer": "blue",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-left",
+    "distractor_region": "middle-left",
+    "distractor_color": "red",
+    "grid_layout": {
+      "bottom-left": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "orange",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0057",
+    "image_file": "synthetic_0057.png",
+    "question": "What color is the square in the center of the image?",
+    "answer": "green",
+    "question_type": "adjacent_distractor",
+    "causal_region": "center",
+    "distractor_region": "middle-right",
+    "distractor_color": "purple",
+    "grid_layout": {
+      "bottom-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "orange",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0058",
+    "image_file": "synthetic_0058.png",
+    "question": "What color is the triangle that is directly above of the yellow circle?",
+    "answer": "blue",
+    "question_type": "relative_position",
+    "causal_region": "middle-left",
+    "ref_pos": "bottom-left",
+    "direction": "above",
+    "grid_layout": {
+      "top-right": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "center": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "blue",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0059",
+    "image_file": "synthetic_0059.png",
+    "question": "What color is the square that is directly left of the yellow square?",
+    "answer": "orange",
+    "question_type": "relative_position",
+    "causal_region": "center",
+    "ref_pos": "middle-right",
+    "direction": "left",
+    "grid_layout": {
+      "bottom-center": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "green",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0060",
+    "image_file": "synthetic_0060.png",
+    "question": "What color is the circle on the left side of the image?",
+    "answer": "blue",
+    "question_type": "color_left_right",
+    "causal_region": "middle-left",
+    "distractor_region": "middle-right"
+  },
+  {
+    "image_id": "synthetic_0061",
+    "image_file": "synthetic_0061.png",
+    "question": "What color is the circle at the top of the image?",
+    "answer": "purple",
+    "question_type": "top_bottom",
+    "causal_region": "top-center",
+    "distractor_region": "bottom-center"
+  },
+  {
+    "image_id": "synthetic_0062",
+    "image_file": "synthetic_0062.png",
+    "question": "What color is the circle that is directly left of the red square?",
+    "answer": "blue",
+    "question_type": "relative_position",
+    "causal_region": "top-center",
+    "ref_pos": "top-right",
+    "direction": "left",
+    "grid_layout": {
+      "top-center": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "red",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0063",
+    "image_file": "synthetic_0063.png",
+    "question": "What color is the triangle in the center of the image?",
+    "answer": "purple",
+    "question_type": "adjacent_distractor",
+    "causal_region": "center",
+    "distractor_region": "bottom-center",
+    "distractor_color": "yellow",
+    "grid_layout": {
+      "top-left": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "middle-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "center": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0064",
+    "image_file": "synthetic_0064.png",
+    "question": "What color is the square in the center of the image?",
+    "answer": "yellow",
+    "question_type": "adjacent_distractor",
+    "causal_region": "center",
+    "distractor_region": "bottom-center",
+    "distractor_color": "purple",
+    "grid_layout": {
+      "middle-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0065",
+    "image_file": "synthetic_0065.png",
+    "question": "What color is the triangle in the top-center of the image?",
+    "answer": "red",
+    "question_type": "adjacent_distractor",
+    "causal_region": "top-center",
+    "distractor_region": "top-right",
+    "distractor_color": "orange",
+    "grid_layout": {
+      "top-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0066",
+    "image_file": "synthetic_0066.png",
+    "question": "What color is the circle in the middle-right of the image?",
+    "answer": "blue",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-right",
+    "distractor_region": "center",
+    "distractor_color": "green",
+    "grid_layout": {
+      "bottom-center": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "red",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0067",
+    "image_file": "synthetic_0067.png",
+    "question": "What color is the square that is directly above of the blue square?",
+    "answer": "yellow",
+    "question_type": "relative_position",
+    "causal_region": "middle-right",
+    "ref_pos": "bottom-right",
+    "direction": "above",
+    "grid_layout": {
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "yellow",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0068",
+    "image_file": "synthetic_0068.png",
+    "question": "What color is the triangle that is directly left of the red square?",
+    "answer": "purple",
+    "question_type": "relative_position",
+    "causal_region": "top-center",
+    "ref_pos": "top-right",
+    "direction": "left",
+    "grid_layout": {
+      "top-center": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0069",
+    "image_file": "synthetic_0069.png",
+    "question": "What color is the circle on the left side of the image?",
+    "answer": "red",
+    "question_type": "color_left_right",
+    "causal_region": "middle-left",
+    "distractor_region": "middle-right"
+  },
+  {
+    "image_id": "synthetic_0070",
+    "image_file": "synthetic_0070.png",
+    "question": "What color is the square at the top of the image?",
+    "answer": "green",
+    "question_type": "top_bottom",
+    "causal_region": "top-center",
+    "distractor_region": "bottom-center"
+  },
+  {
+    "image_id": "synthetic_0071",
+    "image_file": "synthetic_0071.png",
+    "question": "What color is the triangle that is directly below of the green circle?",
+    "answer": "red",
+    "question_type": "relative_position",
+    "causal_region": "center",
+    "ref_pos": "top-center",
+    "direction": "below",
+    "grid_layout": {
+      "middle-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "green",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0072",
+    "image_file": "synthetic_0072.png",
+    "question": "What color is the square in the bottom-right of the image?",
+    "answer": "purple",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-right",
+    "distractor_region": "middle-right",
+    "distractor_color": "yellow",
+    "grid_layout": {
+      "top-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "yellow",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0073",
+    "image_file": "synthetic_0073.png",
+    "question": "What color is the circle in the bottom-left of the image?",
+    "answer": "orange",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-left",
+    "distractor_region": "middle-left",
+    "distractor_color": "red",
+    "grid_layout": {
+      "bottom-right": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "middle-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0074",
+    "image_file": "synthetic_0074.png",
+    "question": "What color is the circle in the bottom-left of the image?",
+    "answer": "yellow",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-left",
+    "distractor_region": "middle-left",
+    "distractor_color": "purple",
+    "grid_layout": {
+      "bottom-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "red",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0075",
+    "image_file": "synthetic_0075.png",
+    "question": "What color is the square in the bottom-right of the image?",
+    "answer": "purple",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-right",
+    "distractor_region": "bottom-center",
+    "distractor_color": "green",
+    "grid_layout": {
+      "middle-right": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "green",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0076",
+    "image_file": "synthetic_0076.png",
+    "question": "What color is the circle that is directly above of the red square?",
+    "answer": "red",
+    "question_type": "relative_position",
+    "causal_region": "top-right",
+    "ref_pos": "middle-right",
+    "direction": "above",
+    "grid_layout": {
+      "top-center": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "middle-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "orange",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0077",
+    "image_file": "synthetic_0077.png",
+    "question": "What color is the triangle that is directly right of the green triangle?",
+    "answer": "blue",
+    "question_type": "relative_position",
+    "causal_region": "bottom-center",
+    "ref_pos": "bottom-left",
+    "direction": "right",
+    "grid_layout": {
+      "bottom-left": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "orange",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0078",
+    "image_file": "synthetic_0078.png",
+    "question": "What color is the circle on the left side of the image?",
+    "answer": "blue",
+    "question_type": "color_left_right",
+    "causal_region": "middle-left",
+    "distractor_region": "middle-right"
+  },
+  {
+    "image_id": "synthetic_0079",
+    "image_file": "synthetic_0079.png",
+    "question": "What color is the circle at the top of the image?",
+    "answer": "blue",
+    "question_type": "top_bottom",
+    "causal_region": "top-center",
+    "distractor_region": "bottom-center"
+  },
+  {
+    "image_id": "synthetic_0080",
+    "image_file": "synthetic_0080.png",
+    "question": "What color is the circle that is directly above of the blue square?",
+    "answer": "red",
+    "question_type": "relative_position",
+    "causal_region": "middle-right",
+    "ref_pos": "bottom-right",
+    "direction": "above",
+    "grid_layout": {
+      "top-center": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0081",
+    "image_file": "synthetic_0081.png",
+    "question": "What color is the square in the middle-left of the image?",
+    "answer": "orange",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-left",
+    "distractor_region": "center",
+    "distractor_color": "red",
+    "grid_layout": {
+      "center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0082",
+    "image_file": "synthetic_0082.png",
+    "question": "What color is the triangle in the middle-right of the image?",
+    "answer": "green",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-right",
+    "distractor_region": "center",
+    "distractor_color": "blue",
+    "grid_layout": {
+      "bottom-right": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "center": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "yellow",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0083",
+    "image_file": "synthetic_0083.png",
+    "question": "What color is the triangle in the middle-left of the image?",
+    "answer": "yellow",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-left",
+    "distractor_region": "top-left",
+    "distractor_color": "blue",
+    "grid_layout": {
+      "bottom-left": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "middle-right": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0084",
+    "image_file": "synthetic_0084.png",
+    "question": "What color is the square in the middle-left of the image?",
+    "answer": "orange",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-left",
+    "distractor_region": "bottom-left",
+    "distractor_color": "green",
+    "grid_layout": {
+      "top-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "middle-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0085",
+    "image_file": "synthetic_0085.png",
+    "question": "What color is the triangle that is directly right of the yellow circle?",
+    "answer": "yellow",
+    "question_type": "relative_position",
+    "causal_region": "bottom-center",
+    "ref_pos": "bottom-left",
+    "direction": "right",
+    "grid_layout": {
+      "top-center": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "purple",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0086",
+    "image_file": "synthetic_0086.png",
+    "question": "What color is the circle that is directly left of the blue triangle?",
+    "answer": "orange",
+    "question_type": "relative_position",
+    "causal_region": "bottom-center",
+    "ref_pos": "bottom-right",
+    "direction": "left",
+    "grid_layout": {
+      "center": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "green",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0087",
+    "image_file": "synthetic_0087.png",
+    "question": "What color is the square on the left side of the image?",
+    "answer": "yellow",
+    "question_type": "color_left_right",
+    "causal_region": "middle-left",
+    "distractor_region": "middle-right"
+  },
+  {
+    "image_id": "synthetic_0088",
+    "image_file": "synthetic_0088.png",
+    "question": "What color is the circle at the top of the image?",
+    "answer": "orange",
+    "question_type": "top_bottom",
+    "causal_region": "top-center",
+    "distractor_region": "bottom-center"
+  },
+  {
+    "image_id": "synthetic_0089",
+    "image_file": "synthetic_0089.png",
+    "question": "What color is the circle that is directly below of the orange triangle?",
+    "answer": "purple",
+    "question_type": "relative_position",
+    "causal_region": "bottom-right",
+    "ref_pos": "middle-right",
+    "direction": "below",
+    "grid_layout": {
+      "top-center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "green",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0090",
+    "image_file": "synthetic_0090.png",
+    "question": "What color is the circle in the center of the image?",
+    "answer": "yellow",
+    "question_type": "adjacent_distractor",
+    "causal_region": "center",
+    "distractor_region": "bottom-center",
+    "distractor_color": "purple",
+    "grid_layout": {
+      "bottom-center": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "center": {
+        "color": "yellow",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0091",
+    "image_file": "synthetic_0091.png",
+    "question": "What color is the circle in the top-right of the image?",
+    "answer": "yellow",
+    "question_type": "adjacent_distractor",
+    "causal_region": "top-right",
+    "distractor_region": "middle-right",
+    "distractor_color": "blue",
+    "grid_layout": {
+      "bottom-left": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "red",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0092",
+    "image_file": "synthetic_0092.png",
+    "question": "What color is the triangle in the bottom-center of the image?",
+    "answer": "blue",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-center",
+    "distractor_region": "bottom-left",
+    "distractor_color": "orange",
+    "grid_layout": {
+      "top-left": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "yellow",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0093",
+    "image_file": "synthetic_0093.png",
+    "question": "What color is the triangle in the bottom-right of the image?",
+    "answer": "purple",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-right",
+    "distractor_region": "middle-right",
+    "distractor_color": "blue",
+    "grid_layout": {
+      "middle-left": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "center": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "blue",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0094",
+    "image_file": "synthetic_0094.png",
+    "question": "What color is the triangle that is directly left of the red circle?",
+    "answer": "green",
+    "question_type": "relative_position",
+    "causal_region": "center",
+    "ref_pos": "middle-right",
+    "direction": "left",
+    "grid_layout": {
+      "bottom-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "center": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0095",
+    "image_file": "synthetic_0095.png",
+    "question": "What color is the triangle that is directly below of the purple circle?",
+    "answer": "yellow",
+    "question_type": "relative_position",
+    "causal_region": "middle-right",
+    "ref_pos": "top-right",
+    "direction": "below",
+    "grid_layout": {
+      "bottom-center": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "middle-right": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0096",
+    "image_file": "synthetic_0096.png",
+    "question": "What color is the triangle on the left side of the image?",
+    "answer": "orange",
+    "question_type": "color_left_right",
+    "causal_region": "middle-left",
+    "distractor_region": "middle-right"
+  },
+  {
+    "image_id": "synthetic_0097",
+    "image_file": "synthetic_0097.png",
+    "question": "What color is the circle at the top of the image?",
+    "answer": "green",
+    "question_type": "top_bottom",
+    "causal_region": "top-center",
+    "distractor_region": "bottom-center"
+  },
+  {
+    "image_id": "synthetic_0098",
+    "image_file": "synthetic_0098.png",
+    "question": "What color is the circle that is directly left of the purple circle?",
+    "answer": "orange",
+    "question_type": "relative_position",
+    "causal_region": "bottom-left",
+    "ref_pos": "bottom-center",
+    "direction": "left",
+    "grid_layout": {
+      "bottom-right": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0099",
+    "image_file": "synthetic_0099.png",
+    "question": "What color is the triangle in the bottom-left of the image?",
+    "answer": "green",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-left",
+    "distractor_region": "bottom-center",
+    "distractor_color": "orange",
+    "grid_layout": {
+      "bottom-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "green",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0100",
+    "image_file": "synthetic_0100.png",
+    "question": "What color is the circle in the middle-right of the image?",
+    "answer": "yellow",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-right",
+    "distractor_region": "center",
+    "distractor_color": "orange",
+    "grid_layout": {
+      "bottom-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "green",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0101",
+    "image_file": "synthetic_0101.png",
+    "question": "What color is the circle in the middle-left of the image?",
+    "answer": "yellow",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-left",
+    "distractor_region": "bottom-left",
+    "distractor_color": "blue",
+    "grid_layout": {
+      "center": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "blue",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0102",
+    "image_file": "synthetic_0102.png",
+    "question": "What color is the circle in the center of the image?",
+    "answer": "blue",
+    "question_type": "adjacent_distractor",
+    "causal_region": "center",
+    "distractor_region": "middle-right",
+    "distractor_color": "red",
+    "grid_layout": {
+      "bottom-center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "center": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "orange",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0103",
+    "image_file": "synthetic_0103.png",
+    "question": "What color is the circle that is directly below of the blue circle?",
+    "answer": "yellow",
+    "question_type": "relative_position",
+    "causal_region": "center",
+    "ref_pos": "top-center",
+    "direction": "below",
+    "grid_layout": {
+      "bottom-right": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "center": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "orange",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0104",
+    "image_file": "synthetic_0104.png",
+    "question": "What color is the square that is directly below of the purple circle?",
+    "answer": "red",
+    "question_type": "relative_position",
+    "causal_region": "center",
+    "ref_pos": "top-center",
+    "direction": "below",
+    "grid_layout": {
+      "top-center": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0105",
+    "image_file": "synthetic_0105.png",
+    "question": "What color is the triangle on the left side of the image?",
+    "answer": "green",
+    "question_type": "color_left_right",
+    "causal_region": "middle-left",
+    "distractor_region": "middle-right"
+  },
+  {
+    "image_id": "synthetic_0106",
+    "image_file": "synthetic_0106.png",
+    "question": "What color is the triangle at the top of the image?",
+    "answer": "blue",
+    "question_type": "top_bottom",
+    "causal_region": "top-center",
+    "distractor_region": "bottom-center"
+  },
+  {
+    "image_id": "synthetic_0107",
+    "image_file": "synthetic_0107.png",
+    "question": "What color is the square that is directly left of the red square?",
+    "answer": "purple",
+    "question_type": "relative_position",
+    "causal_region": "top-center",
+    "ref_pos": "top-right",
+    "direction": "left",
+    "grid_layout": {
+      "middle-left": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "green",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0108",
+    "image_file": "synthetic_0108.png",
+    "question": "What color is the square in the top-left of the image?",
+    "answer": "blue",
+    "question_type": "adjacent_distractor",
+    "causal_region": "top-left",
+    "distractor_region": "top-center",
+    "distractor_color": "red",
+    "grid_layout": {
+      "middle-right": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "center": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0109",
+    "image_file": "synthetic_0109.png",
+    "question": "What color is the square in the top-right of the image?",
+    "answer": "red",
+    "question_type": "adjacent_distractor",
+    "causal_region": "top-right",
+    "distractor_region": "middle-right",
+    "distractor_color": "yellow",
+    "grid_layout": {
+      "middle-left": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "red",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0110",
+    "image_file": "synthetic_0110.png",
+    "question": "What color is the square in the bottom-center of the image?",
+    "answer": "yellow",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-center",
+    "distractor_region": "bottom-right",
+    "distractor_color": "purple",
+    "grid_layout": {
+      "middle-right": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "orange",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0111",
+    "image_file": "synthetic_0111.png",
+    "question": "What color is the square in the middle-right of the image?",
+    "answer": "yellow",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-right",
+    "distractor_region": "center",
+    "distractor_color": "green",
+    "grid_layout": {
+      "top-center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "middle-right": {
+        "color": "yellow",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0112",
+    "image_file": "synthetic_0112.png",
+    "question": "What color is the square that is directly above of the green circle?",
+    "answer": "blue",
+    "question_type": "relative_position",
+    "causal_region": "top-left",
+    "ref_pos": "middle-left",
+    "direction": "above",
+    "grid_layout": {
+      "middle-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0113",
+    "image_file": "synthetic_0113.png",
+    "question": "What color is the triangle that is directly right of the yellow square?",
+    "answer": "red",
+    "question_type": "relative_position",
+    "causal_region": "top-center",
+    "ref_pos": "top-left",
+    "direction": "right",
+    "grid_layout": {
+      "bottom-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0114",
+    "image_file": "synthetic_0114.png",
+    "question": "What color is the square on the left side of the image?",
+    "answer": "yellow",
+    "question_type": "color_left_right",
+    "causal_region": "middle-left",
+    "distractor_region": "middle-right"
+  },
+  {
+    "image_id": "synthetic_0115",
+    "image_file": "synthetic_0115.png",
+    "question": "What color is the square at the top of the image?",
+    "answer": "blue",
+    "question_type": "top_bottom",
+    "causal_region": "top-center",
+    "distractor_region": "bottom-center"
+  },
+  {
+    "image_id": "synthetic_0116",
+    "image_file": "synthetic_0116.png",
+    "question": "What color is the circle that is directly above of the purple triangle?",
+    "answer": "red",
+    "question_type": "relative_position",
+    "causal_region": "middle-left",
+    "ref_pos": "bottom-left",
+    "direction": "above",
+    "grid_layout": {
+      "bottom-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "red",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0117",
+    "image_file": "synthetic_0117.png",
+    "question": "What color is the circle in the top-center of the image?",
+    "answer": "orange",
+    "question_type": "adjacent_distractor",
+    "causal_region": "top-center",
+    "distractor_region": "top-left",
+    "distractor_color": "purple",
+    "grid_layout": {
+      "center": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "blue",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0118",
+    "image_file": "synthetic_0118.png",
+    "question": "What color is the triangle in the center of the image?",
+    "answer": "yellow",
+    "question_type": "adjacent_distractor",
+    "causal_region": "center",
+    "distractor_region": "top-center",
+    "distractor_color": "orange",
+    "grid_layout": {
+      "top-left": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "purple",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0119",
+    "image_file": "synthetic_0119.png",
+    "question": "What color is the circle in the middle-right of the image?",
+    "answer": "yellow",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-right",
+    "distractor_region": "bottom-right",
+    "distractor_color": "red",
+    "grid_layout": {
+      "middle-left": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "middle-right": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "purple",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0120",
+    "image_file": "synthetic_0120.png",
+    "question": "What color is the circle in the top-center of the image?",
+    "answer": "green",
+    "question_type": "adjacent_distractor",
+    "causal_region": "top-center",
+    "distractor_region": "top-right",
+    "distractor_color": "orange",
+    "grid_layout": {
+      "center": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0121",
+    "image_file": "synthetic_0121.png",
+    "question": "What color is the circle that is directly left of the purple square?",
+    "answer": "blue",
+    "question_type": "relative_position",
+    "causal_region": "top-center",
+    "ref_pos": "top-right",
+    "direction": "left",
+    "grid_layout": {
+      "middle-left": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "red",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0122",
+    "image_file": "synthetic_0122.png",
+    "question": "What color is the square that is directly below of the blue triangle?",
+    "answer": "red",
+    "question_type": "relative_position",
+    "causal_region": "middle-left",
+    "ref_pos": "top-left",
+    "direction": "below",
+    "grid_layout": {
+      "bottom-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0123",
+    "image_file": "synthetic_0123.png",
+    "question": "What color is the square on the left side of the image?",
+    "answer": "red",
+    "question_type": "color_left_right",
+    "causal_region": "middle-left",
+    "distractor_region": "middle-right"
+  },
+  {
+    "image_id": "synthetic_0124",
+    "image_file": "synthetic_0124.png",
+    "question": "What color is the square at the top of the image?",
+    "answer": "red",
+    "question_type": "top_bottom",
+    "causal_region": "top-center",
+    "distractor_region": "bottom-center"
+  },
+  {
+    "image_id": "synthetic_0125",
+    "image_file": "synthetic_0125.png",
+    "question": "What color is the circle that is directly below of the purple circle?",
+    "answer": "orange",
+    "question_type": "relative_position",
+    "causal_region": "middle-left",
+    "ref_pos": "top-left",
+    "direction": "below",
+    "grid_layout": {
+      "bottom-right": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0126",
+    "image_file": "synthetic_0126.png",
+    "question": "What color is the square in the middle-left of the image?",
+    "answer": "yellow",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-left",
+    "distractor_region": "center",
+    "distractor_color": "orange",
+    "grid_layout": {
+      "top-left": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "yellow",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0127",
+    "image_file": "synthetic_0127.png",
+    "question": "What color is the square in the top-left of the image?",
+    "answer": "yellow",
+    "question_type": "adjacent_distractor",
+    "causal_region": "top-left",
+    "distractor_region": "middle-left",
+    "distractor_color": "blue",
+    "grid_layout": {
+      "middle-right": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "blue",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0128",
+    "image_file": "synthetic_0128.png",
+    "question": "What color is the square in the bottom-center of the image?",
+    "answer": "blue",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-center",
+    "distractor_region": "center",
+    "distractor_color": "orange",
+    "grid_layout": {
+      "middle-right": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "purple",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0129",
+    "image_file": "synthetic_0129.png",
+    "question": "What color is the triangle in the middle-right of the image?",
+    "answer": "purple",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-right",
+    "distractor_region": "center",
+    "distractor_color": "blue",
+    "grid_layout": {
+      "top-left": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "middle-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "blue",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0130",
+    "image_file": "synthetic_0130.png",
+    "question": "What color is the triangle that is directly below of the yellow square?",
+    "answer": "blue",
+    "question_type": "relative_position",
+    "causal_region": "bottom-right",
+    "ref_pos": "middle-right",
+    "direction": "below",
+    "grid_layout": {
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "center": {
+        "color": "yellow",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0131",
+    "image_file": "synthetic_0131.png",
+    "question": "What color is the square that is directly below of the red triangle?",
+    "answer": "purple",
+    "question_type": "relative_position",
+    "causal_region": "middle-right",
+    "ref_pos": "top-right",
+    "direction": "below",
+    "grid_layout": {
+      "top-right": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0132",
+    "image_file": "synthetic_0132.png",
+    "question": "What color is the circle on the left side of the image?",
+    "answer": "blue",
+    "question_type": "color_left_right",
+    "causal_region": "middle-left",
+    "distractor_region": "middle-right"
+  },
+  {
+    "image_id": "synthetic_0133",
+    "image_file": "synthetic_0133.png",
+    "question": "What color is the circle at the top of the image?",
+    "answer": "red",
+    "question_type": "top_bottom",
+    "causal_region": "top-center",
+    "distractor_region": "bottom-center"
+  },
+  {
+    "image_id": "synthetic_0134",
+    "image_file": "synthetic_0134.png",
+    "question": "What color is the circle that is directly below of the orange triangle?",
+    "answer": "purple",
+    "question_type": "relative_position",
+    "causal_region": "middle-left",
+    "ref_pos": "top-left",
+    "direction": "below",
+    "grid_layout": {
+      "top-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0135",
+    "image_file": "synthetic_0135.png",
+    "question": "What color is the triangle in the middle-right of the image?",
+    "answer": "blue",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-right",
+    "distractor_region": "bottom-right",
+    "distractor_color": "green",
+    "grid_layout": {
+      "center": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0136",
+    "image_file": "synthetic_0136.png",
+    "question": "What color is the circle in the top-right of the image?",
+    "answer": "red",
+    "question_type": "adjacent_distractor",
+    "causal_region": "top-right",
+    "distractor_region": "middle-right",
+    "distractor_color": "blue",
+    "grid_layout": {
+      "bottom-center": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0137",
+    "image_file": "synthetic_0137.png",
+    "question": "What color is the square in the middle-left of the image?",
+    "answer": "purple",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-left",
+    "distractor_region": "top-left",
+    "distractor_color": "green",
+    "grid_layout": {
+      "top-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "green",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0138",
+    "image_file": "synthetic_0138.png",
+    "question": "What color is the triangle in the top-left of the image?",
+    "answer": "blue",
+    "question_type": "adjacent_distractor",
+    "causal_region": "top-left",
+    "distractor_region": "top-center",
+    "distractor_color": "orange",
+    "grid_layout": {
+      "middle-left": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "yellow",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0139",
+    "image_file": "synthetic_0139.png",
+    "question": "What color is the square that is directly left of the red triangle?",
+    "answer": "green",
+    "question_type": "relative_position",
+    "causal_region": "bottom-center",
+    "ref_pos": "bottom-right",
+    "direction": "left",
+    "grid_layout": {
+      "middle-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "red",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0140",
+    "image_file": "synthetic_0140.png",
+    "question": "What color is the square that is directly above of the green triangle?",
+    "answer": "green",
+    "question_type": "relative_position",
+    "causal_region": "middle-right",
+    "ref_pos": "bottom-right",
+    "direction": "above",
+    "grid_layout": {
+      "top-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "blue",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0141",
+    "image_file": "synthetic_0141.png",
+    "question": "What color is the circle on the left side of the image?",
+    "answer": "yellow",
+    "question_type": "color_left_right",
+    "causal_region": "middle-left",
+    "distractor_region": "middle-right"
+  },
+  {
+    "image_id": "synthetic_0142",
+    "image_file": "synthetic_0142.png",
+    "question": "What color is the circle at the top of the image?",
+    "answer": "blue",
+    "question_type": "top_bottom",
+    "causal_region": "top-center",
+    "distractor_region": "bottom-center"
+  },
+  {
+    "image_id": "synthetic_0143",
+    "image_file": "synthetic_0143.png",
+    "question": "What color is the triangle that is directly below of the orange square?",
+    "answer": "green",
+    "question_type": "relative_position",
+    "causal_region": "bottom-center",
+    "ref_pos": "center",
+    "direction": "below",
+    "grid_layout": {
+      "top-right": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "green",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0144",
+    "image_file": "synthetic_0144.png",
+    "question": "What color is the circle in the bottom-left of the image?",
+    "answer": "red",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-left",
+    "distractor_region": "middle-left",
+    "distractor_color": "yellow",
+    "grid_layout": {
+      "center": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "yellow",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0145",
+    "image_file": "synthetic_0145.png",
+    "question": "What color is the square in the middle-left of the image?",
+    "answer": "purple",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-left",
+    "distractor_region": "center",
+    "distractor_color": "red",
+    "grid_layout": {
+      "middle-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0146",
+    "image_file": "synthetic_0146.png",
+    "question": "What color is the square in the bottom-center of the image?",
+    "answer": "green",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-center",
+    "distractor_region": "center",
+    "distractor_color": "red",
+    "grid_layout": {
+      "bottom-left": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "blue",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0147",
+    "image_file": "synthetic_0147.png",
+    "question": "What color is the square in the middle-left of the image?",
+    "answer": "green",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-left",
+    "distractor_region": "bottom-left",
+    "distractor_color": "yellow",
+    "grid_layout": {
+      "bottom-center": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0148",
+    "image_file": "synthetic_0148.png",
+    "question": "What color is the square that is directly above of the blue circle?",
+    "answer": "green",
+    "question_type": "relative_position",
+    "causal_region": "middle-right",
+    "ref_pos": "bottom-right",
+    "direction": "above",
+    "grid_layout": {
+      "center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0149",
+    "image_file": "synthetic_0149.png",
+    "question": "What color is the square that is directly right of the purple circle?",
+    "answer": "red",
+    "question_type": "relative_position",
+    "causal_region": "bottom-center",
+    "ref_pos": "bottom-left",
+    "direction": "right",
+    "grid_layout": {
+      "bottom-center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0150",
+    "image_file": "synthetic_0150.png",
+    "question": "What color is the circle on the left side of the image?",
+    "answer": "green",
+    "question_type": "color_left_right",
+    "causal_region": "middle-left",
+    "distractor_region": "middle-right"
+  },
+  {
+    "image_id": "synthetic_0151",
+    "image_file": "synthetic_0151.png",
+    "question": "What color is the square at the top of the image?",
+    "answer": "red",
+    "question_type": "top_bottom",
+    "causal_region": "top-center",
+    "distractor_region": "bottom-center"
+  },
+  {
+    "image_id": "synthetic_0152",
+    "image_file": "synthetic_0152.png",
+    "question": "What color is the square that is directly below of the blue square?",
+    "answer": "purple",
+    "question_type": "relative_position",
+    "causal_region": "bottom-left",
+    "ref_pos": "middle-left",
+    "direction": "below",
+    "grid_layout": {
+      "center": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0153",
+    "image_file": "synthetic_0153.png",
+    "question": "What color is the square in the middle-right of the image?",
+    "answer": "purple",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-right",
+    "distractor_region": "bottom-right",
+    "distractor_color": "yellow",
+    "grid_layout": {
+      "middle-left": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0154",
+    "image_file": "synthetic_0154.png",
+    "question": "What color is the triangle in the middle-left of the image?",
+    "answer": "red",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-left",
+    "distractor_region": "bottom-left",
+    "distractor_color": "green",
+    "grid_layout": {
+      "center": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "blue",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0155",
+    "image_file": "synthetic_0155.png",
+    "question": "What color is the triangle in the bottom-center of the image?",
+    "answer": "blue",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-center",
+    "distractor_region": "bottom-right",
+    "distractor_color": "yellow",
+    "grid_layout": {
+      "top-center": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "yellow",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0156",
+    "image_file": "synthetic_0156.png",
+    "question": "What color is the triangle in the bottom-left of the image?",
+    "answer": "purple",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-left",
+    "distractor_region": "bottom-center",
+    "distractor_color": "yellow",
+    "grid_layout": {
+      "top-center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "yellow",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0157",
+    "image_file": "synthetic_0157.png",
+    "question": "What color is the square that is directly above of the red square?",
+    "answer": "blue",
+    "question_type": "relative_position",
+    "causal_region": "top-left",
+    "ref_pos": "middle-left",
+    "direction": "above",
+    "grid_layout": {
+      "top-right": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0158",
+    "image_file": "synthetic_0158.png",
+    "question": "What color is the circle that is directly above of the purple square?",
+    "answer": "yellow",
+    "question_type": "relative_position",
+    "causal_region": "top-center",
+    "ref_pos": "center",
+    "direction": "above",
+    "grid_layout": {
+      "center": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0159",
+    "image_file": "synthetic_0159.png",
+    "question": "What color is the square on the left side of the image?",
+    "answer": "purple",
+    "question_type": "color_left_right",
+    "causal_region": "middle-left",
+    "distractor_region": "middle-right"
+  },
+  {
+    "image_id": "synthetic_0160",
+    "image_file": "synthetic_0160.png",
+    "question": "What color is the circle at the top of the image?",
+    "answer": "purple",
+    "question_type": "top_bottom",
+    "causal_region": "top-center",
+    "distractor_region": "bottom-center"
+  },
+  {
+    "image_id": "synthetic_0161",
+    "image_file": "synthetic_0161.png",
+    "question": "What color is the square that is directly above of the blue triangle?",
+    "answer": "yellow",
+    "question_type": "relative_position",
+    "causal_region": "top-center",
+    "ref_pos": "center",
+    "direction": "above",
+    "grid_layout": {
+      "middle-left": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "blue",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0162",
+    "image_file": "synthetic_0162.png",
+    "question": "What color is the circle in the middle-left of the image?",
+    "answer": "orange",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-left",
+    "distractor_region": "top-left",
+    "distractor_color": "yellow",
+    "grid_layout": {
+      "middle-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "blue",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0163",
+    "image_file": "synthetic_0163.png",
+    "question": "What color is the square in the top-center of the image?",
+    "answer": "green",
+    "question_type": "adjacent_distractor",
+    "causal_region": "top-center",
+    "distractor_region": "center",
+    "distractor_color": "red",
+    "grid_layout": {
+      "middle-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "blue",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0164",
+    "image_file": "synthetic_0164.png",
+    "question": "What color is the square in the middle-left of the image?",
+    "answer": "green",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-left",
+    "distractor_region": "center",
+    "distractor_color": "red",
+    "grid_layout": {
+      "center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0165",
+    "image_file": "synthetic_0165.png",
+    "question": "What color is the triangle in the top-left of the image?",
+    "answer": "blue",
+    "question_type": "adjacent_distractor",
+    "causal_region": "top-left",
+    "distractor_region": "middle-left",
+    "distractor_color": "green",
+    "grid_layout": {
+      "bottom-left": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0166",
+    "image_file": "synthetic_0166.png",
+    "question": "What color is the circle that is directly below of the green square?",
+    "answer": "blue",
+    "question_type": "relative_position",
+    "causal_region": "bottom-left",
+    "ref_pos": "middle-left",
+    "direction": "below",
+    "grid_layout": {
+      "center": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0167",
+    "image_file": "synthetic_0167.png",
+    "question": "What color is the circle that is directly left of the orange circle?",
+    "answer": "red",
+    "question_type": "relative_position",
+    "causal_region": "middle-left",
+    "ref_pos": "center",
+    "direction": "left",
+    "grid_layout": {
+      "middle-right": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0168",
+    "image_file": "synthetic_0168.png",
+    "question": "What color is the triangle on the left side of the image?",
+    "answer": "yellow",
+    "question_type": "color_left_right",
+    "causal_region": "middle-left",
+    "distractor_region": "middle-right"
+  },
+  {
+    "image_id": "synthetic_0169",
+    "image_file": "synthetic_0169.png",
+    "question": "What color is the circle at the top of the image?",
+    "answer": "purple",
+    "question_type": "top_bottom",
+    "causal_region": "top-center",
+    "distractor_region": "bottom-center"
+  },
+  {
+    "image_id": "synthetic_0170",
+    "image_file": "synthetic_0170.png",
+    "question": "What color is the triangle that is directly above of the red triangle?",
+    "answer": "yellow",
+    "question_type": "relative_position",
+    "causal_region": "middle-right",
+    "ref_pos": "bottom-right",
+    "direction": "above",
+    "grid_layout": {
+      "top-left": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "middle-right": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "purple",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0171",
+    "image_file": "synthetic_0171.png",
+    "question": "What color is the square in the center of the image?",
+    "answer": "purple",
+    "question_type": "adjacent_distractor",
+    "causal_region": "center",
+    "distractor_region": "bottom-center",
+    "distractor_color": "green",
+    "grid_layout": {
+      "middle-right": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "green",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0172",
+    "image_file": "synthetic_0172.png",
+    "question": "What color is the triangle in the bottom-left of the image?",
+    "answer": "yellow",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-left",
+    "distractor_region": "bottom-center",
+    "distractor_color": "red",
+    "grid_layout": {
+      "middle-left": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "green",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0173",
+    "image_file": "synthetic_0173.png",
+    "question": "What color is the triangle in the bottom-right of the image?",
+    "answer": "blue",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-right",
+    "distractor_region": "bottom-center",
+    "distractor_color": "red",
+    "grid_layout": {
+      "bottom-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "middle-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "green",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0174",
+    "image_file": "synthetic_0174.png",
+    "question": "What color is the circle in the top-right of the image?",
+    "answer": "blue",
+    "question_type": "adjacent_distractor",
+    "causal_region": "top-right",
+    "distractor_region": "top-center",
+    "distractor_color": "orange",
+    "grid_layout": {
+      "top-right": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "green",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0175",
+    "image_file": "synthetic_0175.png",
+    "question": "What color is the triangle that is directly above of the yellow triangle?",
+    "answer": "green",
+    "question_type": "relative_position",
+    "causal_region": "middle-right",
+    "ref_pos": "bottom-right",
+    "direction": "above",
+    "grid_layout": {
+      "bottom-left": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0176",
+    "image_file": "synthetic_0176.png",
+    "question": "What color is the square that is directly right of the red circle?",
+    "answer": "red",
+    "question_type": "relative_position",
+    "causal_region": "center",
+    "ref_pos": "middle-left",
+    "direction": "right",
+    "grid_layout": {
+      "top-center": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0177",
+    "image_file": "synthetic_0177.png",
+    "question": "What color is the square on the left side of the image?",
+    "answer": "yellow",
+    "question_type": "color_left_right",
+    "causal_region": "middle-left",
+    "distractor_region": "middle-right"
+  },
+  {
+    "image_id": "synthetic_0178",
+    "image_file": "synthetic_0178.png",
+    "question": "What color is the triangle at the top of the image?",
+    "answer": "blue",
+    "question_type": "top_bottom",
+    "causal_region": "top-center",
+    "distractor_region": "bottom-center"
+  },
+  {
+    "image_id": "synthetic_0179",
+    "image_file": "synthetic_0179.png",
+    "question": "What color is the square that is directly left of the orange triangle?",
+    "answer": "red",
+    "question_type": "relative_position",
+    "causal_region": "top-center",
+    "ref_pos": "top-right",
+    "direction": "left",
+    "grid_layout": {
+      "top-left": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "purple",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0180",
+    "image_file": "synthetic_0180.png",
+    "question": "What color is the square in the center of the image?",
+    "answer": "orange",
+    "question_type": "adjacent_distractor",
+    "causal_region": "center",
+    "distractor_region": "middle-left",
+    "distractor_color": "red",
+    "grid_layout": {
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "middle-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "blue",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0181",
+    "image_file": "synthetic_0181.png",
+    "question": "What color is the triangle in the middle-left of the image?",
+    "answer": "purple",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-left",
+    "distractor_region": "top-left",
+    "distractor_color": "blue",
+    "grid_layout": {
+      "bottom-center": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "yellow",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0182",
+    "image_file": "synthetic_0182.png",
+    "question": "What color is the triangle in the middle-right of the image?",
+    "answer": "blue",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-right",
+    "distractor_region": "top-right",
+    "distractor_color": "yellow",
+    "grid_layout": {
+      "middle-right": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0183",
+    "image_file": "synthetic_0183.png",
+    "question": "What color is the circle in the top-left of the image?",
+    "answer": "blue",
+    "question_type": "adjacent_distractor",
+    "causal_region": "top-left",
+    "distractor_region": "top-center",
+    "distractor_color": "yellow",
+    "grid_layout": {
+      "middle-left": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0184",
+    "image_file": "synthetic_0184.png",
+    "question": "What color is the circle that is directly above of the red triangle?",
+    "answer": "green",
+    "question_type": "relative_position",
+    "causal_region": "center",
+    "ref_pos": "bottom-center",
+    "direction": "above",
+    "grid_layout": {
+      "bottom-left": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "orange",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "middle-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "green",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0185",
+    "image_file": "synthetic_0185.png",
+    "question": "What color is the circle that is directly above of the yellow circle?",
+    "answer": "purple",
+    "question_type": "relative_position",
+    "causal_region": "middle-right",
+    "ref_pos": "bottom-right",
+    "direction": "above",
+    "grid_layout": {
+      "middle-left": {
+        "color": "green",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0186",
+    "image_file": "synthetic_0186.png",
+    "question": "What color is the square on the left side of the image?",
+    "answer": "red",
+    "question_type": "color_left_right",
+    "causal_region": "middle-left",
+    "distractor_region": "middle-right"
+  },
+  {
+    "image_id": "synthetic_0187",
+    "image_file": "synthetic_0187.png",
+    "question": "What color is the circle at the top of the image?",
+    "answer": "orange",
+    "question_type": "top_bottom",
+    "causal_region": "top-center",
+    "distractor_region": "bottom-center"
+  },
+  {
+    "image_id": "synthetic_0188",
+    "image_file": "synthetic_0188.png",
+    "question": "What color is the triangle that is directly right of the purple square?",
+    "answer": "orange",
+    "question_type": "relative_position",
+    "causal_region": "bottom-center",
+    "ref_pos": "bottom-left",
+    "direction": "right",
+    "grid_layout": {
+      "bottom-right": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "blue",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0189",
+    "image_file": "synthetic_0189.png",
+    "question": "What color is the circle in the bottom-center of the image?",
+    "answer": "purple",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-center",
+    "distractor_region": "bottom-left",
+    "distractor_color": "yellow",
+    "grid_layout": {
+      "top-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0190",
+    "image_file": "synthetic_0190.png",
+    "question": "What color is the circle in the top-right of the image?",
+    "answer": "yellow",
+    "question_type": "adjacent_distractor",
+    "causal_region": "top-right",
+    "distractor_region": "middle-right",
+    "distractor_color": "green",
+    "grid_layout": {
+      "middle-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "center": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "red",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0191",
+    "image_file": "synthetic_0191.png",
+    "question": "What color is the triangle in the center of the image?",
+    "answer": "orange",
+    "question_type": "adjacent_distractor",
+    "causal_region": "center",
+    "distractor_region": "bottom-center",
+    "distractor_color": "green",
+    "grid_layout": {
+      "top-center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "bottom-left": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "top-right": {
+        "color": "red",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0192",
+    "image_file": "synthetic_0192.png",
+    "question": "What color is the triangle in the bottom-left of the image?",
+    "answer": "yellow",
+    "question_type": "adjacent_distractor",
+    "causal_region": "bottom-left",
+    "distractor_region": "bottom-center",
+    "distractor_color": "blue",
+    "grid_layout": {
+      "top-right": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0193",
+    "image_file": "synthetic_0193.png",
+    "question": "What color is the square that is directly below of the purple triangle?",
+    "answer": "purple",
+    "question_type": "relative_position",
+    "causal_region": "middle-right",
+    "ref_pos": "top-right",
+    "direction": "below",
+    "grid_layout": {
+      "middle-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "bottom-left": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "top-center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "center": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-left": {
+        "color": "blue",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0194",
+    "image_file": "synthetic_0194.png",
+    "question": "What color is the circle that is directly above of the blue square?",
+    "answer": "yellow",
+    "question_type": "relative_position",
+    "causal_region": "center",
+    "ref_pos": "bottom-center",
+    "direction": "above",
+    "grid_layout": {
+      "middle-right": {
+        "color": "green",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "center": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "yellow",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "yellow",
+        "shape": "triangle"
+      },
+      "bottom-right": {
+        "color": "green",
+        "shape": "circle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0195",
+    "image_file": "synthetic_0195.png",
+    "question": "What color is the square on the left side of the image?",
+    "answer": "orange",
+    "question_type": "color_left_right",
+    "causal_region": "middle-left",
+    "distractor_region": "middle-right"
+  },
+  {
+    "image_id": "synthetic_0196",
+    "image_file": "synthetic_0196.png",
+    "question": "What color is the square at the top of the image?",
+    "answer": "orange",
+    "question_type": "top_bottom",
+    "causal_region": "top-center",
+    "distractor_region": "bottom-center"
+  },
+  {
+    "image_id": "synthetic_0197",
+    "image_file": "synthetic_0197.png",
+    "question": "What color is the circle that is directly right of the purple triangle?",
+    "answer": "blue",
+    "question_type": "relative_position",
+    "causal_region": "top-right",
+    "ref_pos": "top-center",
+    "direction": "right",
+    "grid_layout": {
+      "bottom-left": {
+        "color": "red",
+        "shape": "square"
+      },
+      "center": {
+        "color": "green",
+        "shape": "square"
+      },
+      "top-right": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "middle-left": {
+        "color": "orange",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "bottom-center": {
+        "color": "green",
+        "shape": "triangle"
+      },
+      "top-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "yellow",
+        "shape": "square"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0198",
+    "image_file": "synthetic_0198.png",
+    "question": "What color is the square in the top-right of the image?",
+    "answer": "orange",
+    "question_type": "adjacent_distractor",
+    "causal_region": "top-right",
+    "distractor_region": "middle-right",
+    "distractor_color": "purple",
+    "grid_layout": {
+      "top-left": {
+        "color": "blue",
+        "shape": "square"
+      },
+      "bottom-right": {
+        "color": "red",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "top-right": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "middle-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "blue",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "bottom-center": {
+        "color": "red",
+        "shape": "square"
+      },
+      "top-center": {
+        "color": "green",
+        "shape": "triangle"
+      }
+    }
+  },
+  {
+    "image_id": "synthetic_0199",
+    "image_file": "synthetic_0199.png",
+    "question": "What color is the triangle in the middle-right of the image?",
+    "answer": "blue",
+    "question_type": "adjacent_distractor",
+    "causal_region": "middle-right",
+    "distractor_region": "bottom-right",
+    "distractor_color": "purple",
+    "grid_layout": {
+      "top-right": {
+        "color": "purple",
+        "shape": "square"
+      },
+      "middle-left": {
+        "color": "green",
+        "shape": "circle"
+      },
+      "center": {
+        "color": "purple",
+        "shape": "circle"
+      },
+      "bottom-left": {
+        "color": "red",
+        "shape": "triangle"
+      },
+      "middle-right": {
+        "color": "blue",
+        "shape": "triangle"
+      },
+      "bottom-center": {
+        "color": "purple",
+        "shape": "triangle"
+      },
+      "top-center": {
+        "color": "orange",
+        "shape": "square"
+      },
+      "top-left": {
+        "color": "yellow",
+        "shape": "circle"
+      },
+      "bottom-right": {
+        "color": "purple",
+        "shape": "triangle"
+      }
+    }
+  }
+]

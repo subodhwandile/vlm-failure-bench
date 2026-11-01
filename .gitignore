@@ -12,7 +12,7 @@ venv/
 # Data (large files — download separately)
 data/images/
 data/*.zip
-code/data/
+code/data/coco/
 
 # Intermediate / partial experiment files and logs
 code/experiments/*.partial
