@@ -517,6 +517,103 @@ objectives and more precise evaluation frameworks.
 
 ---
 
+## Appendix A: Prompt Templates (verbatim)
+
+All prompts use `temperature=0.0` and model `claude-haiku-4-5-20251022` (public Anthropic API) / `global.anthropic.claude-haiku-4-5-20251001-v1:0` (Bedrock). Sonnet baseline uses `claude-sonnet-5-5` / `global.anthropic.claude-sonnet-5-5` (temperature omitted on Bedrock — deprecated parameter).
+
+### A.1 True/False Question (all conditions)
+
+```
+Is the following statement true or false?
+
+Statement: "{caption}"
+
+Answer with only "True" or "False".
+```
+
+### A.2 Condition A — Neutral Self-Localization (all samples)
+
+```
+You just answered the following question about this image:
+"{caption}"
+
+Your answer was: "{model_answer}"
+
+Which region of the image most influenced your answer?
+
+State ONLY the region label on a single line using this exact format:
+REGION: <one of: top-left, top-center, top-right, middle-left, center, middle-right,
+bottom-left, bottom-center, bottom-right>
+
+Then briefly explain why that region influenced your answer.
+```
+
+### A.3 Condition B — Stateless Failure-Specific (failures only)
+
+```
+You answered the following question about this image INCORRECTLY.
+
+Question: Is the following statement true or false?
+Statement: "{caption}"
+
+Your answer was: "{model_answer}" (this was wrong).
+
+Which region of the image most influenced your incorrect answer?
+
+State ONLY the region label on a single line using this exact format:
+REGION: <one of: top-left, top-center, top-right, middle-left, center, middle-right,
+bottom-left, bottom-center, bottom-right>
+
+Then explain:
+1. What visual content in that region led you to give the wrong answer
+2. Why that region caused your error
+```
+
+### A.4 Condition C — Multi-Turn (failures only)
+
+The original T/F exchange is prepended as context before asking for attribution:
+
+```
+[Turn 1 — user]
+Is the following statement true or false?
+Statement: "{caption}"
+Answer with only "True" or "False".
+
+[Turn 1 — assistant]
+{model_answer}
+
+[Turn 2 — user]
+That answer was incorrect. Looking back at the image, which region of the image most
+influenced your incorrect answer?
+
+State ONLY the region label on a single line using this exact format:
+REGION: <one of: top-left, top-center, top-right, middle-left, center, middle-right,
+bottom-left, bottom-center, bottom-right>
+
+Then explain:
+1. What visual content in that region led you to give the wrong answer
+2. Why that region caused your error
+```
+
+### A.5 Grid Cell Definitions
+
+The image is divided into a uniform 3×3 grid:
+
+| Cell | x range | y range |
+|---|---|---|
+| top-left | [0, 1/3) | [0, 1/3) |
+| top-center | [1/3, 2/3) | [0, 1/3) |
+| top-right | [2/3, 1] | [0, 1/3) |
+| middle-left | [0, 1/3) | [1/3, 2/3) |
+| center | [1/3, 2/3) | [1/3, 2/3) |
+| middle-right | [2/3, 1] | [1/3, 2/3) |
+| bottom-left | [0, 1/3) | [2/3, 1] |
+| bottom-center | [1/3, 2/3) | [2/3, 1] |
+| bottom-right | [2/3, 1] | [2/3, 1] |
+
+CF masking: cells are replaced with a solid gray (128, 128, 128) rectangle. Images encoded as PNG base64 in the API request.
+
+---
 *Code and data: [github.com/subodhwandile/vlm-failure-bench](https://github.com/subodhwandile/vlm-failure-bench)*
 
 ---
@@ -540,9 +637,8 @@ objectives and more precise evaluation frameworks.
 - [x] Add papers: Seeing-but-Not-Believing (2510.17771), MLLMs Know Where to Look (2502.17422), When to Call an Apple Red (2604.06422), Madsen ACL Findings 2024, CLIP Cross-Eyed (2604.05971), CoT-faithfulness literature — all added to §2.
 
 ### Reproducibility
-- [ ] Commit result JSONs + 142-failure set + masked-image inputs to repo
-- [ ] Pin model IDs + temperatures in paper; document prompt variants verbatim in appendix
-- [ ] Swap Toast-proxy code path for plain `ANTHROPIC_API_KEY` + `anthropic` SDK
+- [x] Commit result JSONs + 142-failure set + masked-image inputs to repo — committed: pilot_v5_500.json, real_vsr_v3_t0.json, real_vsr_v3_t0_mt.json, real_vsr_v3_t0_coco.json, real_vsr_v3_t0_cf_combined.json, real_vsr_v3_t0_sonnet_explain.json (git commit 29d08cf)
+- [x] Swap Toast-proxy code path for plain `ANTHROPIC_API_KEY` + `anthropic` SDK — done in run_cf_validation.py, run_sonnet_explain.py (make_client() checks ANTHROPIC_API_KEY first; Toast is fallback). real_image_experiment.py already had this.
 
 ### Writing
 - [x] §5.2: always-center counterproductive under failure conditions (causal cells 86% non-central)
@@ -561,8 +657,8 @@ objectives and more precise evaluation frameworks.
 - [ ] Commit result JSONs to repo: `real_vsr_v3_t0.json`, `real_vsr_v3_t0_mt.json`, `real_vsr_v3_t0_coco.json`, `real_vsr_v3_t0_cf_combined.json`, `real_vsr_v3_t0_sonnet_explain.json`, `pilot_v5_500.json`
 - [ ] Commit 142-failure image set (masked inputs used for CF validation)
 - [ ] Swap Toast proxy code → plain `ANTHROPIC_API_KEY` + `anthropic` SDK; keep Toast path as env-var fallback
-- [ ] Pin model IDs + temperatures verbatim in paper (§3 / appendix)
-- [ ] Document all three prompt variants verbatim in appendix (neutral, stateless, multi-turn)
+- [x] Pin model IDs + temperatures verbatim in paper (§3 / appendix) — Appendix A written with all 4 prompt templates verbatim, model IDs for both API paths, and grid cell definitions
+- [x] Document all three prompt variants verbatim in appendix (neutral, stateless, multi-turn) — done in Appendix A (A.2–A.4)
 - [ ] Verify fresh clone runs end-to-end (synthetic + VSR + CF analysis)
 
 ### 2. ARR Submission Prep (Nov–Dec)
