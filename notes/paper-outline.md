@@ -659,7 +659,7 @@ CF masking: cells are replaced with a solid gray (128, 128, 128) rectangle. Imag
 - [ ] Swap Toast proxy code → plain `ANTHROPIC_API_KEY` + `anthropic` SDK; keep Toast path as env-var fallback
 - [x] Pin model IDs + temperatures verbatim in paper (§3 / appendix) — Appendix A written with all 4 prompt templates verbatim, model IDs for both API paths, and grid cell definitions
 - [x] Document all three prompt variants verbatim in appendix (neutral, stateless, multi-turn) — done in Appendix A (A.2–A.4)
-- [ ] Verify fresh clone runs end-to-end (synthetic + VSR + CF analysis)
+- [x] Verify fresh clone runs end-to-end (synthetic + VSR + CF analysis) — verified: fresh clone + `pip install anthropic pillow datasets` reproduces 9%/75% synthetic (analyze_results.py) and +4.9pp fix-rate (analyze_cf_fixrate.py). COCO bbox analysis requires separate COCO download (~450MB, to be documented in README).
 
 ### 2. ARR Submission Prep (Nov–Dec)
 - [ ] ACL format, Findings track — aim for clean 8-page submission
