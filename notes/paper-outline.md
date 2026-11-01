@@ -640,7 +640,7 @@ CF masking: cells are replaced with a solid gray (128, 128, 128) rectangle. Imag
 
 ### Reproducibility
 - [x] Commit result JSONs + 142-failure set + masked-image inputs to repo — committed: pilot_v5_500.json, real_vsr_v3_t0.json, real_vsr_v3_t0_mt.json, real_vsr_v3_t0_coco.json, real_vsr_v3_t0_cf_combined.json, real_vsr_v3_t0_sonnet_explain.json (git commit 29d08cf)
-- [x] Swap Toast-proxy code path for plain `ANTHROPIC_API_KEY` + `anthropic` SDK — done in run_cf_validation.py, run_sonnet_explain.py (make_client() checks ANTHROPIC_API_KEY first; Toast is fallback). real_image_experiment.py already had this.
+- [x] Swap Bedrock proxy code path for plain `ANTHROPIC_API_KEY` + `anthropic` SDK — done in run_cf_validation.py, run_sonnet_explain.py (make_client() checks ANTHROPIC_API_KEY first; Bedrock proxy is fallback). real_image_experiment.py already had this.
 
 ### Writing
 - [x] §5.2: always-center counterproductive under failure conditions (causal cells 86% non-central)
@@ -657,7 +657,7 @@ CF masking: cells are replaced with a solid gray (128, 128, 128) rectangle. Imag
 
 ### 1. Reproducibility ✅ COMPLETE
 - [x] Commit result JSONs to repo (git commit 29d08cf)
-- [x] Swap Toast proxy → plain ANTHROPIC_API_KEY path
+- [x] Swap Bedrock proxy → plain ANTHROPIC_API_KEY path
 - [x] Pin model IDs + temperatures verbatim (Appendix A)
 - [x] Document prompt variants verbatim (Appendix A.2–A.4)
 - [x] Verify fresh clone runs end-to-end
