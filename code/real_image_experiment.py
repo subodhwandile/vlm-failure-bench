@@ -34,7 +34,7 @@ from typing import Optional
 from PIL import Image, ImageDraw
 from datasets import load_dataset
 
-TOAST_PROXY_BASE  = "https://llm-proxy.build.eng.toasttab.com/bedrock"
+BEDROCK_PROXY_BASE = os.environ.get("BEDROCK_PROXY_URL", "")
 DEFAULT_MODEL     = "global.anthropic.claude-haiku-4-5-20251001-v1:0"
 DEFAULT_MODEL_DIRECT = "claude-haiku-5-5"
 TEMPERATURE       = 0.0   # always deterministic; logged in every result
@@ -54,13 +54,17 @@ GRID_CELLS = [
 VALID_REGIONS = {r[0] for r in GRID_CELLS}
 
 
-class ToastLLMClient:
-    def __init__(self, base_url: str = TOAST_PROXY_BASE):
+class BedrockProxyClient:
+    """Bearer-JWT Bedrock proxy client. Set BEDROCK_PROXY_URL and BEDROCK_JWT_HELPER env vars."""
+    def __init__(self, base_url: str = BEDROCK_PROXY_BASE):
         self.base_url = base_url.rstrip("/")
         self.messages = self
 
     def _get_jwt(self) -> str:
-        return subprocess.check_output(["/opt/homebrew/bin/toastApiKeyHelper"]).decode().strip()
+        helper = os.environ.get("BEDROCK_JWT_HELPER", "")
+        if not helper:
+            raise RuntimeError("BEDROCK_JWT_HELPER env var not set — or set ANTHROPIC_API_KEY instead")
+        return subprocess.check_output([helper]).decode().strip()
 
     def create(self, model: str, max_tokens: int, messages: list, **kwargs):
         jwt = self._get_jwt()
@@ -89,7 +93,7 @@ def make_client():
     if os.environ.get("ANTHROPIC_API_KEY"):
         import anthropic
         return anthropic.Anthropic(), DEFAULT_MODEL_DIRECT
-    return ToastLLMClient(), DEFAULT_MODEL
+    return BedrockProxyClient(), DEFAULT_MODEL
 
 
 def fetch_image(url: str) -> Image.Image:

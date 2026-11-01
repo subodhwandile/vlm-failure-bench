@@ -10,7 +10,7 @@ from pathlib import Path
 # Add parent dir so we can import run_cf_validation helpers
 sys.path.insert(0, str(Path(__file__).parent))
 from run_cf_validation import (
-    ToastLLMClient, fetch_image, find_cf_gt, DEFAULT_MODEL, TEMPERATURE
+    BedrockProxyClient, fetch_image, find_cf_gt, DEFAULT_MODEL, TEMPERATURE
 )
 
 random.seed(42)
@@ -53,7 +53,7 @@ def main():
         done_ids = {r["image_id"] for r in cf_results}
         print(f"Resuming — {len(done_ids)} already done")
 
-    client = ToastLLMClient()
+    client = BedrockProxyClient()
     print(f"Model: {args.model}  temperature: {args.temperature}\n")
 
     for i, r in enumerate(batch2):

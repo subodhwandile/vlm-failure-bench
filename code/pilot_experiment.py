@@ -22,23 +22,26 @@ import urllib.request
 import argparse
 from pathlib import Path
 
-TOAST_PROXY_BASE  = "https://llm-proxy.build.eng.toasttab.com/bedrock"
+BEDROCK_PROXY_BASE = os.environ.get("BEDROCK_PROXY_URL", "")
 DEFAULT_MODEL     = "global.anthropic.claude-haiku-4-5-20251001-v1:0"
 DEFAULT_MODEL_DIRECT = "claude-haiku-5-5"
 
 
-class ToastLLMClient:
+class BedrockProxyClient:
     """
-    Thin wrapper around the Toast LLM proxy.
+    Thin wrapper around a Bearer-JWT Bedrock proxy.
     Exposes client.messages.create() matching the anthropic SDK interface.
-    Uses Bearer JWT auth (refreshed per-call via toastApiKeyHelper).
+    Uses Bearer JWT auth via BEDROCK_JWT_HELPER env var.
     """
-    def __init__(self, base_url: str = TOAST_PROXY_BASE):
+    def __init__(self, base_url: str = BEDROCK_PROXY_BASE):
         self.base_url = base_url.rstrip("/")
         self.messages = self  # so client.messages.create() works
 
     def _get_jwt(self) -> str:
-        return subprocess.check_output(["/opt/homebrew/bin/toastApiKeyHelper"]).decode().strip()
+        helper = os.environ.get("BEDROCK_JWT_HELPER", "")
+        if not helper:
+            raise RuntimeError("BEDROCK_JWT_HELPER env var not set — or set ANTHROPIC_API_KEY instead")
+        return subprocess.check_output([helper]).decode().strip()
 
     def create(self, model: str, max_tokens: int, messages: list, **kwargs):
         jwt = self._get_jwt()
@@ -68,8 +71,8 @@ def make_client():
     if os.environ.get("ANTHROPIC_API_KEY"):
         print("Using direct Anthropic API")
         return anthropic.Anthropic(), DEFAULT_MODEL_DIRECT
-    print(f"Using Toast LLM proxy ({TOAST_PROXY_BASE})")
-    return ToastLLMClient(), DEFAULT_MODEL
+    print(f"Using Bedrock proxy ({BEDROCK_PROXY_BASE})")
+    return BedrockProxyClient(), DEFAULT_MODEL
 from dataclasses import dataclass, asdict
 from typing import Optional
 

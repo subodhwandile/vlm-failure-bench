@@ -9,7 +9,7 @@ from collections import Counter
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from run_cf_validation import ToastLLMClient, mask_region, DEFAULT_MODEL, TEMPERATURE
+from run_cf_validation import BedrockProxyClient, mask_region, DEFAULT_MODEL, TEMPERATURE
 
 from PIL import Image
 
@@ -109,7 +109,7 @@ def main():
         done_ids = {r["image_id"] for r in cf_results}
         print(f"Resuming — {len(done_ids)} done")
 
-    client = ToastLLMClient()
+    client = BedrockProxyClient()
     print(f"Model: {args.model}  temperature: {args.temperature}\n")
 
     for i, r in enumerate(adj_failures):

@@ -22,7 +22,7 @@ from PIL import Image, ImageDraw
 from dataclasses import dataclass
 from typing import Optional
 
-TOAST_PROXY_BASE = "https://llm-proxy.build.eng.toasttab.com/bedrock"
+BEDROCK_PROXY_BASE = os.environ.get("BEDROCK_PROXY_URL", "")
 DEFAULT_MODEL    = "global.anthropic.claude-haiku-4-5-20251001-v1:0"
 
 _WORD_TO_NUM = {
@@ -30,13 +30,16 @@ _WORD_TO_NUM = {
     "five": "5", "six": "6", "seven": "7", "eight": "8", "nine": "9", "ten": "10",
 }
 
-class ToastLLMClient:
-    def __init__(self, base_url: str = TOAST_PROXY_BASE):
+class BedrockProxyClient:
+    def __init__(self, base_url: str = BEDROCK_PROXY_BASE):
         self.base_url = base_url.rstrip("/")
         self.messages = self
 
     def _get_jwt(self) -> str:
-        return subprocess.check_output(["/opt/homebrew/bin/toastApiKeyHelper"]).decode().strip()
+        helper = os.environ.get("BEDROCK_JWT_HELPER", "")
+        if not helper:
+            raise RuntimeError("BEDROCK_JWT_HELPER env var not set — or set ANTHROPIC_API_KEY instead")
+        return subprocess.check_output([helper]).decode().strip()
 
     def create(self, model: str, max_tokens: int, messages: list, **kwargs):
         jwt = self._get_jwt()
@@ -63,7 +66,7 @@ class ToastLLMClient:
 def make_client():
     if os.environ.get("ANTHROPIC_API_KEY"):
         return anthropic.Anthropic(), "claude-haiku-5-5"
-    return ToastLLMClient(), DEFAULT_MODEL
+    return BedrockProxyClient(), DEFAULT_MODEL
 
 
 @dataclass

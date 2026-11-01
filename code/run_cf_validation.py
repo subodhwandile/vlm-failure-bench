@@ -26,8 +26,8 @@ from typing import Optional
 
 from PIL import Image, ImageDraw
 
-TOAST_PROXY_BASE  = "https://llm-proxy.build.eng.toasttab.com/bedrock"
-DEFAULT_MODEL     = "global.anthropic.claude-haiku-4-5-20251001-v1:0"  # Bedrock/Toast path
+BEDROCK_PROXY_BASE = os.environ.get("BEDROCK_PROXY_URL", "")
+DEFAULT_MODEL     = "global.anthropic.claude-haiku-4-5-20251001-v1:0"  # Bedrock path
 DEFAULT_MODEL_DIRECT = "claude-haiku-4-5-20251022"                     # Public Anthropic API path
 TEMPERATURE      = 0.0
 
@@ -44,13 +44,17 @@ GRID_CELLS = [
 ]
 
 
-class ToastLLMClient:
-    def __init__(self, base_url: str = TOAST_PROXY_BASE):
+class BedrockProxyClient:
+    """Bearer-JWT Bedrock proxy client. Set BEDROCK_PROXY_URL and BEDROCK_JWT_HELPER env vars."""
+    def __init__(self, base_url: str = BEDROCK_PROXY_BASE):
         self.base_url = base_url.rstrip("/")
         self.messages = self
 
     def _get_jwt(self) -> str:
-        return subprocess.check_output(["/opt/homebrew/bin/toastApiKeyHelper"]).decode().strip()
+        helper = os.environ.get("BEDROCK_JWT_HELPER", "")
+        if not helper:
+            raise RuntimeError("BEDROCK_JWT_HELPER env var not set — or set ANTHROPIC_API_KEY instead")
+        return subprocess.check_output([helper]).decode().strip()
 
     def create(self, model: str, max_tokens: int, messages: list, temperature: float = TEMPERATURE, **kwargs):
         jwt = self._get_jwt()
@@ -82,11 +86,11 @@ class ToastLLMClient:
 
 
 def make_client():
-    """Return (client, model_id). Uses ANTHROPIC_API_KEY if set, else Toast proxy."""
+    """Return (client, model_id). Uses ANTHROPIC_API_KEY if set, else Bedrock proxy."""
     if os.environ.get("ANTHROPIC_API_KEY"):
         import anthropic
         return anthropic.Anthropic(), DEFAULT_MODEL_DIRECT
-    return ToastLLMClient(), DEFAULT_MODEL
+    return BedrockProxyClient(), DEFAULT_MODEL
 
 
 def fetch_image(url: str) -> Image.Image:
@@ -189,7 +193,7 @@ def main():
     parser.add_argument("--output",      default=None)
     parser.add_argument("--n_failures",  type=int,   default=100)
     parser.add_argument("--model",       default=None,
-                        help="Model ID override. Defaults to ANTHROPIC_API_KEY model or Toast model.")
+                        help="Model ID override. Defaults to ANTHROPIC_API_KEY model or Bedrock proxy model.")
     parser.add_argument("--temperature", type=float, default=TEMPERATURE)
     args = parser.parse_args()
 

@@ -22,7 +22,7 @@ from PIL import Image
 
 # Import helpers from the main experiment file
 from real_image_experiment import (
-    ToastLLMClient, make_client,
+    BedrockProxyClient, make_client,
     fetch_image, ask_self_localization_multiturn, parse_region_tag,
     TEMPERATURE,
 )

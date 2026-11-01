@@ -19,7 +19,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from run_cf_validation import (
-    ToastLLMClient, fetch_image, mask_region, ask_tf, normalize_bool,
+    BedrockProxyClient, fetch_image, mask_region, ask_tf, normalize_bool,
     DEFAULT_MODEL, TEMPERATURE, GRID_CELLS,
 )
 
@@ -67,7 +67,7 @@ def main():
         print("All items already have cell_answers — nothing to do.")
         return
 
-    client = ToastLLMClient()
+    client = BedrockProxyClient()
     print(f"Model: {args.model}  temperature: {args.temperature}\n")
 
     done = 0

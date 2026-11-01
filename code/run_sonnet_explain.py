@@ -17,18 +17,18 @@ import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from run_cf_validation import ToastLLMClient, fetch_image, TEMPERATURE
+from run_cf_validation import BedrockProxyClient, fetch_image, TEMPERATURE
 from real_image_experiment import (
     ask_region_neutral, ask_self_localization, parse_region_tag,
 )
 
-SONNET_MODEL        = "global.anthropic.claude-sonnet-5-5"   # Bedrock/Toast path
+SONNET_MODEL        = "global.anthropic.claude-sonnet-5-5"   # Bedrock path
 SONNET_MODEL_DIRECT = "claude-sonnet-5-5"                    # Public Anthropic API path
 HAIKU_MODEL         = "global.anthropic.claude-haiku-4-5-20251001-v1:0"
 
 
-class SonnetToastClient(ToastLLMClient):
-    """ToastLLMClient that omits `temperature` — required for claude-sonnet-5-5
+class SonnetBedrockClient(BedrockProxyClient):
+    """BedrockProxyClient that omits `temperature` — required for claude-sonnet-5-5
     on Bedrock, which rejects the parameter with HTTP 400."""
     def create(self, model, max_tokens, messages, temperature=None, **kwargs):
         import json as _json
@@ -60,12 +60,12 @@ class SonnetToastClient(ToastLLMClient):
 
 
 def make_client():
-    """Return (client, model_id). Uses ANTHROPIC_API_KEY if set, else Toast proxy.
-    Public API accepts temperature; Bedrock/Toast does not for claude-sonnet-5-5."""
+    """Return (client, model_id). Uses ANTHROPIC_API_KEY if set, else Bedrock proxy.
+    Public API accepts temperature; Bedrock does not for claude-sonnet-5-5."""
     if os.environ.get("ANTHROPIC_API_KEY"):
         import anthropic
         return anthropic.Anthropic(), SONNET_MODEL_DIRECT
-    return SonnetToastClient(), SONNET_MODEL
+    return SonnetBedrockClient(), SONNET_MODEL
 
 
 def main():
@@ -75,7 +75,7 @@ def main():
     parser.add_argument("--cf",      default="experiments/real_vsr_v3_t0_cf_combined.json")
     parser.add_argument("--output",  default="experiments/real_vsr_v3_t0_sonnet_explain.json")
     parser.add_argument("--model",   default=None,
-                        help="Model ID override. Defaults to ANTHROPIC_API_KEY model or Toast model.")
+                        help="Model ID override. Defaults to ANTHROPIC_API_KEY model or Bedrock proxy model.")
     parser.add_argument("--temperature", type=float, default=TEMPERATURE)
     args = parser.parse_args()
 
